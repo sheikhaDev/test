@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة إلى أجزاء الحاسوب</title>
+    <style>
+        :root { --primary-color: #003366; --secondary-color: #ffcc00; --bg-color: #f8f9fa; }
+        body { font-family: 'Simplified Arabic', sans-serif; background-color: var(--bg-color); margin: 0; padding: 0; line-height: 1.6; }
+        .container { width: 90%; max-width: 1000px; margin: auto; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 10px; overflow: hidden; margin-top: 20px; }
+        
+        /* صفحة الغلاف [cite: 60] */
+        header { background: var(--primary-color); color: white; padding: 40px; text-align: center; }
+        header img { width: 150px; margin-bottom: 20px; }
+        .cover-title { font-size: 28px; margin: 10px 0; }
+
+        /* الفهرس بالارتباطات التشعبية [cite: 63] */
+        nav { background: #eee; padding: 15px; text-align: center; sticky: top; }
+        nav a { margin: 0 10px; text-decoration: none; color: var(--primary-color); font-weight: bold; font-size: 14px; }
+
+        .content-section { padding: 40px 30px; border-bottom: 1px solid #eee; }
+        h2 { color: var(--primary-color); border-right: 5px solid var(--secondary-color); padding-right: 15px; }
+
+        /* أماكن الوسائط التفاعلية [cite: 64, 67, 68] */
+        .media-box { background: #f0f4f8; border-radius: 8px; padding: 20px; text-align: center; margin: 20px 0; }
+        iframe { width: 100%; height: 450px; border: none; border-radius: 8px; }
+
+        .footer { background: #333; color: white; text-align: center; padding: 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header id="home">
+        <img src="https://via.placeholder.com/150x50?text=AOU+Logo" alt="شعار الجامعة العربية المفتوحة">
+        <h1 class="cover-title">رحلة إلى أجزاء الحاسوب</h1>
+        <p>مادة تقنية المعلومات - الصف الخامس</p>
+        <p>إعداد الطالب: .................... | الرقم الجامعي: ....................</p>
+        <img src="https://via.placeholder.com/400x200?text=Computer+Parts+Image" alt="صورة معبرة للدرس" style="width: 100%; max-width: 400px; border-radius: 10px;">
+    </header>
+
+    <nav>
+        <a href="#guide">دليل الاستخدام</a>
+        <a href="#intro">المقدمة</a>
+        <a href="#goals">الأهداف</a>
+        <a href="#content">المحتوى</a>
+        <a href="#ar">واقع معزز</a>
+        <a href="#game">اللعبه</a>
+    </nav>
+
+    <section id="guide" class="content-section">
+        <h2>دليل الاستخدام</h2>
+        <p>عزيزي الطالب، للتنقل في هذا الدرس استخدم الروابط في الأعلى. ستجد أيقونات تفاعلية، مقاطع فيديو ذكية، وألعاباً لتحدي ذكائك. التطبيقات المستخدمة: <b>Canva, HeyGen, Wordwall, Assemblr EDU</b>.</p>
+    </section>
+
+    <section id="intro" class="content-section">
+        <h2>المقدمة</h2>
+        <div class="media-box">
+            <p>مرحباً بكم! أنا مساعدكم الذكي، شاهدوا الفيديو التالي للتعرف على رحلتنا اليوم:</p>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://www.youtube.com/embed/placeholder" style="position:absolute;top:0;left:0;width:100%;height:100%;" allowfullscreen></iframe></div>
+        </div>
+    </section>
+
+    <section id="goals" class="content-section">
+        <h2>أهداف الدرس</h2>
+        <ul>
+            <li>أن يحدد الطالب المكونات المادية الأساسية للحاسوب[cite: 51].</li>
+            <li>أن يميز الطالب بين وحدات الإدخال ووحدات الإخراج[cite: 51].</li>
+            <li>أن يكتشف الأجزاء الداخلية للحاسوب عبر تقنية الواقع المعزز[cite: 51].</li>
+        </ul>
+    </section>
+
+    <section id="content" class="content-section">
+        <h2>ما هو الحاسوب؟</h2>
+        <p>الحاسوب يتكون من جزأين رئيسيين: الكيان المادي (Hardware) والكيان البرمجي (Software)...</p>
+        <div class="media-box">
+            <img src="https://via.placeholder.com/600x300?text=Hardware+vs+Software" alt="مكونات الحاسوب" style="width:100%;">
+        </div>
+    </section>
+
+    <section id="ar" class="content-section">
+        <h2>استكشف بالواقع المعزز (AR)</h2>
+        <p>استخدم هاتفك لمسح الكود التالي لرؤية "اللوحة الأم" تتحرك أمامك في الغرفة باستخدام تطبيق <b>Assemblr EDU</b>:</p>
+        <div class="media-box">
+            <img src="https://via.placeholder.com/150" alt="QR Code لواقع معزز">
+            <p><small>امسح الكود لفتح التجربة التفاعلية</small></p>
+        </div>
+    </section>
+
+    <section id="game" class="content-section">
+        <h2>تحدي الأبطال (لعبة تفاعلية)</h2>
+        <p>اختبر معلوماتك واجمع النقاط لتتصدر لوحة الصدارة:</p>
+        <div class="media-box">
+            <iframe src="https://wordwall.net/ar/embed/..." allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة - مشروع مقرر ED633 - 2026 [cite: 4]</p>
+    </footer>
+</div>
+
+</body>
+</html>
