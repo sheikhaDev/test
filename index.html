@@ -15,9 +15,8 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
 .page { display: none; height: 100%; overflow-y: auto; }
 .page.active { display: flex; flex-direction: column; }
 
-/* Soft gradient backgrounds - Kid-friendly */
 .bg-grid {
-  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 25%, #dbeafe 50%, #e0e7ff 75%, #f3f4f6 100%);
+  background: linear-gradient(135deg, #F0F4F8 0%, #E0E7FF 25%, #DBEAFE 50%, #E0E7FF 75%, #F0F4F8 100%);
   background-size: 400% 400%;
   animation: gradient-shift 20s ease infinite;
 }
@@ -28,42 +27,37 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
   100% { background-position: 0% 50%; }
 }
 
-/* Clean card - Professional and inviting */
 .glow-card {
   background: rgba(255, 255, 255, 0.98);
-  border: 2px solid #bfdbfe;
+  border: 2px solid #BFDBFE;
   border-radius: 18px;
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.08);
 }
 .glow-card:hover {
-  border-color: #93c5fd;
-  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
+  border-color: #93C5FD;
+  box-shadow: 0 12px 32px rgba(30, 64, 175, 0.12);
   transform: translateY(-2px);
 }
 
-/* Elegant text */
 .neon-text {
-  color: #1e40af;
-  text-shadow: 0 1px 3px rgba(37, 99, 235, 0.1);
+  color: #1E40AF;
+  text-shadow: 0 1px 3px rgba(30, 64, 175, 0.1);
 }
 
-/* Gentle pulse */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); }
-  50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.35); }
+  0%, 100% { box-shadow: 0 0 15px rgba(30, 64, 175, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(30, 64, 175, 0.35); }
 }
 .pulse-glow { animation: pulse-glow 2s infinite; }
 
-/* Float animation */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 .float-anim { animation: float 3s ease-in-out infinite; }
 
-/* Fade in */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -73,11 +67,9 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
 .fade-in-d2 { animation-delay: 0.2s; opacity: 0; }
 .fade-in-d3 { animation-delay: 0.3s; opacity: 0; }
 .fade-in-d4 { animation-delay: 0.4s; opacity: 0; }
-.fade-in-d5 { animation-delay: 0.5s; opacity: 0; }
 
-/* Nav button - Friendly and clickable */
 .nav-btn {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #1E40AF, #3B82F6);
   color: #fff;
   font-weight: 600;
   padding: 12px 32px;
@@ -87,12 +79,12 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
   font-family: 'Tajawal', sans-serif;
   font-size: 15px;
   transition: all 0.3s;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
 }
 .nav-btn:hover { 
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-  background: linear-gradient(135deg, #1e40af, #172554);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+  background: linear-gradient(135deg, #1E3A8A, #2563EB);
 }
 .nav-btn:disabled { 
   opacity: 0.4;
@@ -101,10 +93,9 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
   box-shadow: none;
 }
 
-/* Sidebar - Soft and organized */
 .sidebar {
-  background: rgba(37, 99, 235, 0.04);
-  border-left: 3px solid #2563eb;
+  background: rgba(30, 64, 175, 0.04);
+  border-left: 3px solid #1E40AF;
   backdrop-filter: blur(8px);
 }
 .sidebar-item {
@@ -117,35 +108,33 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
   font-weight: 500;
 }
 .sidebar-item:hover { 
-  background: rgba(37, 99, 235, 0.08);
-  color: #2563eb;
+  background: rgba(30, 64, 175, 0.08);
+  color: #1E40AF;
   transform: translateX(-3px);
 }
 .sidebar-item.active { 
-  background: rgba(37, 99, 235, 0.12);
-  color: #1e40af;
+  background: rgba(30, 64, 175, 0.12);
+  color: #1E40AF;
   font-weight: 700;
-  border-left: 3px solid #2563eb;
+  border-left: 3px solid #1E40AF;
   padding-left: 13px;
 }
 
-/* Progress bar */
 .progress-track { 
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(30, 64, 175, 0.1);
   height: 6px;
   border-radius: 3px;
 }
 .progress-fill { 
-  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  background: linear-gradient(90deg, #1E40AF, #3B82F6);
   height: 100%;
   border-radius: 3px;
   transition: width 0.5s ease;
 }
 
-/* Quiz option - Clear and inviting */
 .quiz-opt {
-  background: rgba(37, 99, 235, 0.05);
-  border: 2px solid #bfdbfe;
+  background: rgba(30, 64, 175, 0.05);
+  border: 2px solid #BFDBFE;
   border-radius: 12px;
   padding: 14px 18px;
   cursor: pointer;
@@ -156,26 +145,27 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
   font-size: 14px;
 }
 .quiz-opt:hover { 
-  border-color: #93c5fd;
-  background: rgba(37, 99, 235, 0.08);
+  border-color: #93C5FD;
+  background: rgba(30, 64, 175, 0.08);
   transform: translateY(-2px);
 }
 .quiz-opt.correct { 
-  border-color: #10b981;
-  background: rgba(16, 185, 129, 0.1);
-  color: #047857;
+  border-color: #059669 !important;
+  background: rgba(5, 150, 105, 0.2) !important;
+  color: #065F46 !important;
+  font-weight: 700;
+  pointer-events: none;
 }
 .quiz-opt.wrong { 
-  border-color: #ef4444;
-  background: rgba(239, 68, 68, 0.1);
-  color: #dc2626;
+  border-color: #DC2626 !important;
+  background: rgba(220, 38, 38, 0.1) !important;
+  color: #991B1B !important;
 }
 
-/* Game card - Friendly and engaging */
 .game-card {
   width: 90px; height: 90px;
-  background: rgba(37, 99, 235, 0.05);
-  border: 2px solid #bfdbfe;
+  background: rgba(30, 64, 175, 0.05);
+  border: 2px solid #BFDBFE;
   border-radius: 12px;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
@@ -184,61 +174,20 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
   font-weight: 600;
 }
 .game-card:hover { 
-  border-color: #93c5fd;
-  background: rgba(37, 99, 235, 0.08);
+  border-color: #93C5FD;
+  background: rgba(30, 64, 175, 0.08);
   transform: scale(1.05);
 }
-.game-card.selected { 
-  border-color: #2563eb;
-  background: rgba(37, 99, 235, 0.15);
-  box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
-  transform: scale(1.1);
-}
 .game-card.matched { 
-  border-color: #10b981;
-  background: rgba(16, 185, 129, 0.15);
+  border-color: #059669;
+  background: rgba(5, 150, 105, 0.15);
   opacity: 0.7;
   pointer-events: none;
 }
-.game-card.wrong-match { 
-  border-color: #ef4444;
-  background: rgba(239, 68, 68, 0.1);
-}
 
-/* AR and PC styles */
-.ar-item {
-  position: absolute;
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-.ar-item:hover { transform: scale(1.15); }
-.ar-label {
-  background: rgba(37, 99, 235, 0.9);
-  border: 2px solid #2563eb;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 12px;
-  position: absolute;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 10;
-  font-weight: 600;
-}
-
-.pc-part { 
-  cursor: pointer;
-  transition: all 0.3s;
-  stroke: #2563eb;
-}
-.pc-part:hover { 
-  filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.4));
-}
-
-/* Chat bubble */
 .chat-bubble {
-  background: rgba(37, 99, 235, 0.08);
-  border: 2px solid #bfdbfe;
+  background: rgba(30, 64, 175, 0.08);
+  border: 2px solid #BFDBFE;
   border-radius: 14px 14px 4px 14px;
   padding: 12px 16px;
   max-width: 80%;
@@ -247,38 +196,22 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
   font-size: 14px;
 }
 .chat-bubble.user {
-  background: rgba(6, 182, 212, 0.08);
-  border: 2px solid #cffafe;
+  background: rgba(59, 130, 246, 0.08);
+  border: 2px solid #93C5FD;
   border-radius: 14px 14px 14px 4px;
   margin-right: auto;
-  color: #0369a1;
+  color: #1E40AF;
 }
 
-.tooltip-content {
-  display: none;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px solid #bfdbfe;
-  border-radius: 10px;
-  padding: 10px 14px;
-  color: #1f2937;
-  font-size: 12px;
-  z-index: 50;
-  max-width: 220px;
-  font-weight: 500;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
-}
-
-/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: rgba(37, 99, 235, 0.05); }
-::-webkit-scrollbar-thumb { background: rgba(37, 99, 235, 0.3); border-radius: 3px; }
-</style>
+::-webkit-scrollbar-track { background: rgba(30, 64, 175, 0.05); }
+::-webkit-scrollbar-thumb { background: rgba(30, 64, 175, 0.3); border-radius: 3px; }
+  </style>
   <style>body { box-sizing: border-box; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full" style="background: #f8f9fc;">
-  <div id="app" class="h-full flex" style="background: #f8f9fc;"><!-- Sidebar Navigation -->
+  <div id="app" class="h-full flex" style="background: #f8f9fc;">
    <aside id="sidebar" class="sidebar w-56 flex-shrink-0 flex flex-col p-4 overflow-y-auto hidden md:flex" style="height:100%;">
     <div class="mb-4">
      <div class="text-xs font-bold mb-1" style="color: #667eea;">
@@ -292,20 +225,20 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
      </div>
     </div>
     <nav id="sidebarNav" class="flex flex-col gap-1"></nav>
-   </aside><!-- Main Content -->
-   <div class="flex-1 flex flex-col overflow-hidden" style="height:100%;"><!-- Top Bar -->
-    <header class="flex items-center justify-between px-4 py-2 flex-shrink-0" style="background:rgba(255,255,255,0.98);border-bottom:2px solid #bfdbfe;box-shadow:0 2px 8px rgba(37,99,235,0.06);"><button id="menuToggle" class="md:hidden p-2" style="color:#2563eb;" onclick="toggleSidebar()"> <i data-lucide="menu" style="width:22px;height:22px;"></i> </button>
-     <div class="flex items-center gap-2"><span style="font-size:20px;">🖥️</span> <span id="topTitle" class="text-sm font-bold" style="color:#1e40af;font-family:'Readex Pro',sans-serif;">رحلة إلى أجزاء الحاسوب</span>
+   </aside>
+   <div class="flex-1 flex flex-col overflow-hidden" style="height:100%;">
+    <header class="flex items-center justify-between px-4 py-2 flex-shrink-0" style="background:rgba(255,255,255,0.98);border-bottom:2px solid #E0E7FF;box-shadow:0 2px 8px rgba(99,102,241,0.06);"><button id="menuToggle" class="md:hidden p-2" style="color:#6366F1;" onclick="toggleSidebar()"><i data-lucide="menu" style="width:22px;height:22px;"></i></button>
+     <div class="flex items-center gap-2"><span style="font-size:20px;">🖥️</span> <span id="topTitle" class="text-sm font-bold" style="color:#4F46E5;font-family:'Readex Pro',sans-serif;">رحلة إلى أجزاء الحاسوب</span>
      </div>
-     <div class="flex items-center gap-2"><span id="scoreDisplay" class="text-xs px-3 py-1 rounded-full" style="background:rgba(37,99,235,0.08);color:#1e40af;font-weight:600;border:1px solid #bfdbfe;">⭐ 0 نقطة</span>
+     <div class="flex items-center gap-2"><span id="scoreDisplay" class="text-xs px-3 py-1 rounded-full" style="background:rgba(99,102,241,0.08);color:#4F46E5;font-weight:600;border:1px solid #E0E7FF;">⭐ 0 نقطة</span>
      </div>
-    </header><!-- Pages Container -->
-    <div id="pagesContainer" class="flex-1 overflow-hidden" style="height:100%;"><!-- PAGE 0: Cover -->
-     <div class="page bg-grid" data-page="0">
+    </header>
+    <div id="pagesContainer" class="flex-1 overflow-hidden" style="height:100%;display:flex;"><!-- PAGE 0: Cover -->
+     <div class="page bg-grid active" data-page="0">
       <div class="flex-1 flex items-center justify-center p-6">
        <div class="text-center max-w-lg">
         <div class="float-anim mb-6">
-         <svg width="140" height="140" viewbox="0 0 140 140" class="mx-auto"><rect x="15" y="20" width="110" height="80" rx="8" fill="none" stroke="#2563eb" stroke-width="2" /> <rect x="25" y="30" width="90" height="55" rx="4" fill="rgba(37,99,235,0.08)" /> <rect x="50" y="105" width="40" height="6" rx="3" fill="#2563eb" opacity="0.5" /> <rect x="35" y="113" width="70" height="4" rx="2" fill="#2563eb" opacity="0.3" /> <!-- Screen content --> <circle cx="70" cy="52" r="12" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <path d="M65 52 L68 56 L76 48" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
+         <svg width="140" height="140" viewbox="0 0 140 140" class="mx-auto"><rect x="15" y="20" width="110" height="80" rx="8" fill="none" stroke="#2563eb" stroke-width="2" /> <rect x="25" y="30" width="90" height="55" rx="4" fill="rgba(37,99,235,0.08)" /> <rect x="50" y="105" width="40" height="6" rx="3" fill="#2563eb" opacity="0.5" /> <rect x="35" y="113" width="70" height="4" rx="2" fill="#2563eb" opacity="0.3" /> <circle cx="70" cy="52" r="12" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <path d="M65 52 L68 56 L76 48" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
          </svg>
         </div>
         <div class="fade-in">
@@ -334,14 +267,14 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
            </div>
           </div>
          </div>
-         <div class="mb-6"><!-- University Logo -->
+         <div class="mb-6">
           <svg width="60" height="60" viewbox="0 0 60 60" class="mx-auto mb-2"><circle cx="30" cy="30" r="28" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.4" /> <path d="M30 12 L42 22 L42 40 L18 40 L18 22 Z" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <rect x="27" y="30" width="6" height="10" fill="rgba(37,99,235,0.2)" /> <path d="M22 22 L30 15 L38 22" fill="none" stroke="#2563eb" stroke-width="1.5" />
           </svg>
           <div class="text-xs" style="color:#64748b;">
            الجامعة العربية المفتوحة
           </div>
          </div>
-        </div><button class="nav-btn fade-in fade-in-d3 pulse-glow" onclick="goToPage(1)"> 🚀 ابدأ الرحلة </button>
+        </div><button class="nav-btn fade-in fade-in-d3 pulse-glow" onclick="goToPage(1)">🚀 ابدأ الرحلة</button>
        </div>
       </div>
      </div><!-- PAGE 1: User Guide -->
@@ -354,34 +287,9 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <ul class="space-y-3 text-sm" style="color:#475569;line-height:1.8;">
           <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">①</span> تنقل بين الصفحات باستخدام أزرار التالي والسابق أو القائمة الجانبية</li>
           <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">②</span> اقرأ المحتوى بتمعن وشاهد الوسائط التفاعلية</li>
-          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">③</span> أجب على الأنشطة والألعاب التعليمية لتعزيز فهمك</li>
-          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">④</span> جرّب نشاط الواقع المعزز للاستكشاف التفاعلي</li>
-          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">⑤</span> استخدم المساعد الذكي لطرح أسئلتك</li>
-          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">⑥</span> تابع تقدمك عبر شريط التقدم في القائمة الجانبية</li>
+          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">③</span> أجب على الأنشطة والألعاب التعليمية</li>
+          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">④</span> تابع تقدمك عبر شريط التقدم</li>
          </ul>
-        </div>
-        <div class="glow-card p-6 fade-in fade-in-d2">
-         <h3 class="font-bold mb-3" style="color:#2563eb;">البرامج والأدوات المستخدمة</h3>
-         <div class="grid grid-cols-2 gap-3 text-sm" style="color:#475569;line-height:1.8;">
-          <div class="flex items-center gap-2">
-           <span>🌐</span> HTML5 / CSS3 / JavaScript
-          </div>
-          <div class="flex items-center gap-2">
-           <span>🎨</span> Tailwind CSS
-          </div>
-          <div class="flex items-center gap-2">
-           <span>🤖</span> مساعد الذكاء الاصطناعي
-          </div>
-          <div class="flex items-center gap-2">
-           <span>🎮</span> ألعاب تعليمية تفاعلية
-          </div>
-          <div class="flex items-center gap-2">
-           <span>📱</span> تقنية الواقع المعزز
-          </div>
-          <div class="flex items-center gap-2">
-           <span>🖼️</span> رسومات SVG تفاعلية
-          </div>
-         </div>
         </div>
         <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(0)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(2)">التالي ⟶</button>
         </div>
@@ -393,85 +301,14 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
        <div class="max-w-2xl mx-auto">
         <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🌟 المقدمة</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <p class="text-sm leading-7" style="color:#ccd;">مرحبًا بك في رحلة استكشافية ممتعة نتعرف فيها على <strong style="color:#00ffc8;">أجزاء الحاسوب</strong> ومكوناته الأساسية. سنغوص معًا في عالم التقنية لنكتشف كيف تعمل هذه الأجزاء معًا لتشكل الحاسوب الذي نستخدمه يوميًا.</p>
-        </div>
-        <div class="glow-card p-6 mb-4 fade-in fade-in-d2">
-         <h3 class="font-bold mb-3" style="color:#00ffc8;">ماذا ستتعلم في هذه الرحلة؟</h3>
-         <div class="grid gap-3">
-          <div class="flex items-center gap-3 text-sm" style="color:#aabbcc;">
-           <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,255,200,0.1);">
-            💻
-           </div><span>المكونات المادية (Hardware) للحاسوب</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm" style="color:#aabbcc;">
-           <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,255,200,0.1);">
-            🧠
-           </div><span>وظيفة كل جزء وكيف يعمل</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm" style="color:#aabbcc;">
-           <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,255,200,0.1);">
-            🔗
-           </div><span>العلاقة بين المكونات المختلفة</span>
-          </div>
-          <div class="flex items-center gap-3 text-sm" style="color:#aabbcc;">
-           <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,255,200,0.1);">
-            🎮
-           </div><span>أنشطة وألعاب تفاعلية لتثبيت المفاهيم</span>
-          </div>
-         </div>
+         <p class="text-sm leading-7" style="color:#ccd;">مرحبًا بك في رحلة استكشافية ممتعة نتعرف فيها على <strong style="color:#00ffc8;">أجزاء الحاسوب</strong> ومكوناته الأساسية. سنغوص معًا في عالم التقنية لنكتشف كيف تعمل هذه الأجزاء معًا.</p>
         </div>
         <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(1)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(3)">التالي ⟶</button>
         </div>
        </div>
       </div>
-     </div><!-- PAGE 3: Video / Presenter -->
+     </div><!-- PAGE 3: Objectives -->
      <div class="page bg-grid" data-page="3">
-      <div class="flex-1 p-6 md:p-10 overflow-y-auto">
-       <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎬 تعريف بالدرس</h2>
-        <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <div class="flex items-center gap-4 mb-4">
-          <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#00ffc8,#00b894);"><span style="font-size:28px;">👨‍🏫</span>
-          </div>
-          <div>
-           <div class="font-bold" style="color:#e0e0e0;">
-            المعلم الافتراضي
-           </div>
-           <div class="text-xs" style="color:#00ffc8;">
-            مُنشأ بالذكاء الاصطناعي
-           </div>
-          </div>
-         </div><!-- Simulated AI video presentation -->
-         <div id="videoPlayer" class="rounded-xl overflow-hidden mb-4" style="background:#000;aspect-ratio:16/9;position:relative;cursor:pointer;" onclick="toggleVideo()">
-          <div id="videoContent" class="w-full h-full flex items-center justify-center relative">
-           <div id="playBtn" class="text-center">
-            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 pulse-glow" style="background:rgba(0,255,200,0.2);border:2px solid #00ffc8;"><span style="font-size:24px;color:#00ffc8;">▶</span>
-            </div>
-            <div class="text-sm" style="color:#aaa;">
-             اضغط للمشاهدة
-            </div>
-           </div>
-           <div id="videoPlaying" class="absolute inset-0 hidden flex-col items-center justify-center p-6">
-            <div id="presenterAvatar" class="w-20 h-20 rounded-full mb-4 flex items-center justify-center" style="background:linear-gradient(135deg,#00ffc8,#00b894);font-size:36px;">
-             👨‍🏫
-            </div>
-            <div id="subtitleText" class="text-center text-sm" style="color:#e0e0e0;max-width:400px;line-height:1.8;"></div>
-            <div id="videoProgress" class="w-full max-w-xs mt-4 progress-track">
-             <div id="videoProgressFill" class="progress-fill" style="width:0%"></div>
-            </div>
-           </div>
-          </div>
-         </div>
-         <div class="text-xs text-center" style="color:#556;">
-          🤖 تم إنشاء هذا العرض التقديمي باستخدام تقنيات الذكاء الاصطناعي
-         </div>
-        </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(4)">التالي ⟶</button>
-        </div>
-       </div>
-      </div>
-     </div><!-- PAGE 5: Objectives -->
-     <div class="page bg-grid" data-page="4">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
         <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎯 أهداف الدرس</h2>
@@ -479,15 +316,14 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <div class="text-xs mb-3" style="color:#00ffc8;">
           بنهاية هذا الدرس، يُتوقع من المتعلم أن يكون قادرًا على:
          </div>
-         <div class="space-y-3" id="objectivesList">
-         </div>
+         <div class="space-y-3" id="objectivesList"></div>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(5)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(4)">التالي ⟶</button>
         </div>
        </div>
       </div>
-     </div><!-- PAGE 6: Content Unit 1 - Input Devices -->
-     <div class="page bg-grid" data-page="5">
+     </div><!-- PAGE 4: Input Devices -->
+     <div class="page bg-grid" data-page="4">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
         <div class="text-xs mb-2" style="color:#00ffc8;">
@@ -495,7 +331,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
         </div>
         <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدات الإدخال</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإدخال هي الأجهزة التي تُستخدم لإدخال البيانات والمعلومات إلى الحاسوب. تقوم بتحويل البيانات من شكلها الخارجي إلى شكل رقمي يفهمه الحاسوب.</p>
+         <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإدخال هي الأجهزة التي تُستخدم لإدخال البيانات والمعلومات إلى الحاسوب.</p>
          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
           <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
            <div class="text-3xl mb-2">
@@ -503,9 +339,6 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
            </div>
            <div class="text-xs font-bold" style="color:#00ffc8;">
             لوحة المفاتيح
-           </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            إدخال النصوص والأوامر
            </div>
           </div>
           <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
@@ -515,9 +348,6 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
            <div class="text-xs font-bold" style="color:#00ffc8;">
             الفأرة
            </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            التحكم والتوجيه
-           </div>
           </div>
           <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
            <div class="text-3xl mb-2">
@@ -526,57 +356,21 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
            <div class="text-xs font-bold" style="color:#00ffc8;">
             الميكروفون
            </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            إدخال الصوت
-           </div>
-          </div>
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
-           <div class="text-3xl mb-2">
-            📷
-           </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
-            الكاميرا
-           </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            إدخال الصور والفيديو
-           </div>
-          </div>
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
-           <div class="text-3xl mb-2">
-            📟
-           </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
-            الماسح الضوئي
-           </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            تحويل الورق لرقمي
-           </div>
-          </div>
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
-           <div class="text-3xl mb-2">
-            🕹️
-           </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
-            عصا التحكم
-           </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            الألعاب والمحاكاة
-           </div>
           </div>
          </div>
-        </div><!-- Quick Quiz -->
+        </div>
         <div class="glow-card p-5 fade-in fade-in-d2">
          <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">💡 اختبر فهمك</h3>
          <p class="text-sm mb-3" style="color:#ccd;">أي من التالي يُعد من وحدات الإدخال؟</p>
          <div class="space-y-2" id="quiz1"></div>
          <div id="quiz1Feedback" class="mt-3 text-sm hidden"></div>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(4)">⟵ السابق</button> <button class="nav-btn" id="nextBtn6" onclick="checkQuizAndNext(6)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(3)">⟵ السابق</button> <button class="nav-btn" id="nextBtn4" onclick="goToPage(5)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
         </div>
        </div>
       </div>
-     </div><!-- PAGE 7: Content Unit 2 - Output Devices -->
-     <div class="page bg-grid" data-page="6">
+     </div><!-- PAGE 5: Output Devices -->
+     <div class="page bg-grid" data-page="5">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
         <div class="text-xs mb-2" style="color:#00ffc8;">
@@ -584,7 +378,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
         </div>
         <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدات الإخراج</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإخراج هي الأجهزة المسؤولة عن عرض وإظهار نتائج معالجة البيانات للمستخدم. تحوّل البيانات الرقمية إلى أشكال يمكن للإنسان فهمها.</p>
+         <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإخراج هي الأجهزة المسؤولة عن عرض وإظهار نتائج معالجة البيانات للمستخدم.</p>
          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
           <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
            <div class="text-3xl mb-2">
@@ -592,9 +386,6 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
            </div>
            <div class="text-xs font-bold" style="color:#00ffc8;">
             الشاشة
-           </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            عرض البيانات مرئيًا
            </div>
           </div>
           <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
@@ -604,30 +395,13 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
            <div class="text-xs font-bold" style="color:#00ffc8;">
             الطابعة
            </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            طباعة على الورق
-           </div>
           </div>
           <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
            <div class="text-3xl mb-2">
             🔊
            </div>
            <div class="text-xs font-bold" style="color:#00ffc8;">
-            مكبر الصوت
-           </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            إخراج الصوت
-           </div>
-          </div>
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
-           <div class="text-3xl mb-2">
-            📽️
-           </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
-            جهاز العرض
-           </div>
-           <div class="text-xs mt-1" style="color:#889;">
-            عرض على أسطح كبيرة
+            السماعة
            </div>
           </div>
          </div>
@@ -638,12 +412,12 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <div class="space-y-2" id="quiz2"></div>
          <div id="quiz2Feedback" class="mt-3 text-sm hidden"></div>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(5)">⟵ السابق</button> <button class="nav-btn" id="nextBtn7" onclick="checkQuizAndNext(7)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(4)">⟵ السابق</button> <button class="nav-btn" id="nextBtn5" onclick="goToPage(6)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
         </div>
        </div>
       </div>
-     </div><!-- PAGE 8: Content Unit 3 - Processing & Storage -->
-     <div class="page bg-grid" data-page="7">
+     </div><!-- PAGE 6: Processing & Storage -->
+     <div class="page bg-grid" data-page="6">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
         <div class="text-xs mb-2" style="color:#00ffc8;">
@@ -652,182 +426,113 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
         <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدة المعالجة والتخزين</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
          <h3 class="font-bold mb-2" style="color:#00ffc8;">🧠 وحدة المعالجة المركزية (CPU)</h3>
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">هي "دماغ" الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات. تتكون من وحدة الحساب والمنطق (ALU) ووحدة التحكم (CU).</p>
-         <div class="flex items-center justify-center mb-4">
-          <svg width="200" height="120" viewbox="0 0 200 120"><rect x="40" y="20" width="120" height="80" rx="8" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1.5" /> <text x="100" y="45" text-anchor="middle" fill="#00ffc8" font-size="10" font-weight="bold">
-            CPU
-           </text> <rect x="52" y="55" width="44" height="30" rx="4" fill="rgba(0,255,200,0.1)" stroke="#00ffc8" stroke-width="1" opacity="0.6" /> <text x="74" y="74" text-anchor="middle" fill="#aaa" font-size="8">
-            ALU
-           </text> <rect x="104" y="55" width="44" height="30" rx="4" fill="rgba(0,255,200,0.1)" stroke="#00ffc8" stroke-width="1" opacity="0.6" /> <text x="126" y="74" text-anchor="middle" fill="#aaa" font-size="8">
-            CU
-           </text> <!-- Pins --> <line x1="60" y1="100" x2="60" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="80" y1="100" x2="80" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="100" y1="100" x2="100" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="120" y1="100" x2="120" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="140" y1="100" x2="140" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" />
-          </svg>
-         </div>
+         <p class="text-sm leading-7 mb-4" style="color:#ccd;">هي "دماغ" الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات.</p>
         </div>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d2">
          <h3 class="font-bold mb-2" style="color:#00ffc8;">💾 وحدات التخزين</h3>
          <div class="grid grid-cols-2 gap-3 text-sm" style="color:#ccd;">
           <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
            <div class="font-bold" style="color:#00ffc8;">
-            RAM - الذاكرة العشوائية
+            RAM
            </div>
            <div class="text-xs mt-1" style="color:#889;">
-            تخزين مؤقت، سريعة، تُمسح عند إيقاف التشغيل
+            الذاكرة العشوائية
            </div>
           </div>
           <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
            <div class="font-bold" style="color:#00ffc8;">
-            ROM - ذاكرة القراءة فقط
+            ROM
            </div>
            <div class="text-xs mt-1" style="color:#889;">
-            تخزين دائم، تحتوي تعليمات أساسية
+            ذاكرة القراءة فقط
            </div>
           </div>
           <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
            <div class="font-bold" style="color:#00ffc8;">
-            القرص الصلب HDD
+            HDD
            </div>
            <div class="text-xs mt-1" style="color:#889;">
-            تخزين كبير دائم، أقراص ممغنطة
+            القرص الصلب
            </div>
           </div>
           <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
            <div class="font-bold" style="color:#00ffc8;">
-            SSD - قرص الحالة الصلبة
+            SSD
            </div>
            <div class="text-xs mt-1" style="color:#889;">
-            سريع جدًا، بدون أجزاء متحركة
+            قرص الحالة الصلبة
            </div>
           </div>
          </div>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(6)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(8)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(5)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(7)">التالي ⟶</button>
         </div>
        </div>
       </div>
-     </div><!-- PAGE 9: Educational Game - Matching -->
-     <div class="page bg-grid" data-page="9">
+     </div><!-- PAGE 7: Game -->
+     <div class="page bg-grid" data-page="7">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">🎮 لعبة المطابقة</h2>
-        <p class="text-sm mb-4 fade-in" style="color:#889;">طابق كل جزء من أجزاء الحاسوب مع وظيفته الصحيحة!</p>
+        <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">🎮 لعبة المطابقة بالسحب والإفلات</h2>
+        <p class="text-sm mb-4 fade-in" style="color:#889;">اسحب الأجهزة إلى الفئات الصحيحة!</p>
         <div class="glow-card p-5 mb-4">
          <div class="flex items-center justify-between mb-4">
-          <div><span class="text-sm" style="color:#00ffc8;">المستوى: </span> <span id="gameLevel" class="text-sm font-bold" style="color:#e0e0e0;">1</span>
+          <div>
+           <span class="text-sm" style="color:#00ffc8;">النقاط: </span><span id="gameScore" class="text-sm font-bold" style="color:#e0e0e0;">0</span>
           </div>
-          <div><span class="text-sm" style="color:#00ffc8;">النقاط: </span> <span id="gameScore" class="text-sm font-bold" style="color:#e0e0e0;">0</span>
+          <div>
+           <span class="text-sm" style="color:#00ffc8;">المطابقات: </span><span id="gameMatched" class="text-sm font-bold" style="color:#e0e0e0;">0 / 6</span>
           </div><button class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.1);color:#00ffc8;border:1px solid rgba(0,255,200,0.2);cursor:pointer;" onclick="resetGame()">🔄 إعادة</button>
          </div>
-         <div class="flex flex-wrap gap-2 justify-center mb-4">
-          <div class="text-xs px-2 py-1 rounded" style="background:rgba(0,255,200,0.1);color:#00ffc8;">
-           الأجزاء ⬇️
-          </div>
-         </div>
-         <div id="gameParts" class="flex flex-wrap gap-2 justify-center mb-4"></div>
-         <div class="flex flex-wrap gap-2 justify-center mb-4">
-          <div class="text-xs px-2 py-1 rounded" style="background:rgba(255,200,0,0.1);color:#ffc800;">
-           الوظائف ⬇️
-          </div>
-         </div>
-         <div id="gameFunctions" class="flex flex-wrap gap-2 justify-center"></div>
-         <div id="gameFeedback" class="mt-4 text-center text-sm hidden"></div>
-        </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(8)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(10)">التالي ⟶</button>
-        </div>
-       </div>
-      </div>
-     </div><!-- PAGE 10: AR Activity -->
-     <div class="page bg-grid" data-page="10">
-      <div class="flex-1 p-6 md:p-10 overflow-y-auto">
-       <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">📱 نشاط الواقع المعزز</h2>
-        <p class="text-sm mb-4 fade-in" style="color:#889;">استكشف مكونات الحاسوب بالنقر على كل جزء لمعرفة تفاصيله!</p>
-        <div class="glow-card p-4 mb-4 fade-in fade-in-d1">
-         <div class="text-xs text-center mb-3" style="color:#00ffc8;">
-          🔍 انقر على أي جزء لرؤية المعلومات المعززة
-         </div>
-         <div id="arScene" class="relative rounded-xl mx-auto" style="background:linear-gradient(180deg,#0d1526,#0a1a2a);height:350px;max-width:500px;overflow:hidden;border:1px solid rgba(0,255,200,0.1);"><!-- AR scanning lines effect -->
-          <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 4px,rgba(0,255,200,0.02) 4px,rgba(0,255,200,0.02) 5px);pointer-events:none;"></div><!-- Computer case outline -->
-          <svg width="100%" height="100%" viewbox="0 0 500 350" style="position:absolute;inset:0;"><!-- Main case --> <rect x="120" y="40" width="260" height="270" rx="10" fill="rgba(0,255,200,0.03)" stroke="rgba(0,255,200,0.2)" stroke-width="1" /> <!-- Internal parts as clickable areas --> <g id="arCPU" class="pc-part" onclick="showARInfo('cpu')">
-            <rect x="180" y="70" width="70" height="50" rx="6" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1" />
-            <text x="215" y="100" text-anchor="middle" fill="#00ffc8" font-size="11" font-family="Tajawal">
-             CPU
-            </text>
-           </g> <g id="arRAM" class="pc-part" onclick="showARInfo('ram')">
-            <rect x="270" y="70" width="90" height="25" rx="4" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1" />
-            <text x="315" y="87" text-anchor="middle" fill="#00ffc8" font-size="9" font-family="Tajawal">
-             RAM
-            </text>
-           </g> <g id="arHDD" class="pc-part" onclick="showARInfo('hdd')">
-            <rect x="140" y="200" width="80" height="50" rx="6" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1" />
-            <text x="180" y="230" text-anchor="middle" fill="#00ffc8" font-size="9" font-family="Tajawal">
-             القرص الصلب
-            </text>
-           </g> <g id="arGPU" class="pc-part" onclick="showARInfo('gpu')">
-            <rect x="140" y="135" width="120" height="40" rx="6" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1" />
-            <text x="200" y="160" text-anchor="middle" fill="#00ffc8" font-size="9" font-family="Tajawal">
-             كرت الشاشة
-            </text>
-           </g> <g id="arPSU" class="pc-part" onclick="showARInfo('psu')">
-            <rect x="280" y="200" width="80" height="50" rx="6" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1" />
-            <text x="320" y="230" text-anchor="middle" fill="#00ffc8" font-size="9" font-family="Tajawal">
-             مزود الطاقة
-            </text>
-           </g> <g id="arMB" class="pc-part" onclick="showARInfo('mb')">
-            <rect x="270" y="110" width="90" height="30" rx="4" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1" />
-            <text x="315" y="130" text-anchor="middle" fill="#00ffc8" font-size="9" font-family="Tajawal">
-             اللوحة الأم
-            </text>
-           </g>
-          </svg>
-         </div><!-- AR Info Panel -->
-         <div id="arInfoPanel" class="mt-4 hidden">
-          <div class="glow-card p-4">
-           <div class="flex items-center justify-between mb-2">
-            <h4 id="arInfoTitle" class="font-bold" style="color:#00ffc8;"></h4><button onclick="hideARInfo()" class="text-xs" style="color:#889;cursor:pointer;">✕ إغلاق</button>
+         <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+           <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(255, 107, 53, 0.15);color:#FF6B35;">
+            📥 أجهزة الإدخال
            </div>
-           <p id="arInfoDesc" class="text-sm" style="color:#ccd;line-height:1.8;"></p>
-           <div id="arInfoExtra" class="mt-2 text-xs" style="color:#889;"></div>
+           <div id="gameInput" class="min-h-40 p-3 rounded-lg" style="background:rgba(255, 107, 53, 0.05);border:2px dashed rgba(255, 107, 53, 0.3);"></div>
+          </div>
+          <div>
+           <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(0, 78, 137, 0.15);color:#004E89;">
+            📤 أجهزة الإخراج
+           </div>
+           <div id="gameOutput" class="min-h-40 p-3 rounded-lg" style="background:rgba(0, 78, 137, 0.05);border:2px dashed rgba(0, 78, 137, 0.3);"></div>
           </div>
          </div>
-        </div>
-        <div class="glow-card p-4 fade-in fade-in-d2">
-         <div class="text-xs" style="color:#556;">
-          📱 هذا نموذج محاكاة للواقع المعزز يتيح لك استكشاف مكونات الحاسوب بشكل تفاعلي. في التطبيق الفعلي، يمكن استخدام تطبيقات مثل ZapWorks أو Adobe Aero لإنشاء تجربة واقع معزز كاملة.
+         <div class="mb-4">
+          <div class="text-xs font-bold px-3 py-2 mb-2" style="color:#667eea;">
+           🎯 اسحب الأجهزة إلى الفئات الصحيحة
+          </div>
+          <div id="gamePool" class="flex flex-wrap gap-2 p-3 rounded-lg" style="background:rgba(37, 99, 235, 0.05);border:1px solid rgba(37, 99, 235, 0.2);min-height:80px;"></div>
          </div>
+         <div id="gameFeedback" class="mt-3 text-sm text-center hidden"></div>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(9)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(11)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(6)">⟵ السابق</button> <button class="nav-btn" id="gameNextBtn" onclick="goToPage(8)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
         </div>
        </div>
       </div>
-     </div><!-- PAGE 11: AI Assistant -->
-     <div class="page bg-grid" data-page="11">
-      <div class="flex-1 p-6 md:p-10 overflow-y-auto">
-       <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">🤖 المساعد الذكي</h2>
-        <p class="text-sm mb-4 fade-in" style="color:#889;">اسأل المساعد الذكي أي سؤال عن أجزاء الحاسوب!</p>
-        <div class="glow-card p-4 mb-4 fade-in fade-in-d1" style="height:350px;display:flex;flex-direction:column;">
-         <div id="chatMessages" class="flex-1 overflow-y-auto space-y-3 mb-3 p-2">
-          <div class="chat-bubble" style="color:#ccd;">
-           مرحبًا! 👋 أنا المساعد الذكي. اسألني أي سؤال عن أجزاء الحاسوب وسأجيبك فورًا!
+     </div><!-- PAGE 8: Chat -->
+     <div class="page bg-grid" data-page="8">
+      <div class="flex-1 p-6 md:p-10 overflow-y-auto flex flex-col">
+       <div class="max-w-2xl mx-auto w-full flex flex-col h-full">
+        <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🤖 المساعد الذكي</h2>
+        <div id="chatContainer" class="flex-1 overflow-y-auto mb-4 p-4 rounded-lg" style="background:rgba(37,99,235,0.03);border:2px solid rgba(37,99,235,0.1);min-height:300px;display:flex;flex-direction:column;gap:3;">
+         <div class="chat-bubble fade-in">
+          <div style="font-weight:600;margin-bottom:4px;color:#00ffc8;">
+           🤖 المساعد الذكي
+          </div>
+          <div>
+           مرحبًا! 👋 أنا هنا لمساعدتك. يمكنك طرح أي سؤال حول المحتوى!
           </div>
          </div>
-         <div class="flex gap-2"><input id="chatInput" type="text" placeholder="اكتب سؤالك هنا..." class="flex-1 px-4 py-2 rounded-full text-sm" style="background:rgba(0,255,200,0.05);border:1px solid rgba(0,255,200,0.2);color:#e0e0e0;outline:none;font-family:'Tajawal';" onkeydown="if(event.key==='Enter')sendChat()"> <button onclick="sendChat()" class="w-10 h-10 rounded-full flex items-center justify-center" style="background:#00ffc8;color:#0a0f1a;cursor:pointer;border:none;"> <i data-lucide="send" style="width:16px;height:16px;"></i> </button>
-         </div>
         </div>
-        <div class="glow-card p-4 fade-in fade-in-d2">
-         <div class="text-xs mb-2" style="color:#00ffc8;">
-          💡 أسئلة مقترحة:
-         </div>
-         <div class="flex flex-wrap gap-2"><button onclick="askSuggested('ما هو المعالج؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما هو المعالج؟</button> <button onclick="askSuggested('ما الفرق بين RAM و ROM؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما الفرق بين RAM و ROM؟</button> <button onclick="askSuggested('ما هي وحدات الإدخال؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما هي وحدات الإدخال؟</button>
-         </div>
+        <div class="flex gap-2"><input id="chatInput" type="text" placeholder="اكتب سؤالك هنا..." class="flex-1 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.9);border:2px solid #E0E7FF;font-family:'Tajawal',sans-serif;color:#333;"> <button onclick="sendChatMessage()" class="nav-btn" style="padding:8px 16px;font-size:13px;">إرسال</button>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(10)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(12)">التالي ⟶</button>
+        <div class="flex justify-between mt-6"><button class="nav-btn" onclick="goToPage(7)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(9)">التالي ⟶</button>
         </div>
        </div>
       </div>
-     </div><!-- PAGE 12: Conclusion -->
-     <div class="page bg-grid" data-page="12">
+     </div><!-- PAGE 9: Completion Summary -->
+     <div class="page bg-grid" data-page="9">
       <div class="flex-1 flex items-center justify-center p-6">
        <div class="text-center max-w-lg">
         <div class="text-5xl mb-4 float-anim">
@@ -835,42 +540,1720 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
         </div>
         <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🎉 مبارك! أتممت الرحلة</h2>
         <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">تهانينا! لقد أكملت رحلتك في عالم أجزاء الحاسوب. تعرفت على وحدات الإدخال والإخراج والمعالجة والتخزين، وتفاعلت مع ألعاب تعليمية ونشاط واقع معزز ومساعد ذكي.</p>
-         <div class="text-center">
+         <p class="text-sm leading-7 mb-4" style="color:#ccd;">تهانينا! لقد أكملت رحلتك في عالم أجزاء الحاسوب بنجاح!</p>
+         <div class="text-center mb-4">
           <div class="text-sm mb-2" style="color:#00ffc8;">
            مجموع نقاطك النهائية
           </div>
-          <div id="finalScore" class="text-4xl font-black neon-text">
+          <div id="finalScore" class="text-5xl font-black neon-text">
            0
           </div>
           <div class="text-xs mt-1" style="color:#889;">
-           نقطة
+           نقطة من أصل 200
           </div>
          </div>
+         <div id="performanceRating" class="text-center p-3 rounded-lg" style="background:rgba(0,255,200,0.1);border:1px solid rgba(0,255,200,0.2);"></div>
         </div>
-        <div class="glow-card p-5 mb-6 fade-in fade-in-d2">
-         <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">📝 ملخص ما تعلمته</h3>
-         <div class="grid grid-cols-2 gap-2 text-xs" style="color:#aabbcc;">
-          <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
-           ✅ وحدات الإدخال
-          </div>
-          <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
-           ✅ وحدات الإخراج
-          </div>
-          <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
-           ✅ وحدة المعالجة
-          </div>
-          <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
-           ✅ وحدات التخزين
-          </div>
-         </div>
-        </div><button class="nav-btn fade-in fade-in-d3 pulse-glow" onclick="goToPage(0)"> 🔄 إعادة الرحلة من البداية </button>
+        <div class="flex gap-3 flex-wrap justify-center"><button class="nav-btn fade-in fade-in-d3" onclick="goToPage(0)">🔄 إعادة الرحلة</button>
+        </div>
        </div>
       </div>
      </div>
-    </div><!-- end pagesContainer -->
+    </div>
    </div>
   </div>
+  <script>
+const defaultConfig = {
+  student_name: 'أحمد محمد العلي',
+  student_id: '44312587',
+  lesson_title: 'رحلة إلى أجزاء الحاسوب'
+};
+
+let currentPage = 0;
+let totalScore = 0;
+const totalPages = 10;
+let draggedItem = null;
+let matchedItems = new Set();
+let gameScore = 0;
+
+const pageNames = ['صفحة الغلاف', 'دليل الاستخدام', 'المقدمة', 'أهداف الدرس', 
+                   'وحدات الإدخال', 'وحدات الإخراج', 'المعالجة والتخزين', 'لعبة المطابقة', 'المساعد الذكي', 'الشهادة'];
+
+function goToPage(n) {
+  if (n < 0 || n >= totalPages) return;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.querySelector(`[data-page="${n}"]`);
+  if (target) {
+    target.classList.add('active');
+    target.scrollTop = 0;
+  }
+  currentPage = n;
+  updateProgress();
+  updateSidebar();
+  if (window.innerWidth < 768) {
+    document.getElementById('sidebar').classList.add('hidden');
+  }
+}
+
+function updateProgress() {
+  const pct = Math.round((currentPage / (totalPages - 1)) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `${currentPage + 1} / ${totalPages}`;
+}
+
+function updateSidebar() {
+  document.querySelectorAll('.sidebar-item').forEach((item, i) => {
+    item.classList.toggle('active', i === currentPage);
+  });
+}
+
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('hidden');
+}
+
+function updateScore(pts) {
+  totalScore += pts;
+  document.getElementById('scoreDisplay').textContent = `⭐ ${totalScore} نقطة`;
+  document.getElementById('finalScore').textContent = totalScore;
+  updatePerformanceRating();
+}
+
+function buildSidebar() {
+  const nav = document.getElementById('sidebarNav');
+  nav.innerHTML = '';
+  pageNames.forEach((name, i) => {
+    const el = document.createElement('div');
+    el.className = 'sidebar-item' + (i === 0 ? ' active' : '');
+    el.textContent = name;
+    el.onclick = () => goToPage(i);
+    nav.appendChild(el);
+  });
+}
+
+function buildObjectives() {
+  const objectives = [
+    'أن يُحدد المتعلم المكونات المادية الرئيسية للحاسوب',
+    'أن يُميّز بين وحدات الإدخال ووحدات الإخراج',
+    'أن يُوضّح وظيفة وحدة المعالجة المركزية (CPU)',
+    'أن يُقارن بين أنواع وحدات التخزين المختلفة'
+  ];
+  const container = document.getElementById('objectivesList');
+  container.innerHTML = '';
+  objectives.forEach((obj, i) => {
+    const el = document.createElement('div');
+    el.className = 'flex items-start gap-3 p-3 rounded-lg';
+    el.style.background = 'rgba(0,255,200,0.04)';
+    el.innerHTML = `<div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">${i + 1}</div><span class="text-sm" style="color:#ccd;">${obj}</span>`;
+    container.appendChild(el);
+  });
+}
+
+function buildQuiz(containerId, feedbackId, question) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+  question.options.forEach((opt, i) => {
+    const el = document.createElement('div');
+    el.className = 'quiz-opt text-sm';
+    el.style.color = '#ccd';
+    el.textContent = opt;
+    el.onclick = () => answerQuiz(containerId, feedbackId, i, question.correct);
+    container.appendChild(el);
+  });
+}
+
+function answerQuiz(containerId, feedbackId, selected, correct) {
+  const container = document.getElementById(containerId);
+  const feedback = document.getElementById(feedbackId);
+  const opts = container.querySelectorAll('.quiz-opt');
+  
+  if (container.dataset.answered === 'true') return;
+
+  feedback.classList.remove('hidden');
+  if (selected === correct) {
+    opts[selected].classList.add('correct');
+    feedback.innerHTML = '<span style="color:#059669;font-weight:600;">✅ إجابة صحيحة! +10 نقاط</span>';
+    updateScore(10);
+    container.dataset.answered = 'true';
+    opts.forEach(opt => opt.style.pointerEvents = 'none');
+    
+    const btnId = containerId === 'quiz1' ? 'nextBtn4' : 'nextBtn5';
+    const btn = document.getElementById(btnId);
+    if (btn) {
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      btn.style.cursor = 'pointer';
+    }
+  } else {
+    opts[selected].classList.add('wrong');
+    feedback.innerHTML = '<span style="color:#DC2626;font-weight:600;">❌ ليست الإجابة الصحيحة. حاول مرة أخرى!</span>';
+    setTimeout(() => {
+      opts[selected].classList.remove('wrong');
+      feedback.classList.add('hidden');
+    }, 1800);
+  }
+}
+
+function buildGame() {
+  const pool = document.getElementById('gamePool');
+  const input = document.getElementById('gameInput');
+  const output = document.getElementById('gameOutput');
+  
+  pool.innerHTML = '';
+  input.innerHTML = '';
+  output.innerHTML = '';
+  matchedItems.clear();
+  gameScore = 0;
+  draggedItem = null;
+  
+  document.getElementById('gameScore').textContent = '0';
+  document.getElementById('gameMatched').textContent = '0 / 6';
+  document.getElementById('gameFeedback').classList.add('hidden');
+
+  const items = [
+    { text: '⌨️ لوحة المفاتيح', type: 'input' },
+    { text: '🖱️ الفأرة', type: 'input' },
+    { text: '🎤 الميكروفون', type: 'input' },
+    { text: '🖥️ الشاشة', type: 'output' },
+    { text: '🖨️ الطابعة', type: 'output' },
+    { text: '🔊 السماعة', type: 'output' }
+  ];
+
+  const shuffled = [...items].sort(() => Math.random() - 0.5);
+
+  input.addEventListener('dragover', e => { e.preventDefault(); input.style.borderColor = '#FF6B35'; });
+  input.addEventListener('dragleave', () => { input.style.borderColor = 'rgba(255, 107, 53, 0.3)'; });
+  input.addEventListener('drop', e => {
+    e.preventDefault();
+    if (draggedItem && draggedItem.dataset.type === 'input') dropItem(draggedItem, 'input');
+    input.style.borderColor = 'rgba(255, 107, 53, 0.3)';
+  });
+
+  output.addEventListener('dragover', e => { e.preventDefault(); output.style.borderColor = '#004E89'; });
+  output.addEventListener('dragleave', () => { output.style.borderColor = 'rgba(0, 78, 137, 0.3)'; });
+  output.addEventListener('drop', e => {
+    e.preventDefault();
+    if (draggedItem && draggedItem.dataset.type === 'output') dropItem(draggedItem, 'output');
+    output.style.borderColor = 'rgba(0, 78, 137, 0.3)';
+  });
+
+  shuffled.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'game-card';
+    el.textContent = item.text;
+    el.draggable = true;
+    el.dataset.type = item.type;
+    el.dataset.text = item.text;
+    
+    el.addEventListener('dragstart', () => { draggedItem = el; el.style.opacity = '0.6'; });
+    el.addEventListener('dragend', () => { el.style.opacity = '1'; });
+    
+    pool.appendChild(el);
+  });
+}
+
+function dropItem(el, zone) {
+  if (el.dataset.type === zone) {
+    el.style.opacity = '0.6';
+    el.draggable = false;
+    el.style.borderColor = '#1FD191';
+    el.style.background = 'rgba(31, 209, 145, 0.2)';
+    el.style.cursor = 'default';
+    
+    const target = zone === 'input' ? document.getElementById('gameInput') : document.getElementById('gameOutput');
+    target.appendChild(el);
+    
+    matchedItems.add(el.dataset.text);
+    gameScore += 15;
+    
+    document.getElementById('gameScore').textContent = gameScore;
+    document.getElementById('gameMatched').textContent = matchedItems.size + ' / 6';
+    updateScore(15);
+    
+    if (matchedItems.size === 6) {
+      setTimeout(() => {
+        const fb = document.getElementById('gameFeedback');
+        fb.classList.remove('hidden');
+        fb.innerHTML = '<div style="color:#1FD191;font-size:16px;font-weight:700;">🎉 ممتاز! صنّفت جميع الأجهزة بشكل صحيح!</div>';
+        const btn = document.getElementById('gameNextBtn');
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.style.cursor = 'pointer';
+      }, 300);
+    }
+  } else {
+    const fb = document.getElementById('gameFeedback');
+    fb.classList.remove('hidden');
+    fb.innerHTML = '<div style="color:#FF006E;font-weight:600;">❌ في المكان الخاطئ! حاول مرة أخرى!</div>';
+    setTimeout(() => fb.classList.add('hidden'), 1500);
+  }
+}
+
+function resetGame() {
+  buildGame();
+}
+
+const aiResponses = {
+  'إدخال': 'وحدات الإدخال تستقبل البيانات من المستخدم، مثل: لوحة المفاتيح، الفأرة، الميكروفون. ⌨️',
+  'إخراج': 'وحدات الإخراج تعرض نتائج المعالجة، مثل: الشاشة، الطابعة، السماعات. 📺',
+  'معالجة': 'وحدة المعالجة المركزية (CPU) هي دماغ الحاسوب تنفذ جميع التعليمات. 🧠',
+  'تخزين': 'وحدات التخزين تحفظ البيانات: RAM (سريعة)، HDD/SSD (دائم). 💾',
+  'default': 'هذا موضوع جيد! يمكنك العودة إلى المحتوى للمزيد من التفاصيل. 😊'
+};
+
+function sendChatMessage() {
+  const input = document.getElementById('chatInput');
+  const message = input.value.trim();
+  
+  if (!message) return;
+  
+  const container = document.getElementById('chatContainer');
+  const userMsg = document.createElement('div');
+  userMsg.className = 'chat-bubble user';
+  userMsg.textContent = message;
+  container.appendChild(userMsg);
+  
+  let response = aiResponses.default;
+  const lower = message.toLowerCase();
+  Object.keys(aiResponses).forEach(key => {
+    if (key !== 'default' && lower.includes(key)) response = aiResponses[key];
+  });
+  
+  setTimeout(() => {
+    const aiMsg = document.createElement('div');
+    aiMsg.className = 'chat-bubble';
+    aiMsg.innerHTML = `<div style="font-weight:600;margin-bottom:4px;color:#00ffc8;">🤖</div><div>${response}</div>`;
+    container.appendChild(aiMsg);
+    container.scrollTop = container.scrollHeight;
+    updateScore(5);
+  }, 500);
+  
+  input.value = '';
+  container.scrollTop = container.scrollHeight;
+}
+
+function updatePerformanceRating() {
+  const rating = document.getElementById('performanceRating');
+  if (!rating) return;
+  
+  const pct = (totalScore / 200) * 100;
+  let text = '';
+  if (pct >= 90) text = '🌟 أداء ممتاز جداً! أنت نجم!';
+  else if (pct >= 80) text = '⭐ أداء ممتاز! مبروك!';
+  else if (pct >= 70) text = '👍 أداء جيد جداً!';
+  else if (pct >= 60) text = '📚 أداء جيد! استمر!';
+  else text = '💪 استمر في المحاولة!';
+  
+  rating.innerHTML = `<div style="color:#00ffc8;font-weight:700;font-size:14px;">${text}</div>`;
+}
+
+function applyConfig(config) {
+  const name = config.student_name || defaultConfig.student_name;
+  const id = config.student_id || defaultConfig.student_id;
+  const title = config.lesson_title || defaultConfig.lesson_title;
+  
+  document.getElementById('coverName').textContent = name;
+  document.getElementById('coverId').textContent = id;
+  document.getElementById('coverTitle').textContent = title;
+  document.getElementById('topTitle').textContent = title;
+}
+
+window.elementSdk.init({
+  defaultConfig,
+  onConfigChange: async (config) => applyConfig(config),
+  mapToCapabilities: (config) => ({
+    recolorables: [],
+    borderables: [],
+    fontEditable: undefined,
+    fontSizeable: undefined
+  }),
+  mapToEditPanelValues: (config) => new Map([
+    ['student_name', config.student_name || defaultConfig.student_name],
+    ['student_id', config.student_id || defaultConfig.student_id],
+    ['lesson_title', config.lesson_title || defaultConfig.lesson_title]
+  ])
+});
+
+buildSidebar();
+buildObjectives();
+buildQuiz('quiz1', 'quiz1Feedback', { options: ['الشاشة', 'لوحة المفاتيح', 'الطابعة', 'مكبر الصوت'], correct: 1 });
+buildQuiz('quiz2', 'quiz2Feedback', { options: ['إدخال البيانات', 'عرض نتائج المعالجة', 'تخزين البيانات', 'الاتصال بالإنترنت'], correct: 1 });
+buildGame();
+
+document.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') sendChatMessage();
+});
+
+lucide.createIcons();
+  </script>
+  <aside id="sidebar" class="sidebar w-56 flex-shrink-0 flex flex-col p-4 overflow-y-auto hidden md:flex" style="height:100%;">
+   <div class="mb-4">
+    <div class="text-xs font-bold mb-1" style="color: #667eea;">
+     📍 الموقع الحالي
+    </div>
+    <div class="progress-track">
+     <div id="progressFill" class="progress-fill" style="width:0%"></div>
+    </div>
+    <div id="progressText" class="text-xs mt-1" style="color:#667eea;font-weight:600;">
+     0 / 12
+    </div>
+   </div>
+   <nav id="sidebarNav" class="flex flex-col gap-1"></nav>
+  </aside><!-- Main Content -->
+  <div class="flex-1 flex flex-col overflow-hidden" style="height:100%;"><!-- Top Bar -->
+   <header class="flex items-center justify-between px-4 py-2 flex-shrink-0" style="background:rgba(255,255,255,0.98);border-bottom:2px solid #E0E7FF;box-shadow:0 2px 8px rgba(99,102,241,0.06);"><button id="menuToggle" class="md:hidden p-2" style="color:#6366F1;" onclick="toggleSidebar()"> <i data-lucide="menu" style="width:22px;height:22px;"></i> </button>
+    <div class="flex items-center gap-2"><span style="font-size:20px;">🖥️</span> <span id="topTitle" class="text-sm font-bold" style="color:#4F46E5;font-family:'Readex Pro',sans-serif;">رحلة إلى أجزاء الحاسوب</span>
+    </div>
+    <div class="flex items-center gap-2"><span id="scoreDisplay" class="text-xs px-3 py-1 rounded-full" style="background:rgba(99,102,241,0.08);color:#4F46E5;font-weight:600;border:1px solid #E0E7FF;">⭐ 0 نقطة</span>
+    </div>
+   </header><!-- Pages Container -->
+   <div id="pagesContainer" class="flex-1 overflow-hidden" style="height:100%;display:flex;"><!-- PAGE 0: Cover -->
+    <div class="page bg-grid active" data-page="0">
+     <div class="flex-1 flex items-center justify-center p-6">
+      <div class="text-center max-w-lg">
+       <div class="float-anim mb-6">
+        <svg width="140" height="140" viewbox="0 0 140 140" class="mx-auto"><rect x="15" y="20" width="110" height="80" rx="8" fill="none" stroke="#2563eb" stroke-width="2" /> <rect x="25" y="30" width="90" height="55" rx="4" fill="rgba(37,99,235,0.08)" /> <rect x="50" y="105" width="40" height="6" rx="3" fill="#2563eb" opacity="0.5" /> <rect x="35" y="113" width="70" height="4" rx="2" fill="#2563eb" opacity="0.3" /> <!-- Screen content --> <circle cx="70" cy="52" r="12" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <path d="M65 52 L68 56 L76 48" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
+        </svg>
+       </div>
+       <div class="fade-in">
+        <div class="text-xs tracking-widest mb-3" style="color:#00ffc8;opacity:0.7;">
+         🎓 رحلة تعليمية تفاعلية
+        </div>
+        <h1 id="coverTitle" class="text-3xl md:text-4xl font-black mb-4 neon-text" style="font-family:'Readex Pro',sans-serif;line-height:1.4;">رحلة إلى أجزاء الحاسوب</h1>
+        <div class="glow-card p-4 mb-6 inline-block">
+         <div class="flex items-center gap-6 text-sm" style="color:#475569;">
+          <div>
+           <div class="text-xs" style="color:#2563eb;">
+            اسم الطالب
+           </div>
+           <div id="coverName" class="font-bold mt-1">
+            أحمد محمد العلي
+           </div>
+          </div>
+          <div style="width:1px;height:30px;background:rgba(37,99,235,0.2);"></div>
+          <div>
+           <div class="text-xs" style="color:#2563eb;">
+            الرقم الجامعي
+           </div>
+           <div id="coverId" class="font-bold mt-1">
+            44312587
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="mb-6"><!-- University Logo -->
+         <svg width="60" height="60" viewbox="0 0 60 60" class="mx-auto mb-2"><circle cx="30" cy="30" r="28" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.4" /> <path d="M30 12 L42 22 L42 40 L18 40 L18 22 Z" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <rect x="27" y="30" width="6" height="10" fill="rgba(37,99,235,0.2)" /> <path d="M22 22 L30 15 L38 22" fill="none" stroke="#2563eb" stroke-width="1.5" />
+         </svg>
+         <div class="text-xs" style="color:#64748b;">
+          الجامعة العربية المفتوحة
+         </div>
+        </div>
+       </div><button class="nav-btn fade-in fade-in-d3 pulse-glow" onclick="goToPage(1)"> 🚀 ابدأ الرحلة </button>
+      </div>
+     </div>
+    </div><!-- PAGE 1: User Guide -->
+    <div class="page bg-grid" data-page="1">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">📖 دليل الاستخدام</h2>
+       <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+        <h3 class="font-bold mb-3" style="color:#2563eb;">كيف تستخدم هذا الدرس؟</h3>
+        <ul class="space-y-3 text-sm" style="color:#475569;line-height:1.8;">
+         <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">①</span> تنقل بين الصفحات باستخدام أزرار التالي والسابق أو القائمة الجانبية</li>
+         <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">②</span> اقرأ المحتوى بتمعن وشاهد الوسائط التفاعلية</li>
+         <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">③</span> أجب على الأنشطة والألعاب التعليمية لتعزيز فهمك</li>
+         <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">④</span> جرّب نشاط الواقع المعزز للاستكشاف التفاعلي</li>
+         <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">⑤</span> استخدم المساعد الذكي لطرح أسئلتك</li>
+         <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">⑥</span> تابع تقدمك عبر شريط التقدم في القائمة الجانبية</li>
+        </ul>
+       </div>
+       <div class="glow-card p-6 fade-in fade-in-d2">
+        <h3 class="font-bold mb-3" style="color:#2563eb;">البرامج والأدوات المستخدمة</h3>
+        <div class="grid grid-cols-2 gap-3 text-sm" style="color:#475569;line-height:1.8;">
+         <div class="flex items-center gap-2">
+          <span>🌐</span> HTML5 / CSS3 / JavaScript
+         </div>
+         <div class="flex items-center gap-2">
+          <span>🎨</span> Tailwind CSS
+         </div>
+         <div class="flex items-center gap-2">
+          <span>🤖</span> مساعد الذكاء الاصطناعي
+         </div>
+         <div class="flex items-center gap-2">
+          <span>🎮</span> ألعاب تعليمية تفاعلية
+         </div>
+         <div class="flex items-center gap-2">
+          <span>📱</span> تقنية الواقع المعزز
+         </div>
+         <div class="flex items-center gap-2">
+          <span>🖼️</span> رسومات SVG تفاعلية
+         </div>
+        </div>
+       </div>
+       <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(0)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(2)">التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 10: Conclusion Summary --> <!-- PAGE 3: Video / Presenter -->
+    <div class="page bg-grid" data-page="3">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎬 تعريف بالدرس</h2>
+       <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+        <div class="flex items-center gap-4 mb-4">
+         <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#00ffc8,#00b894);"><span style="font-size:28px;">👨‍🏫</span>
+         </div>
+         <div>
+          <div class="font-bold" style="color:#e0e0e0;">
+           المعلم الافتراضي
+          </div>
+          <div class="text-xs" style="color:#00ffc8;">
+           مُنشأ بالذكاء الاصطناعي
+          </div>
+         </div>
+        </div><!-- Simulated AI video presentation -->
+        <div id="videoPlayer" class="rounded-xl overflow-hidden mb-4" style="background:#000;aspect-ratio:16/9;position:relative;cursor:pointer;" onclick="toggleVideo()">
+         <div id="videoContent" class="w-full h-full flex items-center justify-center relative">
+          <div id="playBtn" class="text-center">
+           <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 pulse-glow" style="background:rgba(0,255,200,0.2);border:2px solid #00ffc8;"><span style="font-size:24px;color:#00ffc8;">▶</span>
+           </div>
+           <div class="text-sm" style="color:#aaa;">
+            اضغط للمشاهدة
+           </div>
+          </div>
+          <div id="videoPlaying" class="absolute inset-0 hidden flex-col items-center justify-center p-6">
+           <div id="presenterAvatar" class="w-20 h-20 rounded-full mb-4 flex items-center justify-center" style="background:linear-gradient(135deg,#00ffc8,#00b894);font-size:36px;">
+            👨‍🏫
+           </div>
+           <div id="subtitleText" class="text-center text-sm" style="color:#e0e0e0;max-width:400px;line-height:1.8;"></div>
+           <div id="videoProgress" class="w-full max-w-xs mt-4 progress-track">
+            <div id="videoProgressFill" class="progress-fill" style="width:0%"></div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="text-xs text-center" style="color:#556;">
+         🤖 تم إنشاء هذا العرض التقديمي باستخدام تقنيات الذكاء الاصطناعي
+        </div>
+       </div>
+       <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(4)">التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 4: Objectives -->
+    <div class="page bg-grid" data-page="4">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎯 أهداف الدرس</h2>
+       <div class="glow-card p-5 mb-4 fade-in fade-in-d1">
+        <div class="text-xs mb-3" style="color:#00ffc8;">
+         بنهاية هذا الدرس، يُتوقع من المتعلم أن يكون قادرًا على:
+        </div>
+        <div class="space-y-3" id="objectivesList">
+        </div>
+       </div>
+       <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(3)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(5)">التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 5: Content Unit 1 - Input Devices -->
+    <div class="page bg-grid" data-page="5">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <div class="text-xs mb-2" style="color:#00ffc8;">
+        📘 الوحدة الأولى
+       </div>
+       <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدات الإدخال</h2>
+       <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+        <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإدخال هي الأجهزة التي تُستخدم لإدخال البيانات والمعلومات إلى الحاسوب. تقوم بتحويل البيانات من شكلها الخارجي إلى شكل رقمي يفهمه الحاسوب.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           ⌨️
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           لوحة المفاتيح
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           إدخال النصوص والأوامر
+          </div>
+         </div>
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           🖱️
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           الفأرة
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           التحكم والتوجيه
+          </div>
+         </div>
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           🎤
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           الميكروفون
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           إدخال الصوت
+          </div>
+         </div>
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           📷
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           الكاميرا
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           إدخال الصور والفيديو
+          </div>
+         </div>
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           📟
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           الماسح الضوئي
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           تحويل الورق لرقمي
+          </div>
+         </div>
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           🕹️
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           عصا التحكم
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           الألعاب والمحاكاة
+          </div>
+         </div>
+        </div>
+       </div><!-- Quick Quiz -->
+       <div class="glow-card p-5 fade-in fade-in-d2">
+        <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">💡 اختبر فهمك</h3>
+        <p class="text-sm mb-3" style="color:#ccd;">أي من التالي يُعد من وحدات الإدخال؟</p>
+        <div class="space-y-2" id="quiz1"></div>
+        <div id="quiz1Feedback" class="mt-3 text-sm hidden"></div>
+       </div>
+       <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(4)">⟵ السابق</button> <button class="nav-btn" id="nextBtn5" onclick="goToPage(6)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 6: Content Unit 2 - Output Devices -->
+    <div class="page bg-grid" data-page="6">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <div class="text-xs mb-2" style="color:#00ffc8;">
+        📘 الوحدة الثانية
+       </div>
+       <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدات الإخراج</h2>
+       <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+        <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإخراج هي الأجهزة المسؤولة عن عرض وإظهار نتائج معالجة البيانات للمستخدم. تحوّل البيانات الرقمية إلى أشكال يمكن للإنسان فهمها.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           🖥️
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           الشاشة
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           عرض البيانات مرئيًا
+          </div>
+         </div>
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           🖨️
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           الطابعة
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           طباعة على الورق
+          </div>
+         </div>
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           🔊
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           مكبر الصوت
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           إخراج الصوت
+          </div>
+         </div>
+         <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-3xl mb-2">
+           📽️
+          </div>
+          <div class="text-xs font-bold" style="color:#00ffc8;">
+           جهاز العرض
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           عرض على أسطح كبيرة
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="glow-card p-5 fade-in fade-in-d2">
+        <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">💡 اختبر فهمك</h3>
+        <p class="text-sm mb-3" style="color:#ccd;">ما وظيفة وحدات الإخراج؟</p>
+        <div class="space-y-2" id="quiz2"></div>
+        <div id="quiz2Feedback" class="mt-3 text-sm hidden"></div>
+       </div>
+       <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(5)">⟵ السابق</button> <button class="nav-btn" id="nextBtn6" onclick="goToPage(7)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 7: Content Unit 3 - Processing & Storage -->
+    <div class="page bg-grid" data-page="7">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <div class="text-xs mb-2" style="color:#00ffc8;">
+        📘 الوحدة الثالثة
+       </div>
+       <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدة المعالجة والتخزين</h2>
+       <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+        <h3 class="font-bold mb-2" style="color:#00ffc8;">🧠 وحدة المعالجة المركزية (CPU)</h3>
+        <p class="text-sm leading-7 mb-4" style="color:#ccd;">هي "دماغ" الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات. تتكون من وحدة الحساب والمنطق (ALU) ووحدة التحكم (CU).</p>
+        <div class="flex items-center justify-center mb-4">
+         <svg width="200" height="120" viewbox="0 0 200 120"><rect x="40" y="20" width="120" height="80" rx="8" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1.5" /> <text x="100" y="45" text-anchor="middle" fill="#00ffc8" font-size="10" font-weight="bold">
+           CPU
+          </text> <rect x="52" y="55" width="44" height="30" rx="4" fill="rgba(0,255,200,0.1)" stroke="#00ffc8" stroke-width="1" opacity="0.6" /> <text x="74" y="74" text-anchor="middle" fill="#aaa" font-size="8">
+           ALU
+          </text> <rect x="104" y="55" width="44" height="30" rx="4" fill="rgba(0,255,200,0.1)" stroke="#00ffc8" stroke-width="1" opacity="0.6" /> <text x="126" y="74" text-anchor="middle" fill="#aaa" font-size="8">
+           CU
+          </text> <!-- Pins --> <line x1="60" y1="100" x2="60" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="80" y1="100" x2="80" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="100" y1="100" x2="100" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="120" y1="100" x2="120" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="140" y1="100" x2="140" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" />
+         </svg>
+        </div>
+       </div>
+       <div class="glow-card p-6 mb-4 fade-in fade-in-d2">
+        <h3 class="font-bold mb-2" style="color:#00ffc8;">💾 وحدات التخزين</h3>
+        <div class="grid grid-cols-2 gap-3 text-sm" style="color:#ccd;">
+         <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="font-bold" style="color:#00ffc8;">
+           RAM - الذاكرة العشوائية
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           تخزين مؤقت، سريعة، تُمسح عند إيقاف التشغيل
+          </div>
+         </div>
+         <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="font-bold" style="color:#00ffc8;">
+           ROM - ذاكرة القراءة فقط
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           تخزين دائم، تحتوي تعليمات أساسية
+          </div>
+         </div>
+         <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="font-bold" style="color:#00ffc8;">
+           القرص الصلب HDD
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           تخزين كبير دائم، أقراص ممغنطة
+          </div>
+         </div>
+         <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="font-bold" style="color:#00ffc8;">
+           SSD - قرص الحالة الصلبة
+          </div>
+          <div class="text-xs mt-1" style="color:#889;">
+           سريع جدًا، بدون أجزاء متحركة
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(6)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(8)">التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 8: Educational Game - Matching -->
+    <div class="page bg-grid" data-page="8">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">🎮 لعبة المطابقة بالسحب والإفلات</h2>
+       <p class="text-sm mb-4 fade-in" style="color:#889;">اسحب أجهزة الإدخال والإخراج إلى الصناديق الصحيحة!</p>
+       <div class="glow-card p-5 mb-4">
+        <div class="flex items-center justify-between mb-4">
+         <div><span class="text-sm" style="color:#00ffc8;">النقاط: </span> <span id="gameScore2" class="text-sm font-bold" style="color:#e0e0e0;">0</span>
+         </div>
+         <div><span class="text-sm" style="color:#00ffc8;">المطابقات: </span> <span id="gameMatched" class="text-sm font-bold" style="color:#e0e0e0;">0 / 6</span>
+         </div><button class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.1);color:#00ffc8;border:1px solid rgba(0,255,200,0.2);cursor:pointer;" onclick="resetGameDragDrop()">🔄 إعادة</button>
+        </div><!-- Game Zone -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+         <!-- Input Devices - Left Side -->
+         <div>
+          <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(255, 107, 53, 0.15);color:#FF6B35;">
+           📥 أجهزة الإدخال
+          </div>
+          <div id="gameInput" class="min-h-40 p-3 rounded-lg" style="background:rgba(255, 107, 53, 0.05);border:2px dashed rgba(255, 107, 53, 0.3);">
+          </div>
+         </div><!-- Output Devices - Right Side -->
+         <div>
+          <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(0, 78, 137, 0.15);color:#004E89;">
+           📤 أجهزة الإخراج
+          </div>
+          <div id="gameOutput" class="min-h-40 p-3 rounded-lg" style="background:rgba(0, 78, 137, 0.05);border:2px dashed rgba(0, 78, 137, 0.3);">
+          </div>
+         </div>
+        </div><!-- Draggable Items Pool -->
+        <div class="mb-4">
+         <div class="text-xs font-bold px-3 py-2 mb-2" style="color:#667eea;">
+          🎯 اسحب الأجهزة إلى الفئات الصحيحة
+         </div>
+         <div id="gamePool" class="flex flex-wrap gap-2 p-3 rounded-lg" style="background:rgba(37, 99, 235, 0.05);border:1px solid rgba(37, 99, 235, 0.2);min-height:80px;">
+         </div>
+        </div>
+        <div id="gameFeedback2" class="mt-3 text-sm text-center hidden"></div>
+       </div>
+       <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(7)">⟵ السابق</button> <button class="nav-btn" id="gameNextBtn2" onclick="goToPage(9)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 9: AR Activity & Chat -->
+    <div class="page bg-grid" data-page="9">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">📱 نشاط الواقع المعزز</h2><!-- QR Code Section -->
+       <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
+        <h3 class="font-bold mb-4 text-center" style="color:#00ffc8;">📲 امسح رمز الاستجابة السريعة</h3>
+        <div class="flex flex-col items-center gap-6">
+         <!-- QR Code Display -->
+         <div class="p-4 rounded-lg" style="background:white;border:3px solid #00ffc8;">
+          <svg width="200" height="200" viewbox="0 0 200 200" style="margin:0 auto;">
+           <!-- QR Code Pattern --> <rect width="200" height="200" fill="white" /> <!-- Position markers (3 corners) --> <!-- Top-left --> <rect x="10" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="15" y="15" width="30" height="30" fill="#000" /> <rect x="20" y="20" width="20" height="20" fill="white" /> <rect x="25" y="25" width="10" height="10" fill="#000" /> <!-- Top-right --> <rect x="150" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="155" y="15" width="30" height="30" fill="#000" /> <rect x="160" y="20" width="20" height="20" fill="white" /> <rect x="165" y="25" width="10" height="10" fill="#000" /> <!-- Bottom-left --> <rect x="10" y="150" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="15" y="155" width="30" height="30" fill="#000" /> <rect x="20" y="160" width="20" height="20" fill="white" /> <rect x="25" y="165" width="10" height="10" fill="#000" /> <!-- Data area with pattern --> <rect x="60" y="60" width="80" height="80" fill="none" stroke="#00ffc8" stroke-width="1" opacity="0.3" /> <rect x="65" y="65" width="4" height="4" fill="#000" /> <rect x="75" y="70" width="4" height="4" fill="#000" /> <rect x="85" y="75" width="4" height="4" fill="#000" /> <rect x="70" y="85" width="4" height="4" fill="#000" /> <rect x="80" y="90" width="4" height="4" fill="#000" /> <rect x="90" y="85" width="4" height="4" fill="#000" /> <rect x="95" y="95" width="4" height="4" fill="#000" /> <rect x="105" y="100" width="4" height="4" fill="#000" /> <rect x="110" y="75" width="4" height="4" fill="#000" /> <rect x="120" y="80" width="4" height="4" fill="#000" /> <rect x="125" y="90" width="4" height="4" fill="#000" /> <rect x="115" y="100" width="4" height="4" fill="#000" /> <rect x="70" y="110" width="4" height="4" fill="#000" /> <rect x="85" y="115" width="4" height="4" fill="#000" /> <rect x="100" y="110" width="4" height="4" fill="#000" /> <rect x="120" y="120" width="4" height="4" fill="#000" /> <rect x="130" y="115" width="4" height="4" fill="#000" />
+          </svg>
+         </div><!-- Instructions -->
+         <div class="w-full">
+          <div class="text-xs font-bold mb-3 px-3 py-2 rounded-lg" style="background:rgba(0,255,200,0.1);color:#00ffc8;">
+           🔍 خطوات الاستخدام:
+          </div>
+          <div class="space-y-3 text-sm" style="color:#ccd;">
+           <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+             ①
+            </div>
+            <div>
+             <div class="font-bold" style="color:#00ffc8;">
+              فتح تطبيق قارئ الباركود
+             </div>
+             <div class="text-xs mt-1" style="color:#889;">
+              استخدم تطبيق Google Lens أو أي قارئ QR على هاتفك الذكي
+             </div>
+            </div>
+           </div>
+           <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+             ②
+            </div>
+            <div>
+             <div class="font-bold" style="color:#00ffc8;">
+              امسح رمز الاستجابة السريعة
+             </div>
+             <div class="text-xs mt-1" style="color:#889;">
+              وجّه كاميرا هاتفك نحو الرمز أعلاه واجعل الصورة واضحة
+             </div>
+            </div>
+           </div>
+           <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+             ③
+            </div>
+            <div>
+             <div class="font-bold" style="color:#00ffc8;">
+              استكشف الواقع المعزز
+             </div>
+             <div class="text-xs mt-1" style="color:#889;">
+              اضغط على الرابط الذي يظهر لك لمشاهدة مكونات الحاسوب بشكل تفاعلي
+             </div>
+            </div>
+           </div>
+           <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+             ④
+            </div>
+            <div>
+             <div class="font-bold" style="color:#00ffc8;">
+              تعلّم من الأنشطة التفاعلية
+             </div>
+             <div class="text-xs mt-1" style="color:#889;">
+              تفاعل مع العناصر واقرأ المعلومات المفصلة عن كل جزء
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div><!-- Info Box -->
+       <div class="glow-card p-4 fade-in fade-in-d2" style="background:rgba(0,255,200,0.03);border-color:rgba(0,255,200,0.2);">
+        <div class="flex items-start gap-3">
+         <span style="font-size:20px;">ℹ️</span>
+         <div class="text-xs" style="color:#ccd;">
+          <strong style="color:#00ffc8;">ملاحظة:</strong> هذه تجربة تعليمية تفاعلية تساعدك على فهم مكونات الحاسوب بشكل بصري وديناميكي. يمكنك استخدام أي قارئ رمز QR معروف على هاتفك الذكي.
+         </div>
+        </div>
+       </div>
+       <div class="flex justify-between mt-8">
+        <button class="nav-btn" onclick="goToPage(8)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(10)">التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 10: AI Assistant Chat -->
+    <div class="page bg-grid" data-page="10">
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto flex flex-col">
+      <div class="max-w-2xl mx-auto w-full flex flex-col h-full">
+       <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🤖 المساعد الذكي</h2><!-- Chat Area -->
+       <div id="chatContainer" class="flex-1 overflow-y-auto mb-4 p-4 rounded-lg" style="background:rgba(37,99,235,0.03);border:2px solid rgba(37,99,235,0.1);min-height:300px;display:flex;flex-direction:column;gap:3;">
+        <div class="chat-bubble fade-in">
+         <div style="font-weight:600;margin-bottom:4px;color:#00ffc8;">
+          🤖 المساعد الذكي
+         </div>
+         <div>
+          مرحبًا! 👋 أنا هنا لمساعدتك في فهم أجزاء الحاسوب. يمكنك طرح أي سؤال حول المحتوى!
+         </div>
+        </div>
+       </div><!-- Input Area -->
+       <div class="flex gap-2">
+        <input id="chatInput" type="text" placeholder="اكتب سؤالك هنا..." class="flex-1 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.9);border:2px solid #E0E7FF;font-family:'Tajawal',sans-serif;color:#333;"> <button onclick="sendChatMessage()" class="nav-btn" style="padding:8px 16px;font-size:13px;">إرسال</button>
+       </div>
+       <div class="flex justify-between mt-6"><button class="nav-btn" onclick="goToPage(9)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(11)">التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div><!-- PAGE 11: Certificate -->
+    <div class="page bg-grid" data-page="11">
+     <div class="flex-1 flex items-center justify-center p-6">
+      <div class="text-center max-w-lg">
+       <div class="text-5xl mb-4 float-anim">
+        🏆
+       </div>
+       <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🎓 شهادة إتمام الدورة</h2><!-- Certificate -->
+       <div class="glow-card p-8 mb-6 fade-in fade-in-d1 text-center" style="border: 3px solid #00ffc8; background: linear-gradient(135deg, rgba(0,255,200,0.08), rgba(0,185,148,0.05));">
+        <!-- Certificate Header -->
+        <div class="mb-6">
+         <div style="font-size:32px;margin-bottom:8px;">
+          🏆
+         </div>
+         <div class="text-xs tracking-widest" style="color:#00ffc8;font-weight:700;letter-spacing:2px;">
+          شهادة تقدير
+         </div>
+        </div><!-- Decorative line -->
+        <div class="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent mb-6" style="opacity:0.3;"></div><!-- Student Info -->
+        <div class="mb-6">
+         <div class="text-xs mb-3" style="color:#889;">
+          يُشهد بأن الطالب
+         </div>
+         <div id="certName" class="text-2xl font-black mb-4" style="color:#00ffc8;">
+          أحمد محمد العلي
+         </div>
+         <div class="text-xs" style="color:#889;">
+          الرقم الجامعي: <span id="certId" style="color:#00ffc8;font-weight:600;">44312587</span>
+         </div>
+        </div><!-- Achievement Text -->
+        <div class="mb-6">
+         <div class="text-xs mb-4" style="color:#ccd;line-height:1.8;">
+          قد أكمل بنجاح دورة<br><strong style="color:#00ffc8;font-size:14px;">رحلة إلى أجزاء الحاسوب</strong><br><span style="color:#889;font-size:11px;">دورة تعليمية تفاعلية شاملة</span>
+         </div>
+        </div><!-- Learning Achievements -->
+        <div class="mb-6 p-4 rounded-lg" style="background:rgba(0,255,200,0.05);border:1px solid rgba(0,255,200,0.15);">
+         <div class="text-xs font-bold mb-3" style="color:#00ffc8;">
+          المهارات المكتسبة:
+         </div>
+         <div class="grid grid-cols-2 gap-2 text-xs" style="color:#ccd;">
+          <div>
+           ✓ وحدات الإدخال والإخراج
+          </div>
+          <div>
+           ✓ وحدة المعالجة المركزية
+          </div>
+          <div>
+           ✓ وحدات التخزين
+          </div>
+          <div>
+           ✓ الأنشطة التفاعلية
+          </div>
+         </div>
+        </div><!-- Score -->
+        <div class="mb-6">
+         <div class="text-xs mb-2" style="color:#889;">
+          النقاط النهائية
+         </div>
+         <div class="text-4xl font-black" style="color:#00ffc8;"><span id="certScore">0</span> / 200
+         </div>
+        </div><!-- Decorative line -->
+        <div class="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent mb-6" style="opacity:0.3;"></div><!-- Date and Seal -->
+        <div class="flex items-center justify-between px-4">
+         <div class="text-xs" style="color:#889;">
+          <div style="color:#00ffc8;font-weight:600;">
+           التاريخ
+          </div>
+          <div id="certDate" style="font-size:11px;">
+           20/01/2025
+          </div>
+         </div>
+         <div style="font-size:28px;">
+          🎖️
+         </div>
+         <div class="text-xs text-right" style="color:#889;">
+          <div style="color:#00ffc8;font-weight:600;">
+           التوقيع
+          </div>
+          <div style="font-size:11px;">
+           الجامعة العربية المفتوحة
+          </div>
+         </div>
+        </div>
+       </div><!-- Info Box -->
+       <div class="glow-card p-4 fade-in fade-in-d2 mb-6" style="background:rgba(0,255,200,0.03);border:2px solid rgba(0,255,200,0.15);">
+        <div class="flex items-start gap-3"><span style="font-size:20px;">📋</span>
+         <div class="text-xs" style="color:#ccd;line-height:1.8;"><strong style="color:#00ffc8;">مبروك!</strong> لقد أكملت جميع مراحل الدورة بنجاح. يمكنك حفظ أو طباعة هذه الشهادة كإثبات على إتمامك للدورة التعليمية.
+         </div>
+        </div>
+       </div><button class="nav-btn fade-in fade-in-d3" style="width:100%;" onclick="printCertificate()"> 🖨️ طباعة الشهادة </button> <button class="nav-btn fade-in fade-in-d4 pulse-glow" style="width:100%;margin-top:12px;" onclick="goToPage(0)"> 🔄 إعادة الرحلة </button>
+      </div>
+     </div>
+    </div>
+    <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
+     <p class="text-sm leading-7 mb-4" style="color:#ccd;">تهانينا! لقد أكملت رحلتك في عالم أجزاء الحاسوب. تعرفت على وحدات الإدخال والإخراج والمعالجة والتخزين، وتفاعلت مع ألعاب تعليمية ونشاط واقع معزز ومساعد ذكي.</p>
+     <div class="text-center mb-4">
+      <div class="text-sm mb-2" style="color:#00ffc8;">
+       مجموع نقاطك النهائية
+      </div>
+      <div id="finalScore" class="text-5xl font-black neon-text">
+       0
+      </div>
+      <div class="text-xs mt-1" style="color:#889;">
+       نقطة من أصل 200
+      </div>
+     </div>
+     <div id="performanceRating" class="text-center p-3 rounded-lg" style="background:rgba(0,255,200,0.1);border:1px solid rgba(0,255,200,0.2);"></div>
+    </div>
+    <div class="glow-card p-5 mb-6 fade-in fade-in-d2">
+     <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">📝 ملخص ما تعلمته</h3>
+     <div class="grid grid-cols-2 gap-2 text-xs" style="color:#aabbcc;">
+      <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
+       ✅ وحدات الإدخال
+      </div>
+      <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
+       ✅ وحدات الإخراج
+      </div>
+      <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
+       ✅ وحدة المعالجة
+      </div>
+      <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
+       ✅ وحدات التخزين
+      </div>
+     </div>
+    </div>
+    <div class="flex gap-3 flex-wrap justify-center">
+     <button class="nav-btn fade-in fade-in-d3" onclick="goToPage(11)"> 🎓 الحصول على الشهادة </button>
+    </div>
+   </div>
+  </div><!-- PAGE 11: Certificate -->
+  <div class="page bg-grid" data-page="11">
+   <div class="flex-1 flex items-center justify-center p-6">
+    <div class="text-center max-w-lg">
+     <div class="text-5xl mb-4 float-anim">
+      🏆
+     </div>
+     <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🎓 شهادة إتمام الدورة</h2><!-- Certificate -->
+     <div class="glow-card p-8 mb-6 fade-in fade-in-d1 text-center" style="border: 3px solid #00ffc8; background: linear-gradient(135deg, rgba(0,255,200,0.08), rgba(0,185,148,0.05));">
+      <!-- Certificate Header -->
+      <div class="mb-6">
+       <div style="font-size:32px;margin-bottom:8px;">
+        🏆
+       </div>
+       <div class="text-xs tracking-widest" style="color:#00ffc8;font-weight:700;letter-spacing:2px;">
+        شهادة تقدير
+       </div>
+      </div><!-- Decorative line -->
+      <div class="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent mb-6" style="opacity:0.3;"></div><!-- Student Info -->
+      <div class="mb-6">
+       <div class="text-xs mb-3" style="color:#889;">
+        يُشهد بأن الطالب
+       </div>
+       <div id="certName" class="text-2xl font-black mb-4" style="color:#00ffc8;">
+        أحمد محمد العلي
+       </div>
+       <div class="text-xs" style="color:#889;">
+        الرقم الجامعي: <span id="certId" style="color:#00ffc8;font-weight:600;">44312587</span>
+       </div>
+      </div><!-- Achievement Text -->
+      <div class="mb-6">
+       <div class="text-xs mb-4" style="color:#ccd;line-height:1.8;">
+        قد أكمل بنجاح دورة<br><strong style="color:#00ffc8;font-size:14px;">رحلة إلى أجزاء الحاسوب</strong><br><span style="color:#889;font-size:11px;">دورة تعليمية تفاعلية شاملة</span>
+       </div>
+      </div><!-- Learning Achievements -->
+      <div class="mb-6 p-4 rounded-lg" style="background:rgba(0,255,200,0.05);border:1px solid rgba(0,255,200,0.15);">
+       <div class="text-xs font-bold mb-3" style="color:#00ffc8;">
+        المهارات المكتسبة:
+       </div>
+       <div class="grid grid-cols-2 gap-2 text-xs" style="color:#ccd;">
+        <div>
+         ✓ وحدات الإدخال والإخراج
+        </div>
+        <div>
+         ✓ وحدة المعالجة المركزية
+        </div>
+        <div>
+         ✓ وحدات التخزين
+        </div>
+        <div>
+         ✓ الأنشطة التفاعلية
+        </div>
+       </div>
+      </div><!-- Score -->
+      <div class="mb-6">
+       <div class="text-xs mb-2" style="color:#889;">
+        النقاط النهائية
+       </div>
+       <div class="text-4xl font-black" style="color:#00ffc8;"><span id="certScore">0</span> / 200
+       </div>
+      </div><!-- Decorative line -->
+      <div class="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent mb-6" style="opacity:0.3;"></div><!-- Date and Seal -->
+      <div class="flex items-center justify-between px-4">
+       <div class="text-xs" style="color:#889;">
+        <div style="color:#00ffc8;font-weight:600;">
+         التاريخ
+        </div>
+        <div id="certDate" style="font-size:11px;">
+         20/01/2025
+        </div>
+       </div>
+       <div style="font-size:28px;">
+        🎖️
+       </div>
+       <div class="text-xs text-right" style="color:#889;">
+        <div style="color:#00ffc8;font-weight:600;">
+         التوقيع
+        </div>
+        <div style="font-size:11px;">
+         الجامعة العربية المفتوحة
+        </div>
+       </div>
+      </div>
+     </div><!-- Info Box -->
+     <div class="glow-card p-4 fade-in fade-in-d2 mb-6" style="background:rgba(0,255,200,0.03);border:2px solid rgba(0,255,200,0.15);">
+      <div class="flex items-start gap-3"><span style="font-size:20px;">📋</span>
+       <div class="text-xs" style="color:#ccd;line-height:1.8;"><strong style="color:#00ffc8;">مبروك!</strong> لقد أكملت جميع مراحل الدورة بنجاح. يمكنك حفظ أو طباعة هذه الشهادة كإثبات على إتمامك للدورة التعليمية.
+       </div>
+      </div>
+     </div><button class="nav-btn fade-in fade-in-d3" style="width:100%;" onclick="printCertificate()"> 🖨️ طباعة الشهادة </button> <button class="nav-btn fade-in fade-in-d4 pulse-glow" style="width:100%;margin-top:12px;" onclick="goToPage(0)"> 🔄 إعادة الرحلة </button>
+    </div>
+   </div>
+  </div><!-- PAGE 8: AI Assistant Chat -->
+  <div class="page bg-grid" data-page="8">
+   <div class="flex-1 p-6 md:p-10 overflow-y-auto flex flex-col">
+    <div class="max-w-2xl mx-auto w-full flex flex-col h-full">
+     <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🤖 المساعد الذكي</h2><!-- Chat Area -->
+     <div id="chatContainer" class="flex-1 overflow-y-auto mb-4 p-4 rounded-lg" style="background:rgba(37,99,235,0.03);border:2px solid rgba(37,99,235,0.1);min-height:300px;display:flex;flex-direction:column;gap:3;">
+      <div class="chat-bubble fade-in">
+       <div style="font-weight:600;margin-bottom:4px;color:#00ffc8;">
+        🤖 المساعد الذكي
+       </div>
+       <div>
+        مرحبًا! 👋 أنا هنا لمساعدتك في فهم أجزاء الحاسوب. يمكنك طرح أي سؤال حول المحتوى!
+       </div>
+      </div>
+     </div><!-- Input Area -->
+     <div class="flex gap-2">
+      <input id="chatInput" type="text" placeholder="اكتب سؤالك هنا..." class="flex-1 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.9);border:2px solid #E0E7FF;font-family:'Tajawal',sans-serif;color:#333;"> <button onclick="sendChatMessage()" class="nav-btn" style="padding:8px 16px;font-size:13px;">إرسال</button>
+     </div>
+     <div class="flex justify-between mt-6"><button class="nav-btn" onclick="goToPage(7)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(9)">التالي ⟶</button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="page bg-grid" data-page="10">
+   <div class="flex-1 flex items-center justify-center p-6">
+    <div class="text-center max-w-lg">
+     <div class="text-5xl mb-4 float-anim">
+      🏆
+     </div>
+     <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🎉 مبارك! أتممت الرحلة</h2>
+     <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
+      <p class="text-sm leading-7 mb-4" style="color:#ccd;">تهانينا! لقد أكملت رحلتك في عالم أجزاء الحاسوب. تعرفت على وحدات الإدخال والإخراج والمعالجة والتخزين، وتفاعلت مع ألعاب تعليمية ونشاط واقع معزز ومساعد ذكي.</p>
+      <div class="text-center mb-4">
+       <div class="text-sm mb-2" style="color:#00ffc8;">
+        مجموع نقاطك النهائية
+       </div>
+       <div id="finalScore" class="text-5xl font-black neon-text">
+        0
+       </div>
+       <div class="text-xs mt-1" style="color:#889;">
+        نقطة من أصل 200
+       </div>
+      </div>
+      <div id="performanceRating" class="text-center p-3 rounded-lg" style="background:rgba(0,255,200,0.1);border:1px solid rgba(0,255,200,0.2);"></div>
+     </div>
+     <div class="glow-card p-5 mb-6 fade-in fade-in-d2">
+      <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">📝 ملخص ما تعلمته</h3>
+      <div class="grid grid-cols-2 gap-2 text-xs" style="color:#aabbcc;">
+       <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
+        ✅ وحدات الإدخال
+       </div>
+       <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
+        ✅ وحدات الإخراج
+       </div>
+       <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
+        ✅ وحدة المعالجة
+       </div>
+       <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
+        ✅ وحدات التخزين
+       </div>
+      </div>
+     </div>
+     <div class="flex gap-3 flex-wrap justify-center">
+      <button class="nav-btn fade-in fade-in-d3" onclick="goToPage(11)"> 🎓 الحصول على الشهادة </button>
+     </div>
+    </div>
+   </div>
+  </div><!-- PAGE 11: Extra (unused) --> <!-- end pagesContainer --> <!-- PAGE 2: Introduction -->
+  <div class="page bg-grid" data-page="2">
+   <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+    <div class="max-w-2xl mx-auto">
+     <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🌟 المقدمة</h2>
+     <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+      <p class="text-sm leading-7" style="color:#ccd;">مرحبًا بك في رحلة استكشافية ممتعة نتعرف فيها على <strong style="color:#00ffc8;">أجزاء الحاسوب</strong> ومكوناته الأساسية. سنغوص معًا في عالم التقنية لنكتشف كيف تعمل هذه الأجزاء معًا لتشكل الحاسوب الذي نستخدمه يوميًا.</p>
+     </div>
+     <div class="glow-card p-6 mb-4 fade-in fade-in-d2">
+      <h3 class="font-bold mb-3" style="color:#00ffc8;">ماذا ستتعلم في هذه الرحلة؟</h3>
+      <div class="grid gap-3">
+       <div class="flex items-center gap-3 text-sm" style="color:#aabbcc;">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,255,200,0.1);">
+         💻
+        </div><span>المكونات المادية (Hardware) للحاسوب</span>
+       </div>
+       <div class="flex items-center gap-3 text-sm" style="color:#aabbcc;">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,255,200,0.1);">
+         🧠
+        </div><span>وظيفة كل جزء وكيف يعمل</span>
+       </div>
+       <div class="flex items-center gap-3 text-sm" style="color:#aabbcc;">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,255,200,0.1);">
+         🔗
+        </div><span>العلاقة بين المكونات المختلفة</span>
+       </div>
+       <div class="flex items-center gap-3 text-sm" style="color:#aabbcc;">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(0,255,200,0.1);">
+         🎮
+        </div><span>أنشطة وألعاب تفاعلية لتثبيت المفاهيم</span>
+       </div>
+      </div>
+     </div>
+     <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(1)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(3)">التالي ⟶</button>
+     </div>
+    </div>
+   </div>
+  </div><!-- PAGE 3: Video / Presenter -->
+  <div class="page bg-grid" data-page="3">
+   <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+    <div class="max-w-2xl mx-auto">
+     <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎬 تعريف بالدرس</h2>
+     <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+      <div class="flex items-center gap-4 mb-4">
+       <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#00ffc8,#00b894);"><span style="font-size:28px;">👨‍🏫</span>
+       </div>
+       <div>
+        <div class="font-bold" style="color:#e0e0e0;">
+         المعلم الافتراضي
+        </div>
+        <div class="text-xs" style="color:#00ffc8;">
+         مُنشأ بالذكاء الاصطناعي
+        </div>
+       </div>
+      </div><!-- Simulated AI video presentation -->
+      <div id="videoPlayer" class="rounded-xl overflow-hidden mb-4" style="background:#000;aspect-ratio:16/9;position:relative;cursor:pointer;" onclick="toggleVideo()">
+       <div id="videoContent" class="w-full h-full flex items-center justify-center relative">
+        <div id="playBtn" class="text-center">
+         <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 pulse-glow" style="background:rgba(0,255,200,0.2);border:2px solid #00ffc8;"><span style="font-size:24px;color:#00ffc8;">▶</span>
+         </div>
+         <div class="text-sm" style="color:#aaa;">
+          اضغط للمشاهدة
+         </div>
+        </div>
+        <div id="videoPlaying" class="absolute inset-0 hidden flex-col items-center justify-center p-6">
+         <div id="presenterAvatar" class="w-20 h-20 rounded-full mb-4 flex items-center justify-center" style="background:linear-gradient(135deg,#00ffc8,#00b894);font-size:36px;">
+          👨‍🏫
+         </div>
+         <div id="subtitleText" class="text-center text-sm" style="color:#e0e0e0;max-width:400px;line-height:1.8;"></div>
+         <div id="videoProgress" class="w-full max-w-xs mt-4 progress-track">
+          <div id="videoProgressFill" class="progress-fill" style="width:0%"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="text-xs text-center" style="color:#556;">
+       🤖 تم إنشاء هذا العرض التقديمي باستخدام تقنيات الذكاء الاصطناعي
+      </div>
+     </div>
+     <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(4)">التالي ⟶</button>
+     </div>
+    </div>
+   </div>
+  </div><!-- PAGE 5: Objectives -->
+  <div class="page bg-grid" data-page="4">
+   <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+    <div class="max-w-2xl mx-auto">
+     <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎯 أهداف الدرس</h2>
+     <div class="glow-card p-5 mb-4 fade-in fade-in-d1">
+      <div class="text-xs mb-3" style="color:#00ffc8;">
+       بنهاية هذا الدرس، يُتوقع من المتعلم أن يكون قادرًا على:
+      </div>
+      <div class="space-y-3" id="objectivesList">
+      </div>
+     </div>
+     <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(5)">التالي ⟶</button>
+     </div>
+    </div>
+   </div>
+  </div><!-- PAGE 6: Content Unit 1 - Input Devices -->
+  <div class="page bg-grid" data-page="5">
+   <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+    <div class="max-w-2xl mx-auto">
+     <div class="text-xs mb-2" style="color:#00ffc8;">
+      📘 الوحدة الأولى
+     </div>
+     <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدات الإدخال</h2>
+     <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+      <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإدخال هي الأجهزة التي تُستخدم لإدخال البيانات والمعلومات إلى الحاسوب. تقوم بتحويل البيانات من شكلها الخارجي إلى شكل رقمي يفهمه الحاسوب.</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         ⌨️
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         لوحة المفاتيح
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         إدخال النصوص والأوامر
+        </div>
+       </div>
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         🖱️
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         الفأرة
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         التحكم والتوجيه
+        </div>
+       </div>
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         🎤
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         الميكروفون
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         إدخال الصوت
+        </div>
+       </div>
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         📷
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         الكاميرا
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         إدخال الصور والفيديو
+        </div>
+       </div>
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         📟
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         الماسح الضوئي
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         تحويل الورق لرقمي
+        </div>
+       </div>
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         🕹️
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         عصا التحكم
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         الألعاب والمحاكاة
+        </div>
+       </div>
+      </div>
+     </div><!-- Quick Quiz -->
+     <div class="glow-card p-5 fade-in fade-in-d2">
+      <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">💡 اختبر فهمك</h3>
+      <p class="text-sm mb-3" style="color:#ccd;">أي من التالي يُعد من وحدات الإدخال؟</p>
+      <div class="space-y-2" id="quiz1"></div>
+      <div id="quiz1Feedback" class="mt-3 text-sm hidden"></div>
+     </div>
+     <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(4)">⟵ السابق</button> <button class="nav-btn" id="nextBtn5" onclick="goToPage(6)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+     </div>
+    </div>
+   </div>
+  </div><!-- PAGE 7: Content Unit 2 - Output Devices -->
+  <div class="page bg-grid" data-page="6">
+   <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+    <div class="max-w-2xl mx-auto">
+     <div class="text-xs mb-2" style="color:#00ffc8;">
+      📘 الوحدة الثانية
+     </div>
+     <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدات الإخراج</h2>
+     <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+      <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإخراج هي الأجهزة المسؤولة عن عرض وإظهار نتائج معالجة البيانات للمستخدم. تحوّل البيانات الرقمية إلى أشكال يمكن للإنسان فهمها.</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         🖥️
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         الشاشة
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         عرض البيانات مرئيًا
+        </div>
+       </div>
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         🖨️
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         الطابعة
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         طباعة على الورق
+        </div>
+       </div>
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         🔊
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         مكبر الصوت
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         إخراج الصوت
+        </div>
+       </div>
+       <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="text-3xl mb-2">
+         📽️
+        </div>
+        <div class="text-xs font-bold" style="color:#00ffc8;">
+         جهاز العرض
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         عرض على أسطح كبيرة
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="glow-card p-5 fade-in fade-in-d2">
+      <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">💡 اختبر فهمك</h3>
+      <p class="text-sm mb-3" style="color:#ccd;">ما وظيفة وحدات الإخراج؟</p>
+      <div class="space-y-2" id="quiz2"></div>
+      <div id="quiz2Feedback" class="mt-3 text-sm hidden"></div>
+     </div>
+     <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(5)">⟵ السابق</button> <button class="nav-btn" id="nextBtn6" onclick="goToPage(7)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+     </div>
+    </div>
+   </div>
+  </div><!-- PAGE 8: Content Unit 3 - Processing & Storage -->
+  <div class="page bg-grid" data-page="7">
+   <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+    <div class="max-w-2xl mx-auto">
+     <div class="text-xs mb-2" style="color:#00ffc8;">
+      📘 الوحدة الثالثة
+     </div>
+     <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدة المعالجة والتخزين</h2>
+     <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
+      <h3 class="font-bold mb-2" style="color:#00ffc8;">🧠 وحدة المعالجة المركزية (CPU)</h3>
+      <p class="text-sm leading-7 mb-4" style="color:#ccd;">هي "دماغ" الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات. تتكون من وحدة الحساب والمنطق (ALU) ووحدة التحكم (CU).</p>
+      <div class="flex items-center justify-center mb-4">
+       <svg width="200" height="120" viewbox="0 0 200 120"><rect x="40" y="20" width="120" height="80" rx="8" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1.5" /> <text x="100" y="45" text-anchor="middle" fill="#00ffc8" font-size="10" font-weight="bold">
+         CPU
+        </text> <rect x="52" y="55" width="44" height="30" rx="4" fill="rgba(0,255,200,0.1)" stroke="#00ffc8" stroke-width="1" opacity="0.6" /> <text x="74" y="74" text-anchor="middle" fill="#aaa" font-size="8">
+         ALU
+        </text> <rect x="104" y="55" width="44" height="30" rx="4" fill="rgba(0,255,200,0.1)" stroke="#00ffc8" stroke-width="1" opacity="0.6" /> <text x="126" y="74" text-anchor="middle" fill="#aaa" font-size="8">
+         CU
+        </text> <!-- Pins --> <line x1="60" y1="100" x2="60" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="80" y1="100" x2="80" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="100" y1="100" x2="100" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="120" y1="100" x2="120" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" /> <line x1="140" y1="100" x2="140" y2="112" stroke="#00ffc8" stroke-width="1" opacity="0.4" />
+       </svg>
+      </div>
+     </div>
+     <div class="glow-card p-6 mb-4 fade-in fade-in-d2">
+      <h3 class="font-bold mb-2" style="color:#00ffc8;">💾 وحدات التخزين</h3>
+      <div class="grid grid-cols-2 gap-3 text-sm" style="color:#ccd;">
+       <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="font-bold" style="color:#00ffc8;">
+         RAM - الذاكرة العشوائية
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         تخزين مؤقت، سريعة، تُمسح عند إيقاف التشغيل
+        </div>
+       </div>
+       <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="font-bold" style="color:#00ffc8;">
+         ROM - ذاكرة القراءة فقط
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         تخزين دائم، تحتوي تعليمات أساسية
+        </div>
+       </div>
+       <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="font-bold" style="color:#00ffc8;">
+         القرص الصلب HDD
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         تخزين كبير دائم، أقراص ممغنطة
+        </div>
+       </div>
+       <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+        <div class="font-bold" style="color:#00ffc8;">
+         SSD - قرص الحالة الصلبة
+        </div>
+        <div class="text-xs mt-1" style="color:#889;">
+         سريع جدًا، بدون أجزاء متحركة
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(6)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(8)">التالي ⟶</button>
+     </div>
+    </div>
+   </div>
+  </div><!-- PAGE 9: Educational Game - Matching -->
+  <div class="page bg-grid" data-page="9">
+   <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+    <div class="max-w-2xl mx-auto">
+     <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">🎮 لعبة المطابقة بالسحب والإفلات</h2>
+     <p class="text-sm mb-4 fade-in" style="color:#889;">اسحب أجهزة الإدخال والإخراج إلى الصناديق الصحيحة!</p>
+     <div class="glow-card p-5 mb-4">
+      <div class="flex items-center justify-between mb-4">
+       <div><span class="text-sm" style="color:#00ffc8;">النقاط: </span> <span id="gameScore2" class="text-sm font-bold" style="color:#e0e0e0;">0</span>
+       </div>
+       <div><span class="text-sm" style="color:#00ffc8;">المطابقات: </span> <span id="gameMatched" class="text-sm font-bold" style="color:#e0e0e0;">0 / 6</span>
+       </div><button class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.1);color:#00ffc8;border:1px solid rgba(0,255,200,0.2);cursor:pointer;" onclick="resetGameDragDrop()">🔄 إعادة</button>
+      </div><!-- Game Zone -->
+      <div class="grid grid-cols-2 gap-4 mb-4">
+       <!-- Input Devices - Left Side -->
+       <div>
+        <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(255, 107, 53, 0.15);color:#FF6B35;">
+         📥 أجهزة الإدخال
+        </div>
+        <div id="gameInput" class="min-h-40 p-3 rounded-lg" style="background:rgba(255, 107, 53, 0.05);border:2px dashed rgba(255, 107, 53, 0.3);">
+        </div>
+       </div><!-- Output Devices - Right Side -->
+       <div>
+        <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(0, 78, 137, 0.15);color:#004E89;">
+         📤 أجهزة الإخراج
+        </div>
+        <div id="gameOutput" class="min-h-40 p-3 rounded-lg" style="background:rgba(0, 78, 137, 0.05);border:2px dashed rgba(0, 78, 137, 0.3);">
+        </div>
+       </div>
+      </div><!-- Draggable Items Pool -->
+      <div class="mb-4">
+       <div class="text-xs font-bold px-3 py-2 mb-2" style="color:#667eea;">
+        🎯 اسحب الأجهزة إلى الفئات الصحيحة
+       </div>
+       <div id="gamePool" class="flex flex-wrap gap-2 p-3 rounded-lg" style="background:rgba(37, 99, 235, 0.05);border:1px solid rgba(37, 99, 235, 0.2);min-height:80px;">
+       </div>
+      </div>
+      <div id="gameFeedback2" class="mt-3 text-sm text-center hidden"></div>
+     </div>
+     <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(8)">⟵ السابق</button> <button class="nav-btn" id="gameNextBtn2" onclick="goToPage(10)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+     </div>
+     <div class="flex-1 p-6 md:p-10 overflow-y-auto">
+      <div class="max-w-2xl mx-auto">
+       <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">📱 نشاط الواقع المعزز</h2><!-- QR Code Section -->
+       <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
+        <h3 class="font-bold mb-4 text-center" style="color:#00ffc8;">📲 امسح رمز الاستجابة السريعة</h3>
+        <div class="flex flex-col items-center gap-6">
+         <!-- QR Code Display -->
+         <div class="p-4 rounded-lg" style="background:white;border:3px solid #00ffc8;">
+          <svg width="200" height="200" viewbox="0 0 200 200" style="margin:0 auto;">
+           <!-- QR Code Pattern --> <rect width="200" height="200" fill="white" /> <!-- Position markers (3 corners) --> <!-- Top-left --> <rect x="10" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="15" y="15" width="30" height="30" fill="#000" /> <rect x="20" y="20" width="20" height="20" fill="white" /> <rect x="25" y="25" width="10" height="10" fill="#000" /> <!-- Top-right --> <rect x="150" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="155" y="15" width="30" height="30" fill="#000" /> <rect x="160" y="20" width="20" height="20" fill="white" /> <rect x="165" y="25" width="10" height="10" fill="#000" /> <!-- Bottom-left --> <rect x="10" y="150" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="15" y="155" width="30" height="30" fill="#000" /> <rect x="20" y="160" width="20" height="20" fill="white" /> <rect x="25" y="165" width="10" height="10" fill="#000" /> <!-- Data area with pattern --> <rect x="60" y="60" width="80" height="80" fill="none" stroke="#00ffc8" stroke-width="1" opacity="0.3" /> <rect x="65" y="65" width="4" height="4" fill="#000" /> <rect x="75" y="70" width="4" height="4" fill="#000" /> <rect x="85" y="75" width="4" height="4" fill="#000" /> <rect x="70" y="85" width="4" height="4" fill="#000" /> <rect x="80" y="90" width="4" height="4" fill="#000" /> <rect x="90" y="85" width="4" height="4" fill="#000" /> <rect x="95" y="95" width="4" height="4" fill="#000" /> <rect x="105" y="100" width="4" height="4" fill="#000" /> <rect x="110" y="75" width="4" height="4" fill="#000" /> <rect x="120" y="80" width="4" height="4" fill="#000" /> <rect x="125" y="90" width="4" height="4" fill="#000" /> <rect x="115" y="100" width="4" height="4" fill="#000" /> <rect x="70" y="110" width="4" height="4" fill="#000" /> <rect x="85" y="115" width="4" height="4" fill="#000" /> <rect x="100" y="110" width="4" height="4" fill="#000" /> <rect x="120" y="120" width="4" height="4" fill="#000" /> <rect x="130" y="115" width="4" height="4" fill="#000" />
+          </svg>
+         </div><!-- Instructions -->
+         <div class="w-full">
+          <div class="text-xs font-bold mb-3 px-3 py-2 rounded-lg" style="background:rgba(0,255,200,0.1);color:#00ffc8;">
+           🔍 خطوات الاستخدام:
+          </div>
+          <div class="space-y-3 text-sm" style="color:#ccd;">
+           <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+             ①
+            </div>
+            <div>
+             <div class="font-bold" style="color:#00ffc8;">
+              فتح تطبيق قارئ الباركود
+             </div>
+             <div class="text-xs mt-1" style="color:#889;">
+              استخدم تطبيق Google Lens أو أي قارئ QR على هاتفك الذكي
+             </div>
+            </div>
+           </div>
+           <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+             ②
+            </div>
+            <div>
+             <div class="font-bold" style="color:#00ffc8;">
+              امسح رمز الاستجابة السريعة
+             </div>
+             <div class="text-xs mt-1" style="color:#889;">
+              وجّه كاميرا هاتفك نحو الرمز أعلاه واجعل الصورة واضحة
+             </div>
+            </div>
+           </div>
+           <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+             ③
+            </div>
+            <div>
+             <div class="font-bold" style="color:#00ffc8;">
+              استكشف الواقع المعزز
+             </div>
+             <div class="text-xs mt-1" style="color:#889;">
+              اضغط على الرابط الذي يظهر لك لمشاهدة مكونات الحاسوب بشكل تفاعلي
+             </div>
+            </div>
+           </div>
+           <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+             ④
+            </div>
+            <div>
+             <div class="font-bold" style="color:#00ffc8;">
+              تعلّم من الأنشطة التفاعلية
+             </div>
+             <div class="text-xs mt-1" style="color:#889;">
+              تفاعل مع العناصر واقرأ المعلومات المفصلة عن كل جزء
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div><!-- Info Box -->
+       <div class="glow-card p-4 fade-in fade-in-d2" style="background:rgba(0,255,200,0.03);border-color:rgba(0,255,200,0.2);">
+        <div class="flex items-start gap-3">
+         <span style="font-size:20px;">ℹ️</span>
+         <div class="text-xs" style="color:#ccd;">
+          <strong style="color:#00ffc8;">ملاحظة:</strong> هذه تجربة تعليمية تفاعلية تساعدك على فهم مكونات الحاسوب بشكل بصري وديناميكي. يمكنك استخدام أي قارئ رمز QR معروف على هاتفك الذكي.
+         </div>
+        </div>
+       </div>
+       <div class="flex justify-between mt-8">
+        <button class="nav-btn" onclick="goToPage(7)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(10)">التالي ⟶</button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><!-- PAGE 11: Certificate -->
+  <div class="page bg-grid" data-page="11">
+   <div class="flex-1 flex items-center justify-center p-6">
+    <div class="text-center max-w-lg">
+     <div class="text-5xl mb-4 float-anim">
+      🏆
+     </div>
+     <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🎓 شهادة إتمام الدورة</h2><!-- Certificate -->
+     <div class="glow-card p-8 mb-6 fade-in fade-in-d1 text-center" style="border: 3px solid #00ffc8; background: linear-gradient(135deg, rgba(0,255,200,0.08), rgba(0,185,148,0.05));"><!-- Certificate Header -->
+      <div class="mb-6">
+       <div style="font-size:32px;margin-bottom:8px;">
+        🏆
+       </div>
+       <div class="text-xs tracking-widest" style="color:#00ffc8;font-weight:700;letter-spacing:2px;">
+        شهادة تقدير
+       </div>
+      </div><!-- Decorative line -->
+      <div class="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent mb-6" style="opacity:0.3;"></div><!-- Student Info -->
+      <div class="mb-6">
+       <div class="text-xs mb-3" style="color:#889;">
+        يُشهد بأن الطالب
+       </div>
+       <div id="certName" class="text-2xl font-black mb-4" style="color:#00ffc8;">
+        أحمد محمد العلي
+       </div>
+       <div class="text-xs" style="color:#889;">
+        الرقم الجامعي: <span id="certId" style="color:#00ffc8;font-weight:600;">44312587</span>
+       </div>
+      </div><!-- Achievement Text -->
+      <div class="mb-6">
+       <div class="text-xs mb-4" style="color:#ccd;line-height:1.8;">
+        قد أكمل بنجاح دورة<br><strong style="color:#00ffc8;font-size:14px;">رحلة إلى أجزاء الحاسوب</strong><br><span style="color:#889;font-size:11px;">دورة تعليمية تفاعلية شاملة</span>
+       </div>
+      </div><!-- Learning Achievements -->
+      <div class="mb-6 p-4 rounded-lg" style="background:rgba(0,255,200,0.05);border:1px solid rgba(0,255,200,0.15);">
+       <div class="text-xs font-bold mb-3" style="color:#00ffc8;">
+        المهارات المكتسبة:
+       </div>
+       <div class="grid grid-cols-2 gap-2 text-xs" style="color:#ccd;">
+        <div>
+         ✓ وحدات الإدخال والإخراج
+        </div>
+        <div>
+         ✓ وحدة المعالجة المركزية
+        </div>
+        <div>
+         ✓ وحدات التخزين
+        </div>
+        <div>
+         ✓ الأنشطة التفاعلية
+        </div>
+       </div>
+      </div><!-- Score -->
+      <div class="mb-6">
+       <div class="text-xs mb-2" style="color:#889;">
+        النقاط النهائية
+       </div>
+       <div class="text-4xl font-black" style="color:#00ffc8;"><span id="certScore">0</span> / 200
+       </div>
+      </div><!-- Decorative line -->
+      <div class="h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent mb-6" style="opacity:0.3;"></div><!-- Date and Seal -->
+      <div class="flex items-center justify-between px-4">
+       <div class="text-xs" style="color:#889;">
+        <div style="color:#00ffc8;font-weight:600;">
+         التاريخ
+        </div>
+        <div id="certDate" style="font-size:11px;">
+         20/01/2025
+        </div>
+       </div>
+       <div style="font-size:28px;">
+        🎖️
+       </div>
+       <div class="text-xs text-right" style="color:#889;">
+        <div style="color:#00ffc8;font-weight:600;">
+         التوقيع
+        </div>
+        <div style="font-size:11px;">
+         الجامعة العربية المفتوحة
+        </div>
+       </div>
+      </div>
+     </div><!-- Info Box -->
+     <div class="glow-card p-4 fade-in fade-in-d2 mb-6" style="background:rgba(0,255,200,0.03);border:2px solid rgba(0,255,200,0.15);">
+      <div class="flex items-start gap-3"><span style="font-size:20px;">📋</span>
+       <div class="text-xs" style="color:#ccd;line-height:1.8;"><strong style="color:#00ffc8;">مبروك!</strong> لقد أكملت جميع مراحل الدورة بنجاح. يمكنك حفظ أو طباعة هذه الشهادة كإثبات على إتمامك للدورة التعليمية.
+       </div>
+      </div>
+     </div><button class="nav-btn fade-in fade-in-d3" style="width:100%;" onclick="printCertificate()"> 🖨️ طباعة الشهادة </button> <button class="nav-btn fade-in fade-in-d4 pulse-glow" style="width:100%;margin-top:12px;" onclick="goToPage(0)"> 🔄 إعادة الرحلة </button>
+    </div>
+   </div>
+  </div><!-- end pagesContainer -->
   <script>
 // ===== CONFIG & STATE =====
 const defaultConfig = {
@@ -892,7 +2275,7 @@ const quizCompleted = {};
 const pageNames = [
   'صفحة الغلاف', 'دليل الاستخدام', 'المقدمة', 'تعريف بالدرس',
   'أهداف الدرس', 'وحدات الإدخال', 'وحدات الإخراج',
-  'المعالجة والتخزين', 'لعبة المطابقة', 'الواقع المعزز', 'المساعد الذكي', 'الخاتمة'
+  'المعالجة والتخزين', 'لعبة المطابقة', 'الواقع المعزز', 'المساعد الذكي', 'الشهادة'
 ];
 
 // ===== NAVIGATION =====
@@ -932,7 +2315,10 @@ function toggleSidebar() {
 function updateScore(pts) {
   totalScore += pts;
   document.getElementById('scoreDisplay').textContent = `⭐ ${totalScore} نقطة`;
-  document.getElementById('finalScore').textContent = totalScore;
+  if (document.getElementById('finalScore')) {
+    document.getElementById('finalScore').textContent = totalScore;
+  }
+  updatePerformanceRating();
 }
 
 // ===== BUILD SIDEBAR =====
@@ -989,52 +2375,59 @@ function answerQuiz(containerId, feedbackId, selected, correct) {
   const container = document.getElementById(containerId);
   const feedback = document.getElementById(feedbackId);
   const opts = container.querySelectorAll('.quiz-opt');
-  if (opts[0].classList.contains('correct') || opts[0].classList.contains('wrong')) return;
+  
+  // Check if already answered correctly
+  if (container.dataset.answered === 'true') return;
 
   const hints = {
     'quiz1': 'تذكر: لوحة المفاتيح هي من وحدات الإدخال 💡 تُستخدم لإدخال البيانات والأوامر إلى الحاسوب',
     'quiz2': 'تذكر: وحدات الإخراج تُظهر لك النتائج! 💡 مثل الشاشة التي تعرض لك ما يعمله الحاسوب'
   };
 
-  opts.forEach((opt, i) => {
-    opt.style.pointerEvents = 'none';
-    if (i === correct) opt.classList.add('correct');
-    else if (i === selected) opt.classList.add('wrong');
-  });
-
   feedback.classList.remove('hidden');
   if (selected === correct) {
-    feedback.innerHTML = '<span style="color:#10b981;font-weight:600;">✅ إجابة صحيحة! أحسنت! +10 نقاط</span>';
+    // Correct answer
+    opts.forEach((opt, i) => {
+      if (i === correct) opt.classList.add('correct');
+    });
+    opts[selected].classList.add('correct');
+    feedback.innerHTML = '<span style="color:#059669;font-weight:600;">✅ إجابة صحيحة! أحسنت! +10 نقاط</span>';
     updateScore(10);
     quizCompleted[containerId] = true;
-    enableNextButton();
-    // Auto-advance after 2 seconds
-    setTimeout(() => {
-      const nextPageNum = currentPage + 1;
-      if (nextPageNum < totalPages) {
-        goToPage(nextPageNum);
-      }
-    }, 2000);
+    container.dataset.answered = 'true';
+    
+    // Disable all options after correct answer
+    opts.forEach(opt => opt.style.pointerEvents = 'none');
+    
+    // Enable next button immediately after correct answer
+    enableNextButton(containerId);
   } else {
+    // Wrong answer - show hint, keep it clickable for retry
+    opts[selected].classList.add('wrong');
     const hint = hints[containerId] || 'اقرأ المعلومات بتمعن وحاول مرة أخرى! 😊';
-    feedback.innerHTML = `<span style="color:#ef4444;font-weight:600;">❌ ليست هذه الإجابة الصحيحة</span><div style="color:#f59e0b;margin-top:8px;font-size:13px;">${hint}</div>`;
+    feedback.innerHTML = `<span style="color:#DC2626;font-weight:600;">❌ ليست هذه الإجابة الصحيحة</span><div style="color:#D97706;margin-top:8px;font-size:13px;">${hint}</div>`;
+    
+    // Remove wrong style after 1800ms so user can try again
+    setTimeout(() => {
+      opts[selected].classList.remove('wrong');
+      feedback.classList.add('hidden');
+    }, 1800);
   }
 }
 
-// Check if quiz is answered before moving to next page
-function checkQuizAndNext(nextPage) {
-  const currentQuizId = 'quiz' + (currentPage - 5); // Adjust based on your page structure
-  if (quizCompleted[currentQuizId]) {
-    goToPage(nextPage);
+function enableNextButton(quizId) {
+  let nextBtn = null;
+  
+  if (quizId === 'quiz1') {
+    nextBtn = document.getElementById('nextBtn5');
+  } else if (quizId === 'quiz2') {
+    nextBtn = document.getElementById('nextBtn6');
   }
-}
-
-function enableNextButton() {
-  const btn = document.getElementById('nextBtn' + (currentPage + 1));
-  if (btn) {
-    btn.disabled = false;
-    btn.style.opacity = '1';
-    btn.style.cursor = 'pointer';
+  
+  if (nextBtn) {
+    nextBtn.disabled = false;
+    nextBtn.style.opacity = '1';
+    nextBtn.style.cursor = 'pointer';
   }
 }
 
@@ -1076,221 +2469,160 @@ function toggleVideo() {
   }, 3000);
 }
 
-// ===== MATCHING GAME =====
-const gameData = [
-  { part: '⌨️ لوحة المفاتيح', func: 'إدخال النصوص' },
-  { part: '🖥️ الشاشة', func: 'عرض البيانات' },
-  { part: '🧠 المعالج', func: 'معالجة البيانات' },
-  { part: '💾 القرص الصلب', func: 'تخزين دائم' },
-  { part: '🖱️ الفأرة', func: 'التأشير والتحكم' },
-  { part: '🔊 السماعة', func: 'إخراج الصوت' }
-];
+// ===== MATCHING GAME - DRAG & DROP =====
+const gameDataByCategory = {
+  input: [
+    { part: '⌨️ لوحة المفاتيح', type: 'input' },
+    { part: '🖱️ الفأرة', type: 'input' },
+    { part: '🎤 الميكروفون', type: 'input' }
+  ],
+  output: [
+    { part: '🖥️ الشاشة', type: 'output' },
+    { part: '🖨️ الطابعة', type: 'output' },
+    { part: '🔊 السماعة', type: 'output' }
+  ]
+};
 
-let selectedPart = null;
-let selectedFunc = null;
-let matchedPairs = 0;
-let gameScore = 0;
+let draggedGameItem = null;
+let matchedGameItems = new Set();
+let gameScoreDragDrop = 0;
 
-function buildGame() {
-  const partsDiv = document.getElementById('gameParts');
-  const funcsDiv = document.getElementById('gameFunctions');
-  partsDiv.innerHTML = '';
-  funcsDiv.innerHTML = '';
-  matchedPairs = 0;
-  gameScore = 0;
-  selectedPart = null;
-  selectedFunc = null;
-  document.getElementById('gameScore').textContent = '0';
-  document.getElementById('gameFeedback').classList.add('hidden');
+function buildGameDragDrop() {
+  const pool = document.getElementById('gamePool');
+  const input = document.getElementById('gameInput');
+  const output = document.getElementById('gameOutput');
+  
+  pool.innerHTML = '';
+  input.innerHTML = '';
+  output.innerHTML = '';
+  
+  matchedGameItems.clear();
+  gameScoreDragDrop = 0;
+  draggedGameItem = null;
+  
+  document.getElementById('gameScore2').textContent = '0';
+  document.getElementById('gameMatched').textContent = '0 / 6';
+  document.getElementById('gameFeedback2').classList.add('hidden');
 
-  const shuffledParts = [...gameData].sort(() => Math.random() - 0.5);
-  const shuffledFuncs = [...gameData].sort(() => Math.random() - 0.5);
+  // Create all items
+  const allItems = [
+    ...gameDataByCategory.input,
+    ...gameDataByCategory.output
+  ];
 
-  shuffledParts.forEach((item, i) => {
+  // Shuffle
+  const shuffled = [...allItems].sort(() => Math.random() - 0.5);
+
+  // Setup drop zones
+  input.dataset.category = 'input';
+  output.dataset.category = 'output';
+  
+  input.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    input.style.borderColor = '#FF6B35';
+    input.style.background = 'rgba(255, 107, 53, 0.15)';
+  });
+  input.addEventListener('dragleave', () => {
+    input.style.borderColor = 'rgba(255, 107, 53, 0.3)';
+    input.style.background = 'rgba(255, 107, 53, 0.05)';
+  });
+  input.addEventListener('drop', (e) => {
+    e.preventDefault();
+    if (draggedGameItem && draggedGameItem.dataset.type === 'input') {
+      dropItem(draggedGameItem, input, 'input');
+    }
+    input.style.borderColor = 'rgba(255, 107, 53, 0.3)';
+    input.style.background = 'rgba(255, 107, 53, 0.05)';
+  });
+
+  output.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    output.style.borderColor = '#004E89';
+    output.style.background = 'rgba(0, 78, 137, 0.15)';
+  });
+  output.addEventListener('dragleave', () => {
+    output.style.borderColor = 'rgba(0, 78, 137, 0.3)';
+    output.style.background = 'rgba(0, 78, 137, 0.05)';
+  });
+  output.addEventListener('drop', (e) => {
+    e.preventDefault();
+    if (draggedGameItem && draggedGameItem.dataset.type === 'output') {
+      dropItem(draggedGameItem, output, 'output');
+    }
+    output.style.borderColor = 'rgba(0, 78, 137, 0.3)';
+    output.style.background = 'rgba(0, 78, 137, 0.05)';
+  });
+
+  // Build draggable items in pool
+  shuffled.forEach((item) => {
     const el = document.createElement('div');
     el.className = 'game-card';
     el.textContent = item.part;
-    el.dataset.pair = item.part;
-    el.onclick = () => selectCard(el, 'part');
-    partsDiv.appendChild(el);
-  });
-
-  shuffledFuncs.forEach((item, i) => {
-    const el = document.createElement('div');
-    el.className = 'game-card';
-    el.style.borderColor = 'rgba(255,200,0,0.2)';
-    el.textContent = item.func;
-    el.dataset.pair = item.func;
-    el.onclick = () => selectCard(el, 'func');
-    funcsDiv.appendChild(el);
+    el.draggable = true;
+    el.dataset.type = item.type;
+    el.dataset.part = item.part;
+    
+    el.addEventListener('dragstart', (e) => {
+      draggedGameItem = el;
+      el.style.opacity = '0.6';
+    });
+    
+    el.addEventListener('dragend', (e) => {
+      el.style.opacity = '1';
+    });
+    
+    pool.appendChild(el);
   });
 }
 
-function selectCard(el, type) {
-  if (el.classList.contains('matched')) return;
-
-  if (type === 'part') {
-    document.querySelectorAll('#gameParts .game-card').forEach(c => c.classList.remove('selected'));
-    el.classList.add('selected');
-    selectedPart = el;
-  } else {
-    document.querySelectorAll('#gameFunctions .game-card').forEach(c => c.classList.remove('selected'));
-    el.classList.add('selected');
-    selectedFunc = el;
-  }
-
-  if (selectedPart && selectedFunc) {
-    checkMatch();
-  }
-}
-
-function checkMatch() {
-  const partText = selectedPart.dataset.pair;
-  const funcText = selectedFunc.dataset.pair;
-  const match = gameData.find(d => d.part === partText && d.func === funcText);
-
-  if (match) {
-    selectedPart.classList.add('matched');
-    selectedFunc.classList.add('matched');
-    selectedPart.classList.remove('selected');
-    selectedFunc.classList.remove('selected');
-    matchedPairs++;
-    gameScore += 15;
-    document.getElementById('gameScore').textContent = gameScore;
+function dropItem(itemEl, dropZone, correctType) {
+  const itemType = itemEl.dataset.type;
+  
+  if (itemType === correctType) {
+    // Correct drop
+    itemEl.style.opacity = '0.6';
+    itemEl.draggable = false;
+    itemEl.style.borderColor = '#1FD191';
+    itemEl.style.background = 'rgba(31, 209, 145, 0.2)';
+    itemEl.style.cursor = 'default';
+    
+    dropZone.appendChild(itemEl);
+    
+    matchedGameItems.add(itemEl.dataset.part);
+    gameScoreDragDrop += 15;
+    
+    document.getElementById('gameScore2').textContent = gameScoreDragDrop;
+    document.getElementById('gameMatched').textContent = matchedGameItems.size + ' / 6';
     updateScore(15);
-
-    if (matchedPairs === gameData.length) {
-      const fb = document.getElementById('gameFeedback');
-      fb.classList.remove('hidden');
-      fb.innerHTML = '<div style="color:#00ffc8;font-size:16px;">🎉 ممتاز! أكملت جميع المطابقات!</div>';
+    
+    if (matchedGameItems.size === 6) {
+      setTimeout(() => {
+        const fb = document.getElementById('gameFeedback2');
+        fb.classList.remove('hidden');
+        fb.innerHTML = '<div style="color:#1FD191;font-size:16px;font-weight:700;">🎉 ممتاز! صنّفت جميع الأجهزة بشكل صحيح! يمكنك الانتقال للصفحة التالية</div>';
+        const btn = document.getElementById('gameNextBtn2');
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.style.cursor = 'pointer';
+      }, 300);
     }
   } else {
-    selectedPart.classList.add('wrong-match');
-    selectedFunc.classList.add('wrong-match');
+    // Wrong drop - show error
+    const fb = document.getElementById('gameFeedback2');
+    fb.classList.remove('hidden');
+    const wrongCategory = correctType === 'input' ? 'الإخراج' : 'الإدخال';
+    fb.innerHTML = `<div style="color:#FF006E;font-weight:600;">❌ هذا جهاز من فئة ${wrongCategory}، حاول مرة أخرى! 😊</div>`;
+    
     setTimeout(() => {
-      selectedPart.classList.remove('wrong-match', 'selected');
-      selectedFunc.classList.remove('wrong-match', 'selected');
-      selectedPart = null;
-      selectedFunc = null;
-    }, 600);
-    return;
-  }
-  selectedPart = null;
-  selectedFunc = null;
-}
-
-function resetGame() {
-  buildGame();
-}
-
-// ===== AR ACTIVITY =====
-const arData = {
-  cpu: {
-    title: '🧠 وحدة المعالجة المركزية (CPU)',
-    desc: 'هي العقل المدبر للحاسوب. تقوم بتنفيذ ملايين العمليات الحسابية والمنطقية في الثانية الواحدة. تتكون من وحدة الحساب والمنطق (ALU) ووحدة التحكم (CU).',
-    extra: '📊 السرعة تُقاس بالغيغاهرتز (GHz) | أشهر المصنعين: Intel و AMD'
-  },
-  ram: {
-    title: '📦 الذاكرة العشوائية (RAM)',
-    desc: 'ذاكرة مؤقتة سريعة جدًا تُستخدم لتخزين البيانات التي يحتاجها المعالج أثناء التشغيل. تُمسح عند إيقاف الحاسوب.',
-    extra: '💡 كلما زادت سعة RAM، زادت قدرة الحاسوب على تشغيل برامج متعددة'
-  },
-  hdd: {
-    title: '💿 القرص الصلب (HDD/SSD)',
-    desc: 'وحدة تخزين دائمة تحتفظ بالبيانات حتى بعد إيقاف التشغيل. القرص الصلب التقليدي يستخدم أقراص ممغنطة، بينما SSD يستخدم ذاكرة فلاش.',
-    extra: '⚡ SSD أسرع بـ 5-10 مرات من HDD التقليدي'
-  },
-  gpu: {
-    title: '🎮 بطاقة الرسومات (GPU)',
-    desc: 'مسؤولة عن معالجة الرسومات والصور والفيديو. تحتوي على معالج خاص بها وذاكرة مخصصة.',
-    extra: '🎨 أشهر المصنعين: NVIDIA و AMD | ضرورية للألعاب والتصميم'
-  },
-  psu: {
-    title: '🔌 مزود الطاقة (PSU)',
-    desc: 'يقوم بتحويل التيار المتردد من مصدر الكهرباء إلى تيار مستمر يحتاجه الحاسوب. يوزع الطاقة على جميع المكونات.',
-    extra: '⚡ تُقاس قدرته بالواط (W) | اختيار مزود طاقة مناسب ضروري لاستقرار النظام'
-  },
-  mb: {
-    title: '🔗 اللوحة الأم (Motherboard)',
-    desc: 'اللوحة الرئيسية التي تربط جميع مكونات الحاسوب ببعضها. تحتوي على مقابس للمعالج والذاكرة وبطاقات التوسعة.',
-    extra: '🏗️ تُعد العمود الفقري للحاسوب | تحدد أنواع المكونات المتوافقة'
-  }
-};
-
-function showARInfo(part) {
-  const data = arData[part];
-  if (!data) return;
-  document.getElementById('arInfoTitle').textContent = data.title;
-  document.getElementById('arInfoDesc').textContent = data.desc;
-  document.getElementById('arInfoExtra').textContent = data.extra;
-  document.getElementById('arInfoPanel').classList.remove('hidden');
-
-  // Highlight clicked part
-  document.querySelectorAll('.pc-part').forEach(p => p.style.opacity = '0.4');
-  document.getElementById('ar' + part.toUpperCase()).style.opacity = '1';
-
-  if (!window._arExplored) window._arExplored = new Set();
-  if (!window._arExplored.has(part)) {
-    window._arExplored.add(part);
-    updateScore(5);
+      fb.classList.add('hidden');
+    }, 1500);
+    
+    draggedGameItem = null;
   }
 }
 
-function hideARInfo() {
-  document.getElementById('arInfoPanel').classList.add('hidden');
-  document.querySelectorAll('.pc-part').forEach(p => p.style.opacity = '1');
-}
-
-// ===== AI CHAT =====
-const aiResponses = {
-  'المعالج': 'المعالج (CPU) هو وحدة المعالجة المركزية، وهو بمثابة "دماغ" الحاسوب. يقوم بتنفيذ التعليمات ومعالجة البيانات. يتكون من وحدة الحساب والمنطق (ALU) التي تنفذ العمليات الحسابية، ووحدة التحكم (CU) التي تنظم عمل باقي المكونات. 🧠',
-  'ram': 'الـ RAM (الذاكرة العشوائية) هي ذاكرة مؤقتة سريعة جدًا يستخدمها المعالج لتخزين البيانات أثناء العمل. تُمسح عند إطفاء الجهاز. أما ROM (ذاكرة القراءة فقط) فهي دائمة وتحتوي على تعليمات أساسية لتشغيل الحاسوب. 💾',
-  'الإدخال': 'وحدات الإدخال هي الأجهزة التي تُستخدم لإدخال البيانات إلى الحاسوب. من أهمها: لوحة المفاتيح ⌨️ والفأرة 🖱️ والميكروفون 🎤 والكاميرا 📷 والماسح الضوئي 📟 وعصا التحكم 🕹️',
-  'الإخراج': 'وحدات الإخراج هي الأجهزة التي تُظهر نتائج المعالجة للمستخدم. تشمل: الشاشة 🖥️ والطابعة 🖨️ ومكبرات الصوت 🔊 وجهاز العرض (البروجكتور) 📽️',
-  'التخزين': 'وحدات التخزين تنقسم إلى مؤقتة (RAM) ودائمة (القرص الصلب HDD/SSD). القرص الصلب التقليدي يستخدم أقراصًا ممغنطة، بينما SSD يستخدم ذاكرة فلاش وهو أسرع بكثير. 💿',
-  'اللوحة الأم': 'اللوحة الأم (Motherboard) هي اللوحة الرئيسية التي تربط جميع مكونات الحاسوب ببعضها. تحتوي على مقابس للمعالج والذاكرة وفتحات التوسعة ومنافذ USB وغيرها. 🔗'
-};
-
-function sendChat() {
-  const input = document.getElementById('chatInput');
-  const msg = input.value.trim();
-  if (!msg) return;
-  input.value = '';
-
-  const chatDiv = document.getElementById('chatMessages');
-  // User message
-  const userBubble = document.createElement('div');
-  userBubble.className = 'chat-bubble user';
-  userBubble.style.color = '#e0e0e0';
-  userBubble.textContent = msg;
-  chatDiv.appendChild(userBubble);
-
-  // Find response
-  setTimeout(() => {
-    let response = 'سؤال رائع! 🤔 أجزاء الحاسوب الرئيسية تشمل وحدات الإدخال (لوحة المفاتيح، الفأرة)، وحدات الإخراج (الشاشة، الطابعة)، وحدة المعالجة (CPU)، ووحدات التخزين (RAM، القرص الصلب). هل تريد معرفة المزيد عن جزء محدد؟';
-
-    const lowerMsg = msg.toLowerCase();
-    for (const [key, val] of Object.entries(aiResponses)) {
-      if (lowerMsg.includes(key.toLowerCase()) || lowerMsg.includes(key)) {
-        response = val;
-        break;
-      }
-    }
-
-    const botBubble = document.createElement('div');
-    botBubble.className = 'chat-bubble';
-    botBubble.style.color = '#ccd';
-    botBubble.textContent = response;
-    chatDiv.appendChild(botBubble);
-    chatDiv.scrollTop = chatDiv.scrollHeight;
-  }, 800);
-
-  chatDiv.scrollTop = chatDiv.scrollHeight;
-}
-
-function askSuggested(q) {
-  document.getElementById('chatInput').value = q;
-  sendChat();
+function resetGameDragDrop() {
+  buildGameDragDrop();
 }
 
 // ===== ELEMENT SDK =====
@@ -1352,6 +2684,68 @@ window.elementSdk.init({
   ])
 });
 
+// ===== CHAT FUNCTIONALITY =====
+const aiResponses = {
+  'وحدات الإدخال': 'وحدات الإدخال هي الأجهزة التي تستقبل البيانات من المستخدم وتحويلها إلى صيغة يفهمها الحاسوب، مثل: لوحة المفاتيح، الفأرة، الميكروفون، الكاميرا، والماسح الضوئي. 💻',
+  'وحدات الإخراج': 'وحدات الإخراج تعرض نتائج معالجة البيانات للمستخدم، مثل: الشاشة (Monitor)، الطابعة (Printer)، السماعات (Speakers)، وجهاز العرض (Projector). 📺',
+  'CPU': 'وحدة المعالجة المركزية (CPU) هي دماغ الحاسوب. تقوم بتنفيذ جميع التعليمات ومعالجة البيانات. تتكون من وحدة الحساب والمنطق (ALU) ووحدة التحكم. 🧠',
+  'التخزين': 'وحدات التخزين تحفظ البيانات: RAM (ذاكرة سريعة مؤقتة)، ROM (ذاكرة القراءة فقط)، HDD (قرص صلب)، SSD (قرص صلب سريع). 💾',
+  'الفأرة': 'الفأرة هي جهاز إدخال يُستخدم للتحكم والتوجيه على الشاشة. تحتوي على زرين للنقر وعجلة للتمرير. 🖱️',
+  'لوحة المفاتيح': 'لوحة المفاتيح هي جهاز إدخال يُستخدم لإدخال النصوص والأوامر والأرقام. تحتوي على مفاتيح مختلفة مرتبة بطريقة منطقية. ⌨️',
+  'الشاشة': 'الشاشة (Monitor) هي جهاز إخراج يعرض الصور والنصوص والفيديوهات. تقاس بحجم القطر وتحتوي على ملايين البكسل الصغيرة. 🖥️',
+  'الطابعة': 'الطابعة هي جهاز إخراج يطبع المستندات والصور على الورق. تستقبل البيانات من الحاسوب وتحولها إلى صور مادية. 🖨️',
+  'RAM': 'الذاكرة العشوائية (RAM) هي ذاكرة سريعة تُستخدم للعمليات الحالية. تُمسح عند إيقاف الحاسوب، وتتميز بسرعة عالية. ⚡',
+  'default': 'شكرًا على سؤالك! هذا موضوع مهم جدًا. يمكنك العودة إلى المحتوى الخاص بهذا الموضوع في الصفحات السابقة للمزيد من التفاصيل. 😊'
+};
+
+function sendChatMessage() {
+  const input = document.getElementById('chatInput');
+  const message = input.value.trim();
+  
+  if (!message) return;
+  
+  // Add user message to chat
+  const container = document.getElementById('chatContainer');
+  const userMsg = document.createElement('div');
+  userMsg.className = 'chat-bubble user';
+  userMsg.textContent = message;
+  container.appendChild(userMsg);
+  
+  // Find best matching response
+  let response = aiResponses.default;
+  const lowerMsg = message.toLowerCase();
+  
+  Object.keys(aiResponses).forEach(key => {
+    if (key !== 'default' && lowerMsg.includes(key.toLowerCase())) {
+      response = aiResponses[key];
+    }
+  });
+  
+  // Add AI response after delay
+  setTimeout(() => {
+    const aiMsg = document.createElement('div');
+    aiMsg.className = 'chat-bubble';
+    aiMsg.innerHTML = `<div style="font-weight:600;margin-bottom:4px;color:#00ffc8;">🤖 المساعد الذكي</div><div>${response}</div>`;
+    container.appendChild(aiMsg);
+    container.scrollTop = container.scrollHeight;
+    
+    updateScore(5);
+  }, 500);
+  
+  input.value = '';
+  container.scrollTop = container.scrollHeight;
+}
+
+// Handle Enter key in chat input
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('chatInput');
+  if (input) {
+    input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendChatMessage();
+    });
+  }
+});
+
 // ===== INIT =====
 buildSidebar();
 buildTOC();
@@ -1364,9 +2758,132 @@ buildQuiz('quiz2', 'quiz2Feedback', {
   options: ['إدخال البيانات للحاسوب', 'عرض نتائج المعالجة للمستخدم', 'تخزين البيانات بشكل دائم', 'الاتصال بالإنترنت'],
   correct: 1
 });
-buildGame();
-goToPage(0);
+buildGameDragDrop();
+
+// ===== CERTIFICATE FUNCTIONS =====
+function updatePerformanceRating() {
+  const rating = document.getElementById('performanceRating');
+  if (!rating) return;
+  
+  const pct = (totalScore / 200) * 100;
+  let ratingText = '';
+  let ratingColor = '';
+  
+  if (pct >= 90) {
+    ratingText = '🌟 أداء ممتاز جداً! أنت نجم! 🌟';
+    ratingColor = '#059669';
+  } else if (pct >= 80) {
+    ratingText = '⭐ أداء ممتاز! مبروك! ⭐';
+    ratingColor = '#059669';
+  } else if (pct >= 70) {
+    ratingText = '👍 أداء جيد جداً! استمر! 👍';
+    ratingColor = '#0891b2';
+  } else if (pct >= 60) {
+    ratingText = '📚 أداء جيد! حاول المزيد! 📚';
+    ratingColor = '#0891b2';
+  } else {
+    ratingText = '💪 استمر في المحاولة! أنت تتعلم! 💪';
+    ratingColor = '#d97706';
+  }
+  
+  rating.innerHTML = `<div style="color:${ratingColor};font-weight:700;font-size:14px;">${ratingText}</div>`;
+}
+  const name = window.elementSdk?.config?.student_name || defaultConfig.student_name;
+  const id = window.elementSdk?.config?.student_id || defaultConfig.student_id;
+  
+  document.getElementById('certName').textContent = name;
+  document.getElementById('certId').textContent = id;
+  document.getElementById('certScore').textContent = totalScore;
+  
+  // Set current date
+  const today = new Date();
+  const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+  document.getElementById('certDate').textContent = today.toLocaleDateString('ar-SA', options);
+}
+
+function printCertificate() {
+  const certificateContent = document.querySelector('.glow-card');
+  const printWindow = window.open('', '', 'height=600,width=800');
+  
+  const htmlContent = `
+    <!DOCTYPE html>
+    <html dir="rtl" lang="ar">
+    <head>
+      <meta charset="UTF-8">
+      <style>
+        body { font-family: 'Tajawal', Arial, sans-serif; margin: 0; padding: 20px; background: #f8f9fc; }
+        .certificate { 
+          background: white; 
+          padding: 40px; 
+          border: 4px solid #00ffc8; 
+          margin: 20px auto;
+          max-width: 700px;
+          border-radius: 12px;
+          text-align: center;
+          box-shadow: 0 8px 24px rgba(0,255,200,0.15);
+        }
+        .header { margin-bottom: 30px; font-size: 24px; color: #00ffc8; font-weight: bold; }
+        .seal { font-size: 40px; margin: 20px 0; }
+        .student-name { font-size: 24px; color: #00ffc8; font-weight: bold; margin: 15px 0; }
+        .course-title { font-size: 16px; color: #00ffc8; margin: 15px 0; font-weight: bold; }
+        .score { font-size: 20px; color: #00ffc8; margin: 20px 0; }
+        .footer { margin-top: 30px; display: flex; justify-content: space-between; font-size: 12px; }
+        .line { height: 1px; background: rgba(0,255,200,0.3); margin: 20px 0; }
+        @media print { body { margin: 0; } .certificate { margin: 0; } }
+      </style>
+    </head>
+    <body>
+      <div class="certificate">
+        <div class="header">شهادة تقدير</div>
+        <div class="seal">🏆</div>
+        <div style="font-size: 14px; color: #666; margin: 10px 0;">يُشهد بأن الطالب</div>
+        <div class="student-name">${document.getElementById('certName').textContent}</div>
+        <div style="font-size: 12px; color: #666;">الرقم الجامعي: ${document.getElementById('certId').textContent}</div>
+        <div class="line"></div>
+        <div style="font-size: 13px; color: #333; line-height: 1.8;">
+          قد أكمل بنجاح دورة
+        </div>
+        <div class="course-title">رحلة إلى أجزاء الحاسوب</div>
+        <div style="font-size: 12px; color: #666;">دورة تعليمية تفاعلية شاملة</div>
+        <div class="line"></div>
+        <div style="font-size: 13px; color: #333; margin: 20px 0;">المهارات المكتسبة:</div>
+        <div style="font-size: 12px; color: #333; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0;">
+          <div>✓ وحدات الإدخال والإخراج</div>
+          <div>✓ وحدة المعالجة المركزية</div>
+          <div>✓ وحدات التخزين</div>
+          <div>✓ الأنشطة التفاعلية</div>
+        </div>
+        <div class="line"></div>
+        <div style="font-size: 13px; color: #333; margin: 15px 0;">النقاط النهائية</div>
+        <div class="score">${document.getElementById('certScore').textContent} / 200</div>
+        <div class="line"></div>
+        <div class="footer">
+          <div>
+            <div style="color: #00ffc8; font-weight: bold;">التاريخ</div>
+            <div>${document.getElementById('certDate').textContent}</div>
+          </div>
+          <div style="font-size: 28px;">🎖️</div>
+          <div style="text-align: left;">
+            <div style="color: #00ffc8; font-weight: bold;">التوقيع</div>
+            <div>الجامعة العربية المفتوحة</div>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+  
+  printWindow.document.write(htmlContent);
+  printWindow.document.close();
+  
+  setTimeout(() => {
+    printWindow.print();
+  }, 250);
+}
+
+// Update certificate when page loads or config changes
+updateCertificate();
 lucide.createIcons();
 </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ebeafbd7285d1e8',t:'MTc3NjEyNzUxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ebecc938163d1e8',t:'MTc3NjEyODY5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html><!-- Sidebar Navigation -->
