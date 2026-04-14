@@ -286,6 +286,7 @@
       color: #1f2937;
       font-weight: 500;
       font-size: 14px;
+      line-height: 1.8;
     }
 
     .chat-bubble.user {
@@ -336,9 +337,9 @@
           <div class="flex-1 flex items-center justify-center p-6">
             <div class="text-center max-w-lg">
               <div class="float-anim mb-6">
-               <div class="float-anim mb-6">
-  <img src="cover22.png" alt="صورة الدرس" class="mx-auto" style="width: 140px; height: 140px; object-fit: contain;">
-</div>
+                <div class="float-anim mb-6">
+                  <img src="cover22.png" alt="صورة الدرس" class="mx-auto" style="width: 140px; height: 140px; object-fit: contain;">
+                </div>
               </div>
 
               <div class="fade-in">
@@ -349,21 +350,18 @@
                   <div class="flex items-center gap-6 text-sm" style="color: #475569;">
                     <div>
                       <div class="text-xs" style="color: #2563eb;">اسم الطالب</div>
-                      <div id="coverName" class="font-bold mt-1">أ. شيخة سعيد </div>
+                      <div id="coverName" class="font-bold mt-1">أ. شيخة </div>
                     </div>
                     <div style="width: 1px; height: 30px; background: rgba(37, 99, 235, 0.2);"></div>
                     <div>
                       <div class="text-xs" style="color: #2563eb;">الرقم الجامعي</div>
                       <div id="coverId" class="font-bold mt-1">251040</div>
-
                     </div>
                   </div>
                 </div>
 
-             <div class="mb-6">
-                  
-                </div>
-              </div>  
+                <div class="mb-6"></div>
+              </div>
 
               <button class="nav-btn fade-in fade-in-d3 pulse-glow" onclick="goToPage(1)">🚀 ابدأ الرحلة</button>
             </div>
@@ -418,7 +416,7 @@
             <div class="max-w-2xl mx-auto">
               <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">🌟 المقدمة</h2>
               <div class="glow-card p-6 fade-in fade-in-d1">
-                <p class="text-sm leading-7" style="color: #ccd;">مرحبًا بك في رحلة استكشافية ممتعة نتعرف فيها على <strong style="color: #00ffc8;">أجزاء الحاسوب</strong> ومكوناته الأساسية. سنتعلم كيف تعمل هذه الأجزاء معًا!</p>
+                <p class="text-sm leading-7" style="color: #334155;">مرحبًا بك في رحلة استكشافية ممتعة نتعرف فيها على <strong style="color: #2563EB;">أجزاء الحاسوب</strong> ومكوناته الأساسية. سنتعلم كيف تعمل هذه الأجزاء معًا!</p>
               </div>
               <div class="flex justify-between mt-8">
                 <button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button>
@@ -433,7 +431,7 @@
             <div class="max-w-2xl mx-auto">
               <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">🎯 أهداف الدرس</h2>
               <div class="glow-card p-5 fade-in fade-in-d1">
-                <div class="text-xs mb-3" style="color: #00ffc8;">بنهاية هذا الدرس، ستكون قادرًا على:</div>
+                <div class="text-xs mb-3" style="color: #2563EB;">بنهاية هذا الدرس، ستكون قادرًا على:</div>
                 <div class="space-y-3" id="objectivesList"></div>
               </div>
               <div class="flex justify-between mt-8">
@@ -447,29 +445,29 @@
         <div class="page bg-grid" data-page="5">
           <div class="flex-1 p-6 md:p-10 overflow-y-auto">
             <div class="max-w-2xl mx-auto">
-              <div class="text-xs mb-2" style="color: #00ffc8;">📘 الوحدة الأولى</div>
+              <div class="text-xs mb-2" style="color: #2563EB;">📘 الوحدة الأولى</div>
               <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">وحدات الإدخال</h2>
               <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-                <p class="text-sm leading-7 mb-4" style="color: #ccd;">وحدات الإدخال تستقبل البيانات من المستخدم وتحويلها إلى صيغة يفهمها الحاسوب.</p>
+                <p class="text-sm leading-7 mb-4" style="color: #334155;">وحدات الإدخال تستقبل البيانات من المستخدم وتحويلها إلى صيغة يفهمها الحاسوب.</p>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
+                  <div class="text-center p-3 rounded-xl" style="background: rgba(37, 99, 235, 0.06);">
                     <div class="text-3xl mb-2">⌨️</div>
-                    <div class="text-xs font-bold" style="color: #00ffc8;">لوحة المفاتيح</div>
+                    <div class="text-xs font-bold" style="color: #1E40AF;">لوحة المفاتيح</div>
                   </div>
-                  <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
+                  <div class="text-center p-3 rounded-xl" style="background: rgba(37, 99, 235, 0.06);">
                     <div class="text-3xl mb-2">🖱️</div>
-                    <div class="text-xs font-bold" style="color: #00ffc8;">الفأرة</div>
+                    <div class="text-xs font-bold" style="color: #1E40AF;">الفأرة</div>
                   </div>
-                  <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
+                  <div class="text-center p-3 rounded-xl" style="background: rgba(37, 99, 235, 0.06);">
                     <div class="text-3xl mb-2">🎤</div>
-                    <div class="text-xs font-bold" style="color: #00ffc8;">الميكروفون</div>
+                    <div class="text-xs font-bold" style="color: #1E40AF;">الميكروفون</div>
                   </div>
                 </div>
               </div>
 
               <div class="glow-card p-5 fade-in fade-in-d2">
-                <h3 class="font-bold mb-3 text-sm" style="color: #00ffc8;">💡 اختبر فهمك</h3>
-                <p class="text-sm mb-3" style="color: #ccd;">أي من التالي يُعد من وحدات الإدخال؟</p>
+                <h3 class="font-bold mb-3 text-sm" style="color: #2563EB;">💡 اختبر فهمك</h3>
+                <p class="text-sm mb-3" style="color: #334155;">أي من التالي يُعد من وحدات الإدخال؟</p>
                 <div class="space-y-2" id="quiz1"></div>
                 <div id="quiz1Feedback" class="mt-3 text-sm hidden"></div>
               </div>
@@ -485,29 +483,29 @@
         <div class="page bg-grid" data-page="6">
           <div class="flex-1 p-6 md:p-10 overflow-y-auto">
             <div class="max-w-2xl mx-auto">
-              <div class="text-xs mb-2" style="color: #00ffc8;">📘 الوحدة الثانية</div>
+              <div class="text-xs mb-2" style="color: #2563EB;">📘 الوحدة الثانية</div>
               <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">وحدات الإخراج</h2>
               <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-                <p class="text-sm leading-7 mb-4" style="color: #ccd;">وحدات الإخراج تعرض نتائج معالجة البيانات للمستخدم.</p>
+                <p class="text-sm leading-7 mb-4" style="color: #334155;">وحدات الإخراج تعرض نتائج معالجة البيانات للمستخدم.</p>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
+                  <div class="text-center p-3 rounded-xl" style="background: rgba(37, 99, 235, 0.06);">
                     <div class="text-3xl mb-2">🖥️</div>
-                    <div class="text-xs font-bold" style="color: #00ffc8;">الشاشة</div>
+                    <div class="text-xs font-bold" style="color: #1E40AF;">الشاشة</div>
                   </div>
-                  <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
+                  <div class="text-center p-3 rounded-xl" style="background: rgba(37, 99, 235, 0.06);">
                     <div class="text-3xl mb-2">🖨️</div>
-                    <div class="text-xs font-bold" style="color: #00ffc8;">الطابعة</div>
+                    <div class="text-xs font-bold" style="color: #1E40AF;">الطابعة</div>
                   </div>
-                  <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
+                  <div class="text-center p-3 rounded-xl" style="background: rgba(37, 99, 235, 0.06);">
                     <div class="text-3xl mb-2">🔊</div>
-                    <div class="text-xs font-bold" style="color: #00ffc8;">السماعة</div>
+                    <div class="text-xs font-bold" style="color: #1E40AF;">السماعة</div>
                   </div>
                 </div>
               </div>
 
               <div class="glow-card p-5 fade-in fade-in-d2">
-                <h3 class="font-bold mb-3 text-sm" style="color: #00ffc8;">💡 اختبر فهمك</h3>
-                <p class="text-sm mb-3" style="color: #ccd;">ما وظيفة وحدات الإخراج؟</p>
+                <h3 class="font-bold mb-3 text-sm" style="color: #2563EB;">💡 اختبر فهمك</h3>
+                <p class="text-sm mb-3" style="color: #334155;">ما وظيفة وحدات الإخراج؟</p>
                 <div class="space-y-2" id="quiz2"></div>
                 <div id="quiz2Feedback" class="mt-3 text-sm hidden"></div>
               </div>
@@ -523,22 +521,22 @@
         <div class="page bg-grid" data-page="7">
           <div class="flex-1 p-6 md:p-10 overflow-y-auto">
             <div class="max-w-2xl mx-auto">
-              <div class="text-xs mb-2" style="color: #00ffc8;">📘 الوحدة الثالثة</div>
+              <div class="text-xs mb-2" style="color: #2563EB;">📘 الوحدة الثالثة</div>
               <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">وحدة المعالجة والتخزين</h2>
               <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-                <h3 class="font-bold mb-2" style="color: #00ffc8;">🧠 وحدة المعالجة المركزية (CPU)</h3>
-                <p class="text-sm leading-7 mb-4" style="color: #ccd;">هي دماغ الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات.</p>
+                <h3 class="font-bold mb-2" style="color: #2563EB;">🧠 وحدة المعالجة المركزية (CPU)</h3>
+                <p class="text-sm leading-7 mb-4" style="color: #334155;">هي دماغ الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات.</p>
               </div>
               <div class="glow-card p-6 fade-in fade-in-d2">
-                <h3 class="font-bold mb-2" style="color: #00ffc8;">💾 وحدات التخزين</h3>
-                <div class="grid grid-cols-2 gap-3 text-sm" style="color: #ccd;">
-                  <div class="p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
-                    <div class="font-bold" style="color: #00ffc8;">RAM</div>
-                    <div class="text-xs mt-1" style="color: #889;">الذاكرة العشوائية - سريعة ومؤقتة</div>
+                <h3 class="font-bold mb-2" style="color: #2563EB;">💾 وحدات التخزين</h3>
+                <div class="grid grid-cols-2 gap-3 text-sm" style="color: #334155;">
+                  <div class="p-3 rounded-xl" style="background: rgba(37, 99, 235, 0.06);">
+                    <div class="font-bold" style="color: #1E40AF;">RAM</div>
+                    <div class="text-xs mt-1" style="color: #64748B;">الذاكرة العشوائية - سريعة ومؤقتة</div>
                   </div>
-                  <div class="p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
-                    <div class="font-bold" style="color: #00ffc8;">HDD/SSD</div>
-                    <div class="text-xs mt-1" style="color: #889;">التخزين الدائم - كبير وآمن</div>
+                  <div class="p-3 rounded-xl" style="background: rgba(37, 99, 235, 0.06);">
+                    <div class="font-bold" style="color: #1E40AF;">HDD/SSD</div>
+                    <div class="text-xs mt-1" style="color: #64748B;">التخزين الدائم - كبير وآمن</div>
                   </div>
                 </div>
               </div>
@@ -554,18 +552,18 @@
           <div class="flex-1 p-6 md:p-10 overflow-y-auto">
             <div class="max-w-2xl mx-auto">
               <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family: 'Readex Pro', sans-serif;">🎮 لعبة المطابقة</h2>
-              <p class="text-sm mb-4 fade-in" style="color: #889;">اسحب الأجهزة إلى الفئات الصحيحة!</p>
+              <p class="text-sm mb-4 fade-in" style="color: #64748B;">اسحب الأجهزة إلى الفئات الصحيحة!</p>
               <div class="glow-card p-5 mb-4">
                 <div class="flex items-center justify-between mb-4">
                   <div>
-                    <span class="text-sm" style="color: #00ffc8;">النقاط:</span>
+                    <span class="text-sm" style="color: #2563EB;">النقاط:</span>
                     <span id="gameScore2" class="text-sm font-bold">0</span>
                   </div>
                   <div>
-                    <span class="text-sm" style="color: #00ffc8;">المطابقات:</span>
+                    <span class="text-sm" style="color: #2563EB;">المطابقات:</span>
                     <span id="gameMatched" class="text-sm font-bold">0 / 6</span>
                   </div>
-                  <button class="text-xs px-3 py-1 rounded-full" style="background: rgba(0, 255, 200, 0.1); color: #00ffc8; border: 1px solid rgba(0, 255, 200, 0.2); cursor: pointer;" onclick="resetGameDragDrop()">🔄 إعادة</button>
+                  <button class="text-xs px-3 py-1 rounded-full" style="background: rgba(37, 99, 235, 0.1); color: #1E40AF; border: 1px solid rgba(37, 99, 235, 0.2); cursor: pointer;" onclick="resetGameDragDrop()">🔄 إعادة</button>
                 </div>
 
                 <div class="grid grid-cols-2 gap-4 mb-4">
@@ -599,9 +597,9 @@
             <div class="max-w-2xl mx-auto">
               <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">📱 الواقع المعزز</h2>
               <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
-                <h3 class="font-bold mb-4 text-center" style="color: #00ffc8;">📲 امسح رمز الاستجابة السريعة</h3>
+                <h3 class="font-bold mb-4 text-center" style="color: #2563EB;">📲 امسح رمز الاستجابة السريعة</h3>
                 <div class="flex flex-col items-center gap-6">
-                  <div class="p-4 rounded-lg" style="background: white; border: 3px solid #00ffc8;">
+                  <div class="p-4 rounded-lg" style="background: white; border: 3px solid #2563EB;">
                     <svg width="200" height="200" viewBox="0 0 200 200" style="margin: 0 auto;">
                       <rect width="200" height="200" fill="white" />
                       <rect x="10" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" />
@@ -625,30 +623,30 @@
                   </div>
 
                   <div class="w-full">
-                    <div class="text-xs font-bold mb-3 px-3 py-2 rounded-lg" style="background: rgba(0, 255, 200, 0.1); color: #00ffc8;">🔍 تعليمات الاستخدام:</div>
+                    <div class="text-xs font-bold mb-3 px-3 py-2 rounded-lg" style="background: rgba(37, 99, 235, 0.1); color: #1E40AF;">🔍 تعليمات الاستخدام:</div>
 
-                    <div class="space-y-3 text-sm" style="color: #ccd;">
-                      <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(0, 255, 200, 0.03);">
-                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(0, 255, 200, 0.15); color: #00ffc8;">①</div>
+                    <div class="space-y-3 text-sm" style="color: #334155;">
+                      <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(37, 99, 235, 0.03);">
+                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.15); color: #1E40AF;">①</div>
                         <div>
-                          <div class="font-bold" style="color: #00ffc8;">افتح تطبيق قارئ الباركود</div>
-                          <div class="text-xs mt-1" style="color: #889;">استخدم Google Lens أو أي تطبيق QR</div>
+                          <div class="font-bold" style="color: #2563EB;">افتح تطبيق قارئ الباركود</div>
+                          <div class="text-xs mt-1" style="color: #64748B;">استخدم Google Lens أو أي تطبيق QR</div>
                         </div>
                       </div>
 
-                      <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(0, 255, 200, 0.03);">
-                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(0, 255, 200, 0.15); color: #00ffc8;">②</div>
+                      <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(37, 99, 235, 0.03);">
+                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.15); color: #1E40AF;">②</div>
                         <div>
-                          <div class="font-bold" style="color: #00ffc8;">امسح الرمز أعلاه</div>
-                          <div class="text-xs mt-1" style="color: #889;">وجّه الكاميرا نحو الصورة</div>
+                          <div class="font-bold" style="color: #2563EB;">امسح الرمز أعلاه</div>
+                          <div class="text-xs mt-1" style="color: #64748B;">وجّه الكاميرا نحو الصورة</div>
                         </div>
                       </div>
 
-                      <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(0, 255, 200, 0.03);">
-                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(0, 255, 200, 0.15); color: #00ffc8;">③</div>
+                      <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(37, 99, 235, 0.03);">
+                        <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.15); color: #1E40AF;">③</div>
                         <div>
-                          <div class="font-bold" style="color: #00ffc8;">استكشف الواقع المعزز</div>
-                          <div class="text-xs mt-1" style="color: #889;">شاهد أجزاء الحاسوب بشكل تفاعلي</div>
+                          <div class="font-bold" style="color: #2563EB;">استكشف الواقع المعزز</div>
+                          <div class="text-xs mt-1" style="color: #64748B;">شاهد أجزاء الحاسوب بشكل تفاعلي</div>
                         </div>
                       </div>
                     </div>
@@ -671,7 +669,7 @@
 
               <div id="chatContainer" class="flex-1 overflow-y-auto mb-4 p-4 rounded-lg" style="background: rgba(37, 99, 235, 0.03); border: 2px solid rgba(37, 99, 235, 0.1); min-height: 300px; display: flex; flex-direction: column; gap: 12px;">
                 <div class="chat-bubble fade-in">
-                  <div style="font-weight: 600; margin-bottom: 4px; color: #00ffc8;">🤖 المساعد</div>
+                  <div style="font-weight: 600; margin-bottom: 4px; color: #2563EB;">🤖 المساعد</div>
                   <div>مرحبًا! 👋 اسأل أي سؤال عن المحتوى!</div>
                 </div>
               </div>
@@ -696,15 +694,15 @@
               <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family: 'Readex Pro', sans-serif;">🎉 مبارك!</h2>
 
               <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
-                <p class="text-sm leading-7 mb-4" style="color: #ccd;">لقد أكملت رحلتك بنجاح!</p>
+                <p class="text-sm leading-7 mb-4" style="color: #334155;">لقد أكملت رحلتك بنجاح!</p>
 
                 <div class="text-center mb-4">
-                  <div class="text-sm mb-2" style="color: #00ffc8;">النقاط النهائية</div>
+                  <div class="text-sm mb-2" style="color: #2563EB;">النقاط النهائية</div>
                   <div id="finalScore" class="text-5xl font-black neon-text">0</div>
-                  <div class="text-xs mt-1" style="color: #889;">من أصل 100</div>
+                  <div class="text-xs mt-1" style="color: #64748B;">من أصل 100</div>
                 </div>
 
-                <div id="performanceRating" class="text-center p-3 rounded-lg" style="background: rgba(0, 255, 200, 0.1); border: 1px solid rgba(0, 255, 200, 0.2);"></div>
+                <div id="performanceRating" class="text-center p-3 rounded-lg" style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2);"></div>
               </div>
 
               <button class="nav-btn fade-in fade-in-d3" onclick="goToPage(0)">🔄 إعادة الرحلة</button>
@@ -730,6 +728,7 @@
     let draggedItem = null;
     let matchedItems = new Set();
     let gameScore = 0;
+    let chatScoreAdded = false;
 
     function goToPage(n) {
       if (n < 0 || n >= totalPages) return;
@@ -777,14 +776,13 @@
     function updatePerformanceRating() {
       const rating = document.getElementById('performanceRating');
       if (!rating) return;
-      const pct = (totalScore / 100) * 100;
       let text = '';
-      if (pct >= 90) text = '🌟 ممتاز جداً!';
-      else if (pct >= 80) text = '⭐ ممتاز!';
-      else if (pct >= 70) text = '👍 جيد جداً!';
-      else if (pct >= 60) text = '📚 جيد!';
+      if (totalScore >= 90) text = '🌟 ممتاز جداً!';
+      else if (totalScore >= 80) text = '⭐ ممتاز!';
+      else if (totalScore >= 70) text = '👍 جيد جداً!';
+      else if (totalScore >= 60) text = '📚 جيد!';
       else text = '💪 استمر!';
-      rating.innerHTML = `<div style="color: #00ffc8; font-weight: 700;">${text}</div>`;
+      rating.innerHTML = `<div style="color: #1E40AF; font-weight: 700;">${text}</div>`;
     }
 
     function buildSidebar() {
@@ -811,8 +809,8 @@
       objectives.forEach((obj, i) => {
         const el = document.createElement('div');
         el.className = 'flex items-start gap-3 p-3 rounded-lg';
-        el.style.background = 'rgba(0, 255, 200, 0.04)';
-        el.innerHTML = `<div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(0, 255, 200, 0.15); color: #00ffc8;">${i + 1}</div><span class="text-sm" style="color: #ccd;">${obj}</span>`;
+        el.style.background = 'rgba(37, 99, 235, 0.05)';
+        el.innerHTML = `<div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.12); color: #1E40AF;">${i + 1}</div><span class="text-sm" style="color: #334155;">${obj}</span>`;
         container.appendChild(el);
       });
     }
@@ -952,35 +950,116 @@
       buildGame();
     }
 
+    function appendChatMessage(text, isUser = false) {
+      const container = document.getElementById('chatContainer');
+      const msg = document.createElement('div');
+      msg.className = isUser ? 'chat-bubble user' : 'chat-bubble';
+
+      if (isUser) {
+        msg.textContent = text;
+      } else {
+        msg.innerHTML = `<div style="font-weight: 600; margin-bottom: 4px; color: #2563EB;">🤖 المساعد</div><div>${text}</div>`;
+      }
+
+      container.appendChild(msg);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function getSmartReply(message) {
+      const text = message.trim().toLowerCase();
+
+      const responses = [
+        {
+          keys: ['مرحبا', 'اهلا', 'السلام', 'hi', 'hello'],
+          reply: 'مرحبًا بك 🌟 أنا المساعد الذكي في درس أجزاء الحاسوب. يمكنك سؤالي عن وحدات الإدخال، وحدات الإخراج، CPU، أو وحدات التخزين.'
+        },
+        {
+          keys: ['وحدات الإدخال', 'الادخال', 'أجهزة الإدخال', 'اجهزة الادخال', 'input'],
+          reply: 'وحدات الإدخال هي الأجهزة التي تستقبل البيانات من المستخدم وتدخلها إلى الحاسوب، مثل: لوحة المفاتيح، الفأرة، والميكروفون.'
+        },
+        {
+          keys: ['وحدات الإخراج', 'الاخراج', 'أجهزة الإخراج', 'اجهزة الاخراج', 'output'],
+          reply: 'وحدات الإخراج هي الأجهزة التي تعرض نتائج المعالجة للمستخدم، مثل: الشاشة، الطابعة، والسماعة.'
+        },
+        {
+          keys: ['cpu', 'المعالج', 'وحدة المعالجة', 'وحدة المعالجة المركزية'],
+          reply: 'وحدة المعالجة المركزية CPU هي دماغ الحاسوب، فهي تنفذ التعليمات وتعالج البيانات.'
+        },
+        {
+          keys: ['ram', 'الرام', 'الذاكرة العشوائية'],
+          reply: 'RAM هي الذاكرة العشوائية، وتتميز بأنها سريعة ومؤقتة، وتستخدم أثناء تشغيل البرامج.'
+        },
+        {
+          keys: ['hdd', 'ssd', 'التخزين', 'وحدات التخزين', 'القرص الصلب'],
+          reply: 'وحدات التخزين تستخدم لحفظ البيانات. منها تخزين دائم مثل HDD و SSD، وهي تختلف عن RAM لأنها تحتفظ بالبيانات لمدة أطول.'
+        },
+        {
+          keys: ['الفرق بين الإدخال والإخراج', 'الفرق بين الادخال والاخراج', 'الفرق', 'فرق'],
+          reply: 'الفرق هو أن وحدات الإدخال تدخل البيانات إلى الحاسوب، بينما وحدات الإخراج تعرض النتائج للمستخدم.'
+        },
+        {
+          keys: ['لوحة المفاتيح', 'keyboard'],
+          reply: 'لوحة المفاتيح من وحدات الإدخال، وتستخدم لكتابة الحروف والأرقام والأوامر.'
+        },
+        {
+          keys: ['الفأرة', 'الفاره', 'الماوس', 'mouse'],
+          reply: 'الفأرة من وحدات الإدخال، وتستخدم لتحريك المؤشر واختيار العناصر على الشاشة.'
+        },
+        {
+          keys: ['الميكروفون', 'microphone'],
+          reply: 'الميكروفون من وحدات الإدخال، ويستخدم لإدخال الصوت إلى الحاسوب.'
+        },
+        {
+          keys: ['الشاشة', 'monitor'],
+          reply: 'الشاشة من وحدات الإخراج، وتعرض النصوص والصور ونتائج عمل الحاسوب.'
+        },
+        {
+          keys: ['الطابعة', 'printer'],
+          reply: 'الطابعة من وحدات الإخراج، وتستخدم لطباعة المعلومات على الورق.'
+        },
+        {
+          keys: ['السماعة', 'السماعات', 'speaker'],
+          reply: 'السماعة من وحدات الإخراج، وتستخدم لإخراج الصوت للمستخدم.'
+        }
+      ];
+
+      for (const item of responses) {
+        if (item.keys.some(key => text.includes(key))) {
+          return item.reply;
+        }
+      }
+
+      return 'يمكنني مساعدتك في محتوى الدرس 🌷 اسألني عن وحدات الإدخال، وحدات الإخراج، CPU، RAM، أو الفرق بين الإدخال والإخراج.';
+    }
+
     function sendChatMessage() {
       const input = document.getElementById('chatInput');
       const message = input.value.trim();
       if (!message) return;
 
-      const container = document.getElementById('chatContainer');
-      const userMsg = document.createElement('div');
-      userMsg.className = 'chat-bubble user';
-      userMsg.textContent = message;
-      container.appendChild(userMsg);
+      appendChatMessage(message, true);
 
       setTimeout(() => {
-        const aiMsg = document.createElement('div');
-        aiMsg.className = 'chat-bubble';
-        aiMsg.innerHTML = '<div style="font-weight: 600; margin-bottom: 4px; color: #00ffc8;">🤖</div><div>شكرًا على سؤالك! يمكنك العودة للمحتوى للمزيد من المعلومات. 😊</div>';
-        container.appendChild(aiMsg);
-        container.scrollTop = container.scrollHeight;
-        updateScore(5);
-      }, 500);
+        const reply = getSmartReply(message);
+        appendChatMessage(reply, false);
+
+        if (!chatScoreAdded) {
+          updateScore(5);
+          chatScoreAdded = true;
+        }
+      }, 350);
 
       input.value = '';
-      container.scrollTop = container.scrollHeight;
     }
 
     document.addEventListener('DOMContentLoaded', () => {
       const input = document.getElementById('chatInput');
       if (input) {
-        input.addEventListener('keypress', (e) => {
-          if (e.key === 'Enter') sendChatMessage();
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            sendChatMessage();
+          }
         });
       }
 
@@ -998,6 +1077,7 @@
       lucide.createIcons();
       updateProgress();
       updateSidebar();
+      updatePerformanceRating();
     });
   </script>
 </body>
