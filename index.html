@@ -9,118 +9,272 @@
   <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&amp;family=Readex+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <style>
-* { box-sizing: border-box; }
-html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
-body { font-family: 'Tajawal', sans-serif; }
+    /* Base Styles */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+    body { font-family: 'Tajawal', sans-serif; background: #f8f9fc; }
 
-.page { display: none; height: 100%; width: 100%; overflow-y: auto; }
-.page.active { display: flex; flex-direction: column; }
+    /* Layout */
+    .page { display: none; height: 100%; width: 100%; overflow-y: auto; }
+    .page.active { display: flex; flex-direction: column; }
 
-.bg-grid { background: linear-gradient(135deg, #F0F4F8 0%, #E0E7FF 25%, #DBEAFE 50%, #E0E7FF 75%, #F0F4F8 100%); background-size: 400% 400%; animation: gradient-shift 20s ease infinite; }
-@keyframes gradient-shift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    /* Background Gradient */
+    .bg-grid {
+      background: linear-gradient(135deg, #F0F4F8 0%, #E0E7FF 25%, #DBEAFE 50%, #E0E7FF 75%, #F0F4F8 100%);
+      background-size: 400% 400%;
+      animation: gradient-shift 20s ease infinite;
+    }
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-.glow-card { background: rgba(255, 255, 255, 0.98); border: 2px solid #BFDBFE; border-radius: 18px; backdrop-filter: blur(8px); transition: all 0.3s ease; box-shadow: 0 8px 24px rgba(30, 64, 175, 0.08); }
-.glow-card:hover { border-color: #93C5FD; box-shadow: 0 12px 32px rgba(30, 64, 175, 0.12); transform: translateY(-2px); }
+    /* Cards */
+    .glow-card {
+      background: rgba(255, 255, 255, 0.98);
+      border: 2px solid #BFDBFE;
+      border-radius: 18px;
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(30, 64, 175, 0.08);
+    }
+    .glow-card:hover {
+      border-color: #93C5FD;
+      box-shadow: 0 12px 32px rgba(30, 64, 175, 0.12);
+      transform: translateY(-2px);
+    }
 
-.neon-text { color: #1E40AF; text-shadow: 0 1px 3px rgba(30, 64, 175, 0.1); }
+    /* Typography */
+    .neon-text { color: #1E40AF; text-shadow: 0 1px 3px rgba(30, 64, 175, 0.1); }
 
-@keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 15px rgba(30, 64, 175, 0.2); } 50% { box-shadow: 0 0 30px rgba(30, 64, 175, 0.35); } }
-.pulse-glow { animation: pulse-glow 2s infinite; }
+    /* Animations */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 15px rgba(30, 64, 175, 0.2); }
+      50% { box-shadow: 0 0 30px rgba(30, 64, 175, 0.35); }
+    }
+    .pulse-glow { animation: pulse-glow 2s infinite; }
 
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-.float-anim { animation: float 3s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float-anim { animation: float 3s ease-in-out infinite; }
 
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-.fade-in { animation: fadeInUp 0.6s ease forwards; }
-.fade-in-d1 { animation-delay: 0.1s; opacity: 0; }
-.fade-in-d2 { animation-delay: 0.2s; opacity: 0; }
-.fade-in-d3 { animation-delay: 0.3s; opacity: 0; }
-.fade-in-d4 { animation-delay: 0.4s; opacity: 0; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeInUp 0.6s ease forwards; }
+    .fade-in-d1 { animation-delay: 0.1s; opacity: 0; }
+    .fade-in-d2 { animation-delay: 0.2s; opacity: 0; }
+    .fade-in-d3 { animation-delay: 0.3s; opacity: 0; }
+    .fade-in-d4 { animation-delay: 0.4s; opacity: 0; }
 
-.nav-btn { background: linear-gradient(135deg, #1E40AF, #3B82F6); color: #fff; font-weight: 600; padding: 12px 32px; border-radius: 12px; border: none; cursor: pointer; font-family: 'Tajawal', sans-serif; font-size: 15px; transition: all 0.3s; box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2); }
-.nav-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3); background: linear-gradient(135deg, #1E3A8A, #2563EB); }
-.nav-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+    /* Buttons */
+    .nav-btn {
+      background: linear-gradient(135deg, #1E40AF, #3B82F6);
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 32px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 15px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+    }
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+      background: linear-gradient(135deg, #1E3A8A, #2563EB);
+    }
+    .nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
 
-.sidebar { background: rgba(30, 64, 175, 0.04); border-left: 3px solid #1E40AF; backdrop-filter: blur(8px); }
-.sidebar-item { padding: 12px 16px; border-radius: 12px; cursor: pointer; transition: all 0.2s; font-size: 13px; color: #475569; font-weight: 500; }
-.sidebar-item:hover { background: rgba(30, 64, 175, 0.08); color: #1E40AF; transform: translateX(-3px); }
-.sidebar-item.active { background: rgba(30, 64, 175, 0.12); color: #1E40AF; font-weight: 700; border-left: 3px solid #1E40AF; padding-left: 13px; }
+    /* Sidebar */
+    .sidebar {
+      background: rgba(30, 64, 175, 0.04);
+      border-left: 3px solid #1E40AF;
+      backdrop-filter: blur(8px);
+    }
+    .sidebar-item {
+      padding: 12px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 13px;
+      color: #475569;
+      font-weight: 500;
+    }
+    .sidebar-item:hover {
+      background: rgba(30, 64, 175, 0.08);
+      color: #1E40AF;
+      transform: translateX(-3px);
+    }
+    .sidebar-item.active {
+      background: rgba(30, 64, 175, 0.12);
+      color: #1E40AF;
+      font-weight: 700;
+      border-left: 3px solid #1E40AF;
+      padding-left: 13px;
+    }
 
-.progress-track { background: rgba(30, 64, 175, 0.1); height: 6px; border-radius: 3px; }
-.progress-fill { background: linear-gradient(90deg, #1E40AF, #3B82F6); height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+    /* Progress */
+    .progress-track {
+      background: rgba(30, 64, 175, 0.1);
+      height: 6px;
+      border-radius: 3px;
+    }
+    .progress-fill {
+      background: linear-gradient(90deg, #1E40AF, #3B82F6);
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
 
-.quiz-opt { background: rgba(30, 64, 175, 0.05); border: 2px solid #BFDBFE; border-radius: 12px; padding: 14px 18px; cursor: pointer; transition: all 0.3s; text-align: right; color: #1f2937; font-weight: 500; font-size: 14px; }
-.quiz-opt:hover { border-color: #93C5FD; background: rgba(30, 64, 175, 0.08); transform: translateY(-2px); }
-.quiz-opt.correct { border-color: #059669 !important; background: rgba(5, 150, 105, 0.2) !important; color: #065F46 !important; font-weight: 700; pointer-events: none; }
-.quiz-opt.wrong { border-color: #DC2626 !important; background: rgba(220, 38, 38, 0.1) !important; color: #991B1B !important; }
+    /* Quiz */
+    .quiz-opt {
+      background: rgba(30, 64, 175, 0.05);
+      border: 2px solid #BFDBFE;
+      border-radius: 12px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: right;
+      color: #1f2937;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .quiz-opt:hover {
+      border-color: #93C5FD;
+      background: rgba(30, 64, 175, 0.08);
+      transform: translateY(-2px);
+    }
+    .quiz-opt.correct {
+      border-color: #059669 !important;
+      background: rgba(5, 150, 105, 0.2) !important;
+      color: #065F46 !important;
+      font-weight: 700;
+      pointer-events: none;
+    }
+    .quiz-opt.wrong {
+      border-color: #DC2626 !important;
+      background: rgba(220, 38, 38, 0.1) !important;
+      color: #991B1B !important;
+    }
 
-.game-card { width: 90px; height: 90px; background: rgba(30, 64, 175, 0.05); border: 2px solid #BFDBFE; border-radius: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 13px; text-align: center; color: #1f2937; transition: all 0.3s; user-select: none; font-weight: 600; }
-.game-card:hover { border-color: #93C5FD; background: rgba(30, 64, 175, 0.08); transform: scale(1.05); }
-.game-card.matched { border-color: #059669; background: rgba(5, 150, 105, 0.15); opacity: 0.7; pointer-events: none; }
+    /* Game Card */
+    .game-card {
+      width: 90px;
+      height: 90px;
+      background: rgba(30, 64, 175, 0.05);
+      border: 2px solid #BFDBFE;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      text-align: center;
+      color: #1f2937;
+      transition: all 0.3s;
+      user-select: none;
+      font-weight: 600;
+    }
+    .game-card:hover {
+      border-color: #93C5FD;
+      background: rgba(30, 64, 175, 0.08);
+      transform: scale(1.05);
+    }
+    .game-card.matched {
+      border-color: #059669;
+      background: rgba(5, 150, 105, 0.15);
+      opacity: 0.7;
+      pointer-events: none;
+    }
 
-.chat-bubble { background: rgba(30, 64, 175, 0.08); border: 2px solid #BFDBFE; border-radius: 14px 14px 4px 14px; padding: 12px 16px; max-width: 80%; color: #1f2937; font-weight: 500; font-size: 14px; }
-.chat-bubble.user { background: rgba(59, 130, 246, 0.08); border: 2px solid #93C5FD; border-radius: 14px 14px 14px 4px; margin-right: auto; color: #1E40AF; }
+    /* Chat */
+    .chat-bubble {
+      background: rgba(30, 64, 175, 0.08);
+      border: 2px solid #BFDBFE;
+      border-radius: 14px 14px 4px 14px;
+      padding: 12px 16px;
+      max-width: 80%;
+      color: #1f2937;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .chat-bubble.user {
+      background: rgba(59, 130, 246, 0.08);
+      border: 2px solid #93C5FD;
+      border-radius: 14px 14px 14px 4px;
+      margin-right: auto;
+      color: #1E40AF;
+    }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: rgba(30, 64, 175, 0.05); }
-::-webkit-scrollbar-thumb { background: rgba(30, 64, 175, 0.3); border-radius: 3px; }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(30, 64, 175, 0.05); }
+    ::-webkit-scrollbar-thumb { background: rgba(30, 64, 175, 0.3); border-radius: 3px; }
   </style>
+  <script src="/_sdk/data_sdk.js"></script>
   <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full w-full" style="background: #f8f9fc;">
-  <div id="app" class="h-full w-full flex flex-col md:flex-row" style="background: #f8f9fc;">
-   <!-- SIDEBAR -->
-   <aside id="sidebar" class="sidebar w-full md:w-48 lg:w-56 flex-shrink-0 flex flex-col p-3 lg:p-4 overflow-y-auto hidden md:flex" style="height:100%;max-height:100%;">
+  <div id="app" class="h-full w-full flex flex-col md:flex-row" style="background: #f8f9fc;"><!-- SIDEBAR -->
+   <aside id="sidebar" class="sidebar w-full md:w-48 lg:w-56 flex-shrink-0 flex flex-col p-3 lg:p-4 overflow-y-auto hidden md:flex" style="height: 100%; max-height: 100%;">
     <div class="mb-4">
      <div class="text-xs font-bold mb-1" style="color: #667eea;">
       📍 التقدم
      </div>
      <div class="progress-track">
-      <div id="progressFill" class="progress-fill" style="width:0%"></div>
+      <div id="progressFill" class="progress-fill" style="width: 0%"></div>
      </div>
-     <div id="progressText" class="text-xs mt-1" style="color:#667eea;font-weight:600;">
+     <div id="progressText" class="text-xs mt-1" style="color: #667eea; font-weight: 600;">
       0 / 12
      </div>
     </div>
     <nav id="sidebarNav" class="flex flex-col gap-1"></nav>
    </aside><!-- MAIN CONTENT -->
-   <div class="flex-1 flex flex-col overflow-hidden" style="height:100%;">
-    <!-- HEADER -->
-    <header class="flex items-center justify-between px-3 md:px-4 py-2 flex-shrink-0 z-50" style="background:rgba(255,255,255,0.98);border-bottom:2px solid #E0E7FF;box-shadow:0 2px 8px rgba(99,102,241,0.06);">
-     <button id="menuToggle" class="md:hidden p-2" style="color:#6366F1;" onclick="toggleSidebar()"><i data-lucide="menu" style="width:20px;height:20px;"></i></button>
-     <div class="flex items-center gap-2 flex-1 min-w-0"><span style="font-size:18px;flex-shrink-0;">🖥️</span> <span id="topTitle" class="text-xs md:text-sm font-bold truncate" style="color:#4F46E5;font-family:'Readex Pro',sans-serif;">رحلة إلى أجزاء الحاسوب</span>
+   <div class="flex-1 flex flex-col overflow-hidden" style="height: 100%;"><!-- HEADER -->
+    <header class="flex items-center justify-between px-3 md:px-4 py-2 flex-shrink-0 z-50" style="background: rgba(255, 255, 255, 0.98); border-bottom: 2px solid #E0E7FF; box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);"><button id="menuToggle" class="md:hidden p-2" style="color: #6366F1;" onclick="toggleSidebar()"> <i data-lucide="menu" style="width: 20px; height: 20px;"></i> </button>
+     <div class="flex items-center gap-2 flex-1 min-w-0"><span style="font-size: 18px; flex-shrink: 0;">🖥️</span> <span id="topTitle" class="text-xs md:text-sm font-bold truncate" style="color: #4F46E5; font-family: 'Readex Pro', sans-serif;">رحلة إلى أجزاء الحاسوب</span>
      </div>
-     <div class="flex-shrink-0"><span id="scoreDisplay" class="text-xs px-2 md:px-3 py-1 rounded-full whitespace-nowrap" style="background:rgba(99,102,241,0.08);color:#4F46E5;font-weight:600;border:1px solid #E0E7FF;">⭐ 0</span>
+     <div class="flex-shrink-0"><span id="scoreDisplay" class="text-xs px-2 md:px-3 py-1 rounded-full whitespace-nowrap" style="background: rgba(99, 102, 241, 0.08); color: #4F46E5; font-weight: 600; border: 1px solid #E0E7FF;">⭐ 0</span>
      </div>
     </header><!-- PAGES CONTAINER -->
-    <div id="pagesContainer" class="flex-1 overflow-hidden w-full" style="height:100%;display:flex;">
-     <!-- PAGE 0: COVER -->
+    <div id="pagesContainer" class="flex-1 overflow-hidden w-full" style="height: 100%; display: flex;"><!-- PAGE 0: COVER -->
      <div class="page bg-grid active" data-page="0">
       <div class="flex-1 flex items-center justify-center p-6">
        <div class="text-center max-w-lg">
         <div class="float-anim mb-6">
-         <svg width="140" height="140" viewbox="0 0 140 140" class="mx-auto"><rect x="15" y="20" width="110" height="80" rx="8" fill="none" stroke="#2563eb" stroke-width="2" /> <rect x="25" y="30" width="90" height="55" rx="4" fill="rgba(37,99,235,0.08)" /> <rect x="50" y="105" width="40" height="6" rx="3" fill="#2563eb" opacity="0.5" /> <rect x="35" y="113" width="70" height="4" rx="2" fill="#2563eb" opacity="0.3" /> <circle cx="70" cy="52" r="12" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <path d="M65 52 L68 56 L76 48" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
+         <svg width="140" height="140" viewbox="0 0 140 140" class="mx-auto"><rect x="15" y="20" width="110" height="80" rx="8" fill="none" stroke="#2563eb" stroke-width="2" /> <rect x="25" y="30" width="90" height="55" rx="4" fill="rgba(37, 99, 235, 0.08)" /> <rect x="50" y="105" width="40" height="6" rx="3" fill="#2563eb" opacity="0.5" /> <rect x="35" y="113" width="70" height="4" rx="2" fill="#2563eb" opacity="0.3" /> <circle cx="70" cy="52" r="12" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <path d="M65 52 L68 56 L76 48" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
          </svg>
         </div>
         <div class="fade-in">
-         <div class="text-xs tracking-widest mb-3" style="color:#00ffc8;opacity:0.7;">
+         <div class="text-xs tracking-widest mb-3" style="color: #00ffc8; opacity: 0.7;">
           🎓 رحلة تعليمية تفاعلية
          </div>
-         <h1 id="coverTitle" class="text-3xl md:text-4xl font-black mb-4 neon-text" style="font-family:'Readex Pro',sans-serif;line-height:1.4;">رحلة إلى أجزاء الحاسوب</h1>
+         <h1 id="coverTitle" class="text-3xl md:text-4xl font-black mb-4 neon-text" style="font-family: 'Readex Pro', sans-serif; line-height: 1.4;">رحلة إلى أجزاء الحاسوب</h1>
          <div class="glow-card p-4 mb-6 inline-block">
-          <div class="flex items-center gap-6 text-sm" style="color:#475569;">
+          <div class="flex items-center gap-6 text-sm" style="color: #475569;">
            <div>
-            <div class="text-xs" style="color:#2563eb;">
+            <div class="text-xs" style="color: #2563eb;">
              اسم الطالب
             </div>
             <div id="coverName" class="font-bold mt-1">
-             شيخة العلوية
+             شووشش
             </div>
            </div>
-           <div style="width:1px;height:30px;background:rgba(37,99,235,0.2);"></div>
+           <div style="width: 1px; height: 30px; background: rgba(37, 99, 235, 0.2);"></div>
            <div>
-            <div class="text-xs" style="color:#2563eb;">
+            <div class="text-xs" style="color: #2563eb;">
              الرقم الجامعي
             </div>
             <div id="coverId" class="font-bold mt-1">
@@ -130,9 +284,9 @@ body { font-family: 'Tajawal', sans-serif; }
           </div>
          </div>
          <div class="mb-6">
-          <svg width="60" height="60" viewbox="0 0 60 60" class="mx-auto mb-2"><circle cx="30" cy="30" r="28" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.4" /> <path d="M30 12 L42 22 L42 40 L18 40 L18 22 Z" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <rect x="27" y="30" width="6" height="10" fill="rgba(37,99,235,0.2)" /> <path d="M22 22 L30 15 L38 22" fill="none" stroke="#2563eb" stroke-width="1.5" />
+          <svg width="60" height="60" viewbox="0 0 60 60" class="mx-auto mb-2"><circle cx="30" cy="30" r="28" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.4" /> <path d="M30 12 L42 22 L42 40 L18 40 L18 22 Z" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <rect x="27" y="30" width="6" height="10" fill="rgba(37, 99, 235, 0.2)" /> <path d="M22 22 L30 15 L38 22" fill="none" stroke="#2563eb" stroke-width="1.5" />
           </svg>
-          <div class="text-xs" style="color:#64748b;">
+          <div class="text-xs" style="color: #64748b;">
            الجامعة العربية المفتوحة
           </div>
          </div>
@@ -143,14 +297,14 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="1">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">📖 دليل الاستخدام</h2>
+        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">📖 دليل الاستخدام</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <h3 class="font-bold mb-3" style="color:#2563eb;">كيف تستخدم هذا الدرس؟</h3>
-         <ul class="space-y-3 text-sm" style="color:#475569;line-height:1.8;">
-          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">①</span> تنقل بين الصفحات باستخدام الأزرار أو القائمة</li>
-          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">②</span> اقرأ المحتوى وشاهد الفيديو</li>
-          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">③</span> أجب على الاختبارات والألعاب</li>
-          <li class="flex items-start gap-2"><span style="color:#2563eb;font-weight:700;">④</span> استخدم رمز الواقع المعزز</li>
+         <h3 class="font-bold mb-3" style="color: #2563eb;">كيف تستخدم هذا الدرس؟</h3>
+         <ul class="space-y-3 text-sm" style="color: #475569; line-height: 1.8;">
+          <li class="flex items-start gap-2"><span style="color: #2563eb; font-weight: 700;">①</span> تنقل بين الصفحات باستخدام الأزرار أو القائمة</li>
+          <li class="flex items-start gap-2"><span style="color: #2563eb; font-weight: 700;">②</span> اقرأ المحتوى وشاهد الفيديو</li>
+          <li class="flex items-start gap-2"><span style="color: #2563eb; font-weight: 700;">③</span> أجب على الاختبارات والألعاب</li>
+          <li class="flex items-start gap-2"><span style="color: #2563eb; font-weight: 700;">④</span> استخدم رمز الواقع المعزز</li>
          </ul>
         </div>
         <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(0)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(2)">التالي ⟶</button>
@@ -161,18 +315,18 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="2">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎥 الفيديو التعليمي</h2>
+        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">🎥 الفيديو التعليمي</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <h3 class="font-bold mb-4 text-center" style="color:#2563eb;">مقدمة عن أجزاء الحاسوب</h3>
-         <div class="rounded-xl overflow-hidden" style="background:#000;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+         <h3 class="font-bold mb-4 text-center" style="color: #2563eb;">مقدمة عن أجزاء الحاسوب</h3>
+         <div class="rounded-xl overflow-hidden" style="background: #000; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
           <div class="text-center">
-           <div style="font-size:64px;margin-bottom:16px;">
+           <div style="font-size: 64px; margin-bottom: 16px;">
             🎬
            </div>
-           <div style="color:#aaa;font-size:14px;">
+           <div style="color: #aaa; font-size: 14px;">
             مساحة الفيديو
            </div>
-           <div style="color:#777;font-size:12px;margin-top:8px;">
+           <div style="color: #777; font-size: 12px; margin-top: 8px;">
             يمكن إضافة فيديو من YouTube أو رابط مباشر
            </div>
           </div>
@@ -186,9 +340,9 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="3">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🌟 المقدمة</h2>
+        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">🌟 المقدمة</h2>
         <div class="glow-card p-6 fade-in fade-in-d1">
-         <p class="text-sm leading-7" style="color:#ccd;">مرحبًا بك في رحلة استكشافية ممتعة نتعرف فيها على <strong style="color:#00ffc8;">أجزاء الحاسوب</strong> ومكوناته الأساسية. سنتعلم كيف تعمل هذه الأجزاء معًا!</p>
+         <p class="text-sm leading-7" style="color: #ccd;">مرحبًا بك في رحلة استكشافية ممتعة نتعرف فيها على <strong style="color: #00ffc8;">أجزاء الحاسوب</strong> ومكوناته الأساسية. سنتعلم كيف تعمل هذه الأجزاء معًا!</p>
         </div>
         <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(4)">التالي ⟶</button>
         </div>
@@ -198,9 +352,9 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="4">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎯 أهداف الدرس</h2>
+        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">🎯 أهداف الدرس</h2>
         <div class="glow-card p-5 fade-in fade-in-d1">
-         <div class="text-xs mb-3" style="color:#00ffc8;">
+         <div class="text-xs mb-3" style="color: #00ffc8;">
           بنهاية هذا الدرس، ستكون قادرًا على:
          </div>
          <div class="space-y-3" id="objectivesList"></div>
@@ -213,46 +367,46 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="5">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <div class="text-xs mb-2" style="color:#00ffc8;">
+        <div class="text-xs mb-2" style="color: #00ffc8;">
          📘 الوحدة الأولى
         </div>
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدات الإدخال</h2>
+        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">وحدات الإدخال</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإدخال تستقبل البيانات من المستخدم وتحويلها إلى صيغة يفهمها الحاسوب.</p>
+         <p class="text-sm leading-7 mb-4" style="color: #ccd;">وحدات الإدخال تستقبل البيانات من المستخدم وتحويلها إلى صيغة يفهمها الحاسوب.</p>
          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
            <div class="text-3xl mb-2">
             ⌨️
            </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
+           <div class="text-xs font-bold" style="color: #00ffc8;">
             لوحة المفاتيح
            </div>
           </div>
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
            <div class="text-3xl mb-2">
             🖱️
            </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
+           <div class="text-xs font-bold" style="color: #00ffc8;">
             الفأرة
            </div>
           </div>
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
            <div class="text-3xl mb-2">
             🎤
            </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
+           <div class="text-xs font-bold" style="color: #00ffc8;">
             الميكروفون
            </div>
           </div>
          </div>
         </div>
         <div class="glow-card p-5 fade-in fade-in-d2">
-         <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">💡 اختبر فهمك</h3>
-         <p class="text-sm mb-3" style="color:#ccd;">أي من التالي يُعد من وحدات الإدخال؟</p>
+         <h3 class="font-bold mb-3 text-sm" style="color: #00ffc8;">💡 اختبر فهمك</h3>
+         <p class="text-sm mb-3" style="color: #ccd;">أي من التالي يُعد من وحدات الإدخال؟</p>
          <div class="space-y-2" id="quiz1"></div>
          <div id="quiz1Feedback" class="mt-3 text-sm hidden"></div>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(4)">⟵ السابق</button> <button class="nav-btn" id="nextBtn5" onclick="goToPage(6)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(4)">⟵ السابق</button> <button class="nav-btn" id="nextBtn5" onclick="goToPage(6)" style="opacity: 0.5; cursor: not-allowed;" disabled>التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -260,46 +414,46 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="6">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <div class="text-xs mb-2" style="color:#00ffc8;">
+        <div class="text-xs mb-2" style="color: #00ffc8;">
          📘 الوحدة الثانية
         </div>
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدات الإخراج</h2>
+        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">وحدات الإخراج</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">وحدات الإخراج تعرض نتائج معالجة البيانات للمستخدم.</p>
+         <p class="text-sm leading-7 mb-4" style="color: #ccd;">وحدات الإخراج تعرض نتائج معالجة البيانات للمستخدم.</p>
          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
            <div class="text-3xl mb-2">
             🖥️
            </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
+           <div class="text-xs font-bold" style="color: #00ffc8;">
             الشاشة
            </div>
           </div>
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
            <div class="text-3xl mb-2">
             🖨️
            </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
+           <div class="text-xs font-bold" style="color: #00ffc8;">
             الطابعة
            </div>
           </div>
-          <div class="text-center p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
+          <div class="text-center p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
            <div class="text-3xl mb-2">
             🔊
            </div>
-           <div class="text-xs font-bold" style="color:#00ffc8;">
+           <div class="text-xs font-bold" style="color: #00ffc8;">
             السماعة
            </div>
           </div>
          </div>
         </div>
         <div class="glow-card p-5 fade-in fade-in-d2">
-         <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">💡 اختبر فهمك</h3>
-         <p class="text-sm mb-3" style="color:#ccd;">ما وظيفة وحدات الإخراج؟</p>
+         <h3 class="font-bold mb-3 text-sm" style="color: #00ffc8;">💡 اختبر فهمك</h3>
+         <p class="text-sm mb-3" style="color: #ccd;">ما وظيفة وحدات الإخراج؟</p>
          <div class="space-y-2" id="quiz2"></div>
          <div id="quiz2Feedback" class="mt-3 text-sm hidden"></div>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(5)">⟵ السابق</button> <button class="nav-btn" id="nextBtn6" onclick="goToPage(7)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(5)">⟵ السابق</button> <button class="nav-btn" id="nextBtn6" onclick="goToPage(7)" style="opacity: 0.5; cursor: not-allowed;" disabled>التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -307,30 +461,30 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="7">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <div class="text-xs mb-2" style="color:#00ffc8;">
+        <div class="text-xs mb-2" style="color: #00ffc8;">
          📘 الوحدة الثالثة
         </div>
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">وحدة المعالجة والتخزين</h2>
+        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">وحدة المعالجة والتخزين</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
-         <h3 class="font-bold mb-2" style="color:#00ffc8;">🧠 وحدة المعالجة المركزية (CPU)</h3>
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">هي دماغ الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات.</p>
+         <h3 class="font-bold mb-2" style="color: #00ffc8;">🧠 وحدة المعالجة المركزية (CPU)</h3>
+         <p class="text-sm leading-7 mb-4" style="color: #ccd;">هي دماغ الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات.</p>
         </div>
         <div class="glow-card p-6 fade-in fade-in-d2">
-         <h3 class="font-bold mb-2" style="color:#00ffc8;">💾 وحدات التخزين</h3>
-         <div class="grid grid-cols-2 gap-3 text-sm" style="color:#ccd;">
-          <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
-           <div class="font-bold" style="color:#00ffc8;">
+         <h3 class="font-bold mb-2" style="color: #00ffc8;">💾 وحدات التخزين</h3>
+         <div class="grid grid-cols-2 gap-3 text-sm" style="color: #ccd;">
+          <div class="p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
+           <div class="font-bold" style="color: #00ffc8;">
             RAM
            </div>
-           <div class="text-xs mt-1" style="color:#889;">
+           <div class="text-xs mt-1" style="color: #889;">
             الذاكرة العشوائية - سريعة ومؤقتة
            </div>
           </div>
-          <div class="p-3 rounded-xl" style="background:rgba(0,255,200,0.05);">
-           <div class="font-bold" style="color:#00ffc8;">
+          <div class="p-3 rounded-xl" style="background: rgba(0, 255, 200, 0.05);">
+           <div class="font-bold" style="color: #00ffc8;">
             HDD/SSD
            </div>
-           <div class="text-xs mt-1" style="color:#889;">
+           <div class="text-xs mt-1" style="color: #889;">
             التخزين الدائم - كبير وآمن
            </div>
           </div>
@@ -344,38 +498,40 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="8">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">🎮 لعبة المطابقة</h2>
-        <p class="text-sm mb-4 fade-in" style="color:#889;">اسحب الأجهزة إلى الفئات الصحيحة!</p>
+        <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family: 'Readex Pro', sans-serif;">🎮 لعبة المطابقة</h2>
+        <p class="text-sm mb-4 fade-in" style="color: #889;">اسحب الأجهزة إلى الفئات الصحيحة!</p>
         <div class="glow-card p-5 mb-4">
          <div class="flex items-center justify-between mb-4">
-          <div><span class="text-sm" style="color:#00ffc8;">النقاط: </span><span id="gameScore2" class="text-sm font-bold">0</span>
+          <div>
+           <span class="text-sm" style="color: #00ffc8;">النقاط:</span> <span id="gameScore2" class="text-sm font-bold">0</span>
           </div>
-          <div><span class="text-sm" style="color:#00ffc8;">المطابقات: </span><span id="gameMatched" class="text-sm font-bold">0 / 6</span>
-          </div><button class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.1);color:#00ffc8;border:1px solid rgba(0,255,200,0.2);cursor:pointer;" onclick="resetGameDragDrop()">🔄 إعادة</button>
+          <div>
+           <span class="text-sm" style="color: #00ffc8;">المطابقات:</span> <span id="gameMatched" class="text-sm font-bold">0 / 6</span>
+          </div><button class="text-xs px-3 py-1 rounded-full" style="background: rgba(0, 255, 200, 0.1); color: #00ffc8; border: 1px solid rgba(0, 255, 200, 0.2); cursor: pointer;" onclick="resetGameDragDrop()">🔄 إعادة</button>
          </div>
          <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
-           <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(255, 107, 53, 0.15);color:#FF6B35;">
+           <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background: rgba(255, 107, 53, 0.15); color: #FF6B35;">
             📥 الإدخال
            </div>
-           <div id="gameInput" class="min-h-40 p-3 rounded-lg" style="background:rgba(255, 107, 53, 0.05);border:2px dashed rgba(255, 107, 53, 0.3);"></div>
+           <div id="gameInput" class="min-h-40 p-3 rounded-lg" style="background: rgba(255, 107, 53, 0.05); border: 2px dashed rgba(255, 107, 53, 0.3);"></div>
           </div>
           <div>
-           <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(0, 78, 137, 0.15);color:#004E89;">
+           <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background: rgba(0, 78, 137, 0.15); color: #004E89;">
             📤 الإخراج
            </div>
-           <div id="gameOutput" class="min-h-40 p-3 rounded-lg" style="background:rgba(0, 78, 137, 0.05);border:2px dashed rgba(0, 78, 137, 0.3);"></div>
+           <div id="gameOutput" class="min-h-40 p-3 rounded-lg" style="background: rgba(0, 78, 137, 0.05); border: 2px dashed rgba(0, 78, 137, 0.3);"></div>
           </div>
          </div>
          <div class="mb-4">
-          <div class="text-xs font-bold px-3 py-2 mb-2" style="color:#667eea;">
+          <div class="text-xs font-bold px-3 py-2 mb-2" style="color: #667eea;">
            🎯 اسحب الأجهزة
           </div>
-          <div id="gamePool" class="flex flex-wrap gap-2 p-3 rounded-lg" style="background:rgba(37, 99, 235, 0.05);border:1px solid rgba(37, 99, 235, 0.2);min-height:80px;"></div>
+          <div id="gamePool" class="flex flex-wrap gap-2 p-3 rounded-lg" style="background: rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.2); min-height: 80px;"></div>
          </div>
          <div id="gameFeedback2" class="mt-3 text-sm text-center hidden"></div>
         </div>
-        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(7)">⟵ السابق</button> <button class="nav-btn" id="gameNextBtn2" onclick="goToPage(9)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(7)">⟵ السابق</button> <button class="nav-btn" id="gameNextBtn2" onclick="goToPage(9)" style="opacity: 0.5; cursor: not-allowed;" disabled>التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -383,55 +539,54 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="9">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">📱 الواقع المعزز</h2>
+        <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family: 'Readex Pro', sans-serif;">📱 الواقع المعزز</h2>
         <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
-         <h3 class="font-bold mb-4 text-center" style="color:#00ffc8;">📲 امسح رمز الاستجابة السريعة</h3>
+         <h3 class="font-bold mb-4 text-center" style="color: #00ffc8;">📲 امسح رمز الاستجابة السريعة</h3>
          <div class="flex flex-col items-center gap-6">
-          <div class="p-4 rounded-lg" style="background:white;border:3px solid #00ffc8;">
-           <svg width="200" height="200" viewbox="0 0 200 200" style="margin:0 auto;">
-            <rect width="200" height="200" fill="white" /> <rect x="10" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="15" y="15" width="30" height="30" fill="#000" /> <rect x="20" y="20" width="20" height="20" fill="white" /> <rect x="25" y="25" width="10" height="10" fill="#000" /> <rect x="150" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="155" y="15" width="30" height="30" fill="#000" /> <rect x="160" y="20" width="20" height="20" fill="white" /> <rect x="165" y="25" width="10" height="10" fill="#000" /> <rect x="10" y="150" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="15" y="155" width="30" height="30" fill="#000" /> <rect x="20" y="160" width="20" height="20" fill="white" /> <rect x="25" y="165" width="10" height="10" fill="#000" /> <rect x="65" y="65" width="4" height="4" fill="#000" /> <rect x="75" y="70" width="4" height="4" fill="#000" /> <rect x="85" y="75" width="4" height="4" fill="#000" /> <rect x="70" y="85" width="4" height="4" fill="#000" /> <rect x="80" y="90" width="4" height="4" fill="#000" />
+          <div class="p-4 rounded-lg" style="background: white; border: 3px solid #00ffc8;">
+           <svg width="200" height="200" viewbox="0 0 200 200" style="margin: 0 auto;"><rect width="200" height="200" fill="white" /> <rect x="10" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="15" y="15" width="30" height="30" fill="#000" /> <rect x="20" y="20" width="20" height="20" fill="white" /> <rect x="25" y="25" width="10" height="10" fill="#000" /> <rect x="150" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="155" y="15" width="30" height="30" fill="#000" /> <rect x="160" y="20" width="20" height="20" fill="white" /> <rect x="165" y="25" width="10" height="10" fill="#000" /> <rect x="10" y="150" width="40" height="40" fill="none" stroke="#000" stroke-width="2" /> <rect x="15" y="155" width="30" height="30" fill="#000" /> <rect x="20" y="160" width="20" height="20" fill="white" /> <rect x="25" y="165" width="10" height="10" fill="#000" /> <rect x="65" y="65" width="4" height="4" fill="#000" /> <rect x="75" y="70" width="4" height="4" fill="#000" /> <rect x="85" y="75" width="4" height="4" fill="#000" /> <rect x="70" y="85" width="4" height="4" fill="#000" /> <rect x="80" y="90" width="4" height="4" fill="#000" />
            </svg>
           </div>
           <div class="w-full">
-           <div class="text-xs font-bold mb-3 px-3 py-2 rounded-lg" style="background:rgba(0,255,200,0.1);color:#00ffc8;">
+           <div class="text-xs font-bold mb-3 px-3 py-2 rounded-lg" style="background: rgba(0, 255, 200, 0.1); color: #00ffc8;">
             🔍 تعليمات الاستخدام:
            </div>
-           <div class="space-y-3 text-sm" style="color:#ccd;">
-            <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
-             <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+           <div class="space-y-3 text-sm" style="color: #ccd;">
+            <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(0, 255, 200, 0.03);">
+             <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(0, 255, 200, 0.15); color: #00ffc8;">
               ①
              </div>
              <div>
-              <div class="font-bold" style="color:#00ffc8;">
+              <div class="font-bold" style="color: #00ffc8;">
                افتح تطبيق قارئ الباركود
               </div>
-              <div class="text-xs mt-1" style="color:#889;">
+              <div class="text-xs mt-1" style="color: #889;">
                استخدم Google Lens أو أي تطبيق QR
               </div>
              </div>
             </div>
-            <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
-             <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+            <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(0, 255, 200, 0.03);">
+             <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(0, 255, 200, 0.15); color: #00ffc8;">
               ②
              </div>
              <div>
-              <div class="font-bold" style="color:#00ffc8;">
+              <div class="font-bold" style="color: #00ffc8;">
                امسح الرمز أعلاه
               </div>
-              <div class="text-xs mt-1" style="color:#889;">
+              <div class="text-xs mt-1" style="color: #889;">
                وجّه الكاميرا نحو الصورة
               </div>
              </div>
             </div>
-            <div class="flex items-start gap-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.03);">
-             <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">
+            <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(0, 255, 200, 0.03);">
+             <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(0, 255, 200, 0.15); color: #00ffc8;">
               ③
              </div>
              <div>
-              <div class="font-bold" style="color:#00ffc8;">
+              <div class="font-bold" style="color: #00ffc8;">
                استكشف الواقع المعزز
               </div>
-              <div class="text-xs mt-1" style="color:#889;">
+              <div class="text-xs mt-1" style="color: #889;">
                شاهد أجزاء الحاسوب بشكل تفاعلي
               </div>
              </div>
@@ -448,10 +603,10 @@ body { font-family: 'Tajawal', sans-serif; }
      <div class="page bg-grid" data-page="10">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto flex flex-col">
        <div class="max-w-2xl mx-auto w-full flex flex-col h-full">
-        <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🤖 المساعد الذكي</h2>
-        <div id="chatContainer" class="flex-1 overflow-y-auto mb-4 p-4 rounded-lg" style="background:rgba(37,99,235,0.03);border:2px solid rgba(37,99,235,0.1);min-height:300px;display:flex;flex-direction:column;gap:3;">
+        <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family: 'Readex Pro', sans-serif;">🤖 المساعد الذكي</h2>
+        <div id="chatContainer" class="flex-1 overflow-y-auto mb-4 p-4 rounded-lg" style="background: rgba(37, 99, 235, 0.03); border: 2px solid rgba(37, 99, 235, 0.1); min-height: 300px; display: flex; flex-direction: column; gap: 12px;">
          <div class="chat-bubble fade-in">
-          <div style="font-weight:600;margin-bottom:4px;color:#00ffc8;">
+          <div style="font-weight: 600; margin-bottom: 4px; color: #00ffc8;">
            🤖 المساعد
           </div>
           <div>
@@ -459,7 +614,7 @@ body { font-family: 'Tajawal', sans-serif; }
           </div>
          </div>
         </div>
-        <div class="flex gap-2"><input id="chatInput" type="text" placeholder="اكتب سؤالك..." class="flex-1 px-3 py-2 rounded-lg" style="background:rgba(255,255,255,0.9);border:2px solid #E0E7FF;font-family:'Tajawal',sans-serif;color:#333;"> <button onclick="sendChatMessage()" class="nav-btn" style="padding:8px 16px;font-size:13px;">إرسال</button>
+        <div class="flex gap-2"><input id="chatInput" type="text" placeholder="اكتب سؤالك..." class="flex-1 px-3 py-2 rounded-lg" style="background: rgba(255, 255, 255, 0.9); border: 2px solid #E0E7FF; font-family: 'Tajawal', sans-serif; color: #333;"> <button onclick="sendChatMessage()" class="nav-btn" style="padding: 8px 16px; font-size: 13px;">إرسال</button>
         </div>
         <div class="flex justify-between mt-6"><button class="nav-btn" onclick="goToPage(9)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(11)">التالي ⟶</button>
         </div>
@@ -472,21 +627,21 @@ body { font-family: 'Tajawal', sans-serif; }
         <div class="text-5xl mb-4 float-anim">
          🏆
         </div>
-        <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🎉 مبارك!</h2>
+        <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family: 'Readex Pro', sans-serif;">🎉 مبارك!</h2>
         <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">لقد أكملت رحلتك بنجاح!</p>
+         <p class="text-sm leading-7 mb-4" style="color: #ccd;">لقد أكملت رحلتك بنجاح!</p>
          <div class="text-center mb-4">
-          <div class="text-sm mb-2" style="color:#00ffc8;">
+          <div class="text-sm mb-2" style="color: #00ffc8;">
            النقاط النهائية
           </div>
           <div id="finalScore" class="text-5xl font-black neon-text">
            0
           </div>
-          <div class="text-xs mt-1" style="color:#889;">
+          <div class="text-xs mt-1" style="color: #889;">
            من أصل 100
           </div>
          </div>
-         <div id="performanceRating" class="text-center p-3 rounded-lg" style="background:rgba(0,255,200,0.1);border:1px solid rgba(0,255,200,0.2);"></div>
+         <div id="performanceRating" class="text-center p-3 rounded-lg" style="background: rgba(0, 255, 200, 0.1); border: 1px solid rgba(0, 255, 200, 0.2);"></div>
         </div><button class="nav-btn fade-in fade-in-d3" onclick="goToPage(0)">🔄 إعادة الرحلة</button>
        </div>
       </div>
@@ -495,241 +650,307 @@ body { font-family: 'Tajawal', sans-serif; }
    </div>
   </div>
   <script>
-const defaultConfig = { student_name: 'أحمد محمد العلي', student_id: '44312587', lesson_title: 'رحلة إلى أجزاء الحاسوب' };
-let currentPage = 0, totalScore = 0, totalPages = 12;
-const pageNames = ['صفحة الغلاف', 'الدليل', 'الفيديو', 'المقدمة', 'الأهداف', 'الإدخال', 'الإخراج', 'المعالجة', 'اللعبة', 'الواقع المعزز', 'المساعد', 'الشهادة'];
+    /* ====== STATE ====== */
+    const defaultConfig = {
+      student_name: 'أحمد محمد العلي',
+      student_id: '44312587',
+      lesson_title: 'رحلة إلى أجزاء الحاسوب'
+    };
 
-function goToPage(n) {
-  if (n < 0 || n >= totalPages) return;
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const target = document.querySelector(`[data-page="${n}"]`);
-  if (target) { target.classList.add('active'); target.scrollTop = 0; }
-  currentPage = n; updateProgress(); updateSidebar();
-  if (window.innerWidth < 768) { document.getElementById('sidebar').classList.add('hidden'); }
-}
+    let currentPage = 0;
+    let totalScore = 0;
+    const totalPages = 12;
+    const pageNames = ['صفحة الغلاف', 'الدليل', 'الفيديو', 'المقدمة', 'الأهداف', 'الإدخال', 'الإخراج', 'المعالجة', 'اللعبة', 'الواقع المعزز', 'المساعد', 'الشهادة'];
 
-function updateProgress() {
-  const pct = Math.round((currentPage / (totalPages - 1)) * 100);
-  document.getElementById('progressFill').style.width = pct + '%';
-  document.getElementById('progressText').textContent = `${currentPage + 1} / ${totalPages}`;
-}
+    let draggedItem = null;
+    let matchedItems = new Set();
+    let gameScore = 0;
 
-function updateSidebar() {
-  document.querySelectorAll('.sidebar-item').forEach((item, i) => {
-    item.classList.toggle('active', i === currentPage);
-  });
-}
-
-function toggleSidebar() {
-  document.getElementById('sidebar').classList.toggle('hidden');
-}
-
-function updateScore(pts) {
-  totalScore += pts;
-  document.getElementById('scoreDisplay').textContent = `⭐ ${totalScore}`;
-  if (document.getElementById('finalScore')) { document.getElementById('finalScore').textContent = totalScore; }
-  updatePerformanceRating();
-}
-
-function buildSidebar() {
-  const nav = document.getElementById('sidebarNav');
-  nav.innerHTML = '';
-  pageNames.forEach((name, i) => {
-    const el = document.createElement('div');
-    el.className = 'sidebar-item' + (i === 0 ? ' active' : '');
-    el.textContent = name;
-    el.onclick = () => goToPage(i);
-    nav.appendChild(el);
-  });
-}
-
-function buildObjectives() {
-  const objectives = ['معرفة المكونات المادية للحاسوب', 'التمييز بين الإدخال والإخراج', 'فهم وظيفة CPU', 'معرفة وحدات التخزين'];
-  const container = document.getElementById('objectivesList');
-  container.innerHTML = '';
-  objectives.forEach((obj, i) => {
-    const el = document.createElement('div');
-    el.className = 'flex items-start gap-3 p-3 rounded-lg';
-    el.style.background = 'rgba(0,255,200,0.04)';
-    el.innerHTML = `<div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(0,255,200,0.15);color:#00ffc8;">${i + 1}</div><span class="text-sm" style="color:#ccd;">${obj}</span>`;
-    container.appendChild(el);
-  });
-}
-
-function buildQuiz(containerId, feedbackId, question) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = '';
-  question.options.forEach((opt, i) => {
-    const el = document.createElement('div');
-    el.className = 'quiz-opt text-sm';
-    el.textContent = opt;
-    el.onclick = () => answerQuiz(containerId, feedbackId, i, question.correct);
-    container.appendChild(el);
-  });
-}
-
-function answerQuiz(containerId, feedbackId, selected, correct) {
-  const container = document.getElementById(containerId);
-  const feedback = document.getElementById(feedbackId);
-  const opts = container.querySelectorAll('.quiz-opt');
-  if (container.dataset.answered === 'true') return;
-  feedback.classList.remove('hidden');
-  if (selected === correct) {
-    opts[selected].classList.add('correct');
-    feedback.innerHTML = '<span style="color:#059669;font-weight:600;">✅ صحيح! +10</span>';
-    updateScore(10);
-    container.dataset.answered = 'true';
-    opts.forEach(opt => opt.style.pointerEvents = 'none');
-    const btnId = containerId === 'quiz1' ? 'nextBtn5' : 'nextBtn6';
-    const btn = document.getElementById(btnId);
-    if (btn) { btn.disabled = false; btn.style.opacity = '1'; btn.style.cursor = 'pointer'; }
-  } else {
-    opts[selected].classList.add('wrong');
-    feedback.innerHTML = '<span style="color:#DC2626;">❌ حاول مرة أخرى</span>';
-    setTimeout(() => { opts[selected].classList.remove('wrong'); feedback.classList.add('hidden'); }, 1800);
-  }
-}
-
-let draggedItem = null, matchedItems = new Set(), gameScore = 0;
-
-function buildGame() {
-  const pool = document.getElementById('gamePool');
-  const input = document.getElementById('gameInput');
-  const output = document.getElementById('gameOutput');
-  pool.innerHTML = '';
-  input.innerHTML = '';
-  output.innerHTML = '';
-  matchedItems.clear();
-  gameScore = 0;
-  document.getElementById('gameScore2').textContent = '0';
-  document.getElementById('gameMatched').textContent = '0 / 6';
-
-  const items = [
-    { text: '⌨️ لوحة المفاتيح', type: 'input' },
-    { text: '🖱️ الفأرة', type: 'input' },
-    { text: '🎤 الميكروفون', type: 'input' },
-    { text: '🖥️ الشاشة', type: 'output' },
-    { text: '🖨️ الطابعة', type: 'output' },
-    { text: '🔊 السماعة', type: 'output' }
-  ];
-
-  const shuffled = [...items].sort(() => Math.random() - 0.5);
-
-  [input, output].forEach((zone, idx) => {
-    zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.style.borderColor = idx === 0 ? '#FF6B35' : '#004E89'; });
-    zone.addEventListener('dragleave', () => { zone.style.borderColor = idx === 0 ? 'rgba(255, 107, 53, 0.3)' : 'rgba(0, 78, 137, 0.3)'; });
-    zone.addEventListener('drop', (e) => {
-      e.preventDefault();
-      if (draggedItem && draggedItem.dataset.type === (idx === 0 ? 'input' : 'output')) dropItem(draggedItem, idx === 0 ? 'input' : 'output');
-      zone.style.borderColor = idx === 0 ? 'rgba(255, 107, 53, 0.3)' : 'rgba(0, 78, 137, 0.3)';
-    });
-  });
-
-  shuffled.forEach(item => {
-    const el = document.createElement('div');
-    el.className = 'game-card';
-    el.textContent = item.text;
-    el.draggable = true;
-    el.dataset.type = item.type;
-    el.addEventListener('dragstart', () => { draggedItem = el; el.style.opacity = '0.6'; });
-    el.addEventListener('dragend', () => { el.style.opacity = '1'; });
-    pool.appendChild(el);
-  });
-}
-
-function dropItem(itemEl, zone) {
-  if (itemEl.dataset.type === zone) {
-    itemEl.style.opacity = '0.6';
-    itemEl.draggable = false;
-    itemEl.style.borderColor = '#1FD191';
-    itemEl.style.background = 'rgba(31, 209, 145, 0.2)';
-    (zone === 'input' ? document.getElementById('gameInput') : document.getElementById('gameOutput')).appendChild(itemEl);
-    matchedItems.add(itemEl.textContent);
-    gameScore += 15;
-    document.getElementById('gameScore2').textContent = gameScore;
-    document.getElementById('gameMatched').textContent = matchedItems.size + ' / 6';
-    updateScore(15);
-    if (matchedItems.size === 6) {
-      setTimeout(() => {
-        const btn = document.getElementById('gameNextBtn2');
-        btn.disabled = false;
-        btn.style.opacity = '1';
-        btn.style.cursor = 'pointer';
-      }, 300);
+    /* ====== NAVIGATION ====== */
+    function goToPage(n) {
+      if (n < 0 || n >= totalPages) return;
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      const target = document.querySelector(`[data-page="${n}"]`);
+      if (target) {
+        target.classList.add('active');
+        target.scrollTop = 0;
+      }
+      currentPage = n;
+      updateProgress();
+      updateSidebar();
+      if (window.innerWidth < 768) {
+        document.getElementById('sidebar').classList.add('hidden');
+      }
     }
-  }
-}
 
-function resetGameDragDrop() {
-  buildGame();
-}
+    function updateProgress() {
+      const pct = Math.round((currentPage / (totalPages - 1)) * 100);
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('progressText').textContent = `${currentPage + 1} / ${totalPages}`;
+    }
 
-function sendChatMessage() {
-  const input = document.getElementById('chatInput');
-  const message = input.value.trim();
-  if (!message) return;
-  const container = document.getElementById('chatContainer');
-  const userMsg = document.createElement('div');
-  userMsg.className = 'chat-bubble user';
-  userMsg.textContent = message;
-  container.appendChild(userMsg);
-  setTimeout(() => {
-    const aiMsg = document.createElement('div');
-    aiMsg.className = 'chat-bubble';
-    aiMsg.innerHTML = '<div style="font-weight:600;margin-bottom:4px;color:#00ffc8;">🤖</div><div>شكرًا على سؤالك! يمكنك العودة للمحتوى للمزيد من المعلومات. 😊</div>';
-    container.appendChild(aiMsg);
-    container.scrollTop = container.scrollHeight;
-    updateScore(5);
-  }, 500);
-  input.value = '';
-  container.scrollTop = container.scrollHeight;
-}
+    function updateSidebar() {
+      document.querySelectorAll('.sidebar-item').forEach((item, i) => {
+        item.classList.toggle('active', i === currentPage);
+      });
+    }
 
-function updatePerformanceRating() {
-  const rating = document.getElementById('performanceRating');
-  if (!rating) return;
-  const pct = (totalScore / 100) * 100;
-  let text = '';
-  if (pct >= 90) text = '🌟 ممتاز جداً!';
-  else if (pct >= 80) text = '⭐ ممتاز!';
-  else if (pct >= 70) text = '👍 جيد جداً!';
-  else if (pct >= 60) text = '📚 جيد!';
-  else text = '💪 استمر!';
-  rating.innerHTML = `<div style="color:#00ffc8;font-weight:700;">${text}</div>`;
-}
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('hidden');
+    }
 
-function applyConfig(config) {
-  const name = config.student_name || defaultConfig.student_name;
-  const id = config.student_id || defaultConfig.student_id;
-  const title = config.lesson_title || defaultConfig.lesson_title;
-  document.getElementById('coverName').textContent = name;
-  document.getElementById('coverId').textContent = id;
-  document.getElementById('coverTitle').textContent = title;
-  document.getElementById('topTitle').textContent = title;
-}
+    /* ====== SCORING ====== */
+    function updateScore(pts) {
+      totalScore += pts;
+      document.getElementById('scoreDisplay').textContent = `⭐ ${totalScore}`;
+      if (document.getElementById('finalScore')) {
+        document.getElementById('finalScore').textContent = totalScore;
+      }
+      updatePerformanceRating();
+    }
 
-window.elementSdk.init({
-  defaultConfig,
-  onConfigChange: async (config) => applyConfig(config),
-  mapToCapabilities: (config) => ({ recolorables: [], borderables: [], fontEditable: undefined, fontSizeable: undefined }),
-  mapToEditPanelValues: (config) => new Map([
-    ['student_name', config.student_name || defaultConfig.student_name],
-    ['student_id', config.student_id || defaultConfig.student_id],
-    ['lesson_title', config.lesson_title || defaultConfig.lesson_title]
-  ])
-});
+    function updatePerformanceRating() {
+      const rating = document.getElementById('performanceRating');
+      if (!rating) return;
+      const pct = (totalScore / 100) * 100;
+      let text = '';
+      if (pct >= 90) text = '🌟 ممتاز جداً!';
+      else if (pct >= 80) text = '⭐ ممتاز!';
+      else if (pct >= 70) text = '👍 جيد جداً!';
+      else if (pct >= 60) text = '📚 جيد!';
+      else text = '💪 استمر!';
+      rating.innerHTML = `<div style="color: #00ffc8; font-weight: 700;">${text}</div>`;
+    }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const input = document.getElementById('chatInput');
-  if (input) { input.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendChatMessage(); }); }
-});
+    /* ====== CONTENT BUILDERS ====== */
+    function buildSidebar() {
+      const nav = document.getElementById('sidebarNav');
+      nav.innerHTML = '';
+      pageNames.forEach((name, i) => {
+        const el = document.createElement('div');
+        el.className = 'sidebar-item' + (i === 0 ? ' active' : '');
+        el.textContent = name;
+        el.onclick = () => goToPage(i);
+        nav.appendChild(el);
+      });
+    }
 
-buildSidebar();
-buildObjectives();
-buildQuiz('quiz1', 'quiz1Feedback', { options: ['الشاشة', 'لوحة المفاتيح', 'الطابعة', 'السماعة'], correct: 1 });
-buildQuiz('quiz2', 'quiz2Feedback', { options: ['إدخال البيانات', 'عرض النتائج للمستخدم', 'تخزين البيانات', 'الاتصال بالإنترنت'], correct: 1 });
-buildGame();
-lucide.createIcons();
+    function buildObjectives() {
+      const objectives = [
+        'معرفة المكونات المادية للحاسوب',
+        'التمييز بين الإدخال والإخراج',
+        'فهم وظيفة CPU',
+        'معرفة وحدات التخزين'
+      ];
+      const container = document.getElementById('objectivesList');
+      container.innerHTML = '';
+      objectives.forEach((obj, i) => {
+        const el = document.createElement('div');
+        el.className = 'flex items-start gap-3 p-3 rounded-lg';
+        el.style.background = 'rgba(0, 255, 200, 0.04)';
+        el.innerHTML = `<div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(0, 255, 200, 0.15); color: #00ffc8;">${i + 1}</div><span class="text-sm" style="color: #ccd;">${obj}</span>`;
+        container.appendChild(el);
+      });
+    }
+
+    function buildQuiz(containerId, feedbackId, question) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      question.options.forEach((opt, i) => {
+        const el = document.createElement('div');
+        el.className = 'quiz-opt text-sm';
+        el.textContent = opt;
+        el.onclick = () => answerQuiz(containerId, feedbackId, i, question.correct);
+        container.appendChild(el);
+      });
+    }
+
+    function answerQuiz(containerId, feedbackId, selected, correct) {
+      const container = document.getElementById(containerId);
+      const feedback = document.getElementById(feedbackId);
+      const opts = container.querySelectorAll('.quiz-opt');
+      if (container.dataset.answered === 'true') return;
+      feedback.classList.remove('hidden');
+      if (selected === correct) {
+        opts[selected].classList.add('correct');
+        feedback.innerHTML = '<span style="color: #059669; font-weight: 600;">✅ صحيح! +10</span>';
+        updateScore(10);
+        container.dataset.answered = 'true';
+        opts.forEach(opt => opt.style.pointerEvents = 'none');
+        const btnId = containerId === 'quiz1' ? 'nextBtn5' : 'nextBtn6';
+        const btn = document.getElementById(btnId);
+        if (btn) {
+          btn.disabled = false;
+          btn.style.opacity = '1';
+          btn.style.cursor = 'pointer';
+        }
+      } else {
+        opts[selected].classList.add('wrong');
+        feedback.innerHTML = '<span style="color: #DC2626;">❌ حاول مرة أخرى</span>';
+        setTimeout(() => {
+          opts[selected].classList.remove('wrong');
+          feedback.classList.add('hidden');
+        }, 1800);
+      }
+    }
+
+    /* ====== GAME ====== */
+    function buildGame() {
+      const pool = document.getElementById('gamePool');
+      const input = document.getElementById('gameInput');
+      const output = document.getElementById('gameOutput');
+      pool.innerHTML = '';
+      input.innerHTML = '';
+      output.innerHTML = '';
+      matchedItems.clear();
+      gameScore = 0;
+      document.getElementById('gameScore2').textContent = '0';
+      document.getElementById('gameMatched').textContent = '0 / 6';
+
+      const items = [
+        { text: '⌨️ لوحة المفاتيح', type: 'input' },
+        { text: '🖱️ الفأرة', type: 'input' },
+        { text: '🎤 الميكروفون', type: 'input' },
+        { text: '🖥️ الشاشة', type: 'output' },
+        { text: '🖨️ الطابعة', type: 'output' },
+        { text: '🔊 السماعة', type: 'output' }
+      ];
+
+      const shuffled = [...items].sort(() => Math.random() - 0.5);
+
+      [input, output].forEach((zone, idx) => {
+        zone.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          zone.style.borderColor = idx === 0 ? '#FF6B35' : '#004E89';
+        });
+        zone.addEventListener('dragleave', () => {
+          zone.style.borderColor = idx === 0 ? 'rgba(255, 107, 53, 0.3)' : 'rgba(0, 78, 137, 0.3)';
+        });
+        zone.addEventListener('drop', (e) => {
+          e.preventDefault();
+          if (draggedItem && draggedItem.dataset.type === (idx === 0 ? 'input' : 'output')) {
+            dropItem(draggedItem, idx === 0 ? 'input' : 'output');
+          }
+          zone.style.borderColor = idx === 0 ? 'rgba(255, 107, 53, 0.3)' : 'rgba(0, 78, 137, 0.3)';
+        });
+      });
+
+      shuffled.forEach(item => {
+        const el = document.createElement('div');
+        el.className = 'game-card';
+        el.textContent = item.text;
+        el.draggable = true;
+        el.dataset.type = item.type;
+        el.addEventListener('dragstart', () => {
+          draggedItem = el;
+          el.style.opacity = '0.6';
+        });
+        el.addEventListener('dragend', () => {
+          el.style.opacity = '1';
+        });
+        pool.appendChild(el);
+      });
+    }
+
+    function dropItem(itemEl, zone) {
+      if (itemEl.dataset.type === zone) {
+        itemEl.style.opacity = '0.6';
+        itemEl.draggable = false;
+        itemEl.style.borderColor = '#1FD191';
+        itemEl.style.background = 'rgba(31, 209, 145, 0.2)';
+        (zone === 'input' ? document.getElementById('gameInput') : document.getElementById('gameOutput')).appendChild(itemEl);
+        matchedItems.add(itemEl.textContent);
+        gameScore += 15;
+        document.getElementById('gameScore2').textContent = gameScore;
+        document.getElementById('gameMatched').textContent = matchedItems.size + ' / 6';
+        updateScore(15);
+        if (matchedItems.size === 6) {
+          setTimeout(() => {
+            const btn = document.getElementById('gameNextBtn2');
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btn.style.cursor = 'pointer';
+          }, 300);
+        }
+      }
+    }
+
+    function resetGameDragDrop() {
+      buildGame();
+    }
+
+    /* ====== CHAT ====== */
+    function sendChatMessage() {
+      const input = document.getElementById('chatInput');
+      const message = input.value.trim();
+      if (!message) return;
+      const container = document.getElementById('chatContainer');
+      const userMsg = document.createElement('div');
+      userMsg.className = 'chat-bubble user';
+      userMsg.textContent = message;
+      container.appendChild(userMsg);
+      setTimeout(() => {
+        const aiMsg = document.createElement('div');
+        aiMsg.className = 'chat-bubble';
+        aiMsg.innerHTML = '<div style="font-weight: 600; margin-bottom: 4px; color: #00ffc8;">🤖</div><div>شكرًا على سؤالك! يمكنك العودة للمحتوى للمزيد من المعلومات. 😊</div>';
+        container.appendChild(aiMsg);
+        container.scrollTop = container.scrollHeight;
+        updateScore(5);
+      }, 500);
+      input.value = '';
+      container.scrollTop = container.scrollHeight;
+    }
+
+    /* ====== CONFIG ====== */
+    function applyConfig(config) {
+      const name = config.student_name || defaultConfig.student_name;
+      const id = config.student_id || defaultConfig.student_id;
+      const title = config.lesson_title || defaultConfig.lesson_title;
+      document.getElementById('coverName').textContent = name;
+      document.getElementById('coverId').textContent = id;
+      document.getElementById('coverTitle').textContent = title;
+      document.getElementById('topTitle').textContent = title;
+    }
+
+    /* ====== ELEMENT SDK INIT ====== */
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => applyConfig(config),
+      mapToCapabilities: (config) => ({
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ['student_name', config.student_name || defaultConfig.student_name],
+        ['student_id', config.student_id || defaultConfig.student_id],
+        ['lesson_title', config.lesson_title || defaultConfig.lesson_title]
+      ])
+    });
+
+    /* ====== INITIALIZATION ====== */
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('chatInput');
+      if (input) {
+        input.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') sendChatMessage();
+        });
+      }
+    });
+
+    buildSidebar();
+    buildObjectives();
+    buildQuiz('quiz1', 'quiz1Feedback', {
+      options: ['الشاشة', 'لوحة المفاتيح', 'الطابعة', 'السماعة'],
+      correct: 1
+    });
+    buildQuiz('quiz2', 'quiz2Feedback', {
+      options: ['إدخال البيانات', 'عرض النتائج للمستخدم', 'تخزين البيانات', 'الاتصال بالإنترنت'],
+      correct: 1
+    });
+    buildGame();
+    lucide.createIcons();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ebeda005388d1e8',t:'MTc3NjEyOTI0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ebee235036ad1e8',t:'MTc3NjEyOTU4MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
