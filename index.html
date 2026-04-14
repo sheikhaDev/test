@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"> lucide.createIcons();
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&amp;family=Readex+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <style>
 * { box-sizing: border-box; }
@@ -289,11 +289,10 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
 ::-webkit-scrollbar-thumb { background: rgba(37, 99, 235, 0.3); border-radius: 3px; }
 </style>
   <style>body { box-sizing: border-box; }</style>
-  
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full" style="background: #f8f9fc;">
-  <div id="app" class="h-full flex" style="background: #f8f9fc;">
-   <!-- Sidebar Navigation -->
+  <div id="app" class="h-full flex" style="background: #f8f9fc;"><!-- Sidebar Navigation -->
    <aside id="sidebar" class="sidebar w-56 flex-shrink-0 flex flex-col p-4 overflow-y-auto hidden md:flex" style="height:100%;">
     <div class="mb-4">
      <div class="text-xs font-bold mb-1" style="color: #667eea;">
@@ -308,25 +307,19 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
     </div>
     <nav id="sidebarNav" class="flex flex-col gap-1"></nav>
    </aside><!-- Main Content -->
-   <div class="flex-1 flex flex-col overflow-hidden" style="height:100%;">
-    <!-- Top Bar -->
-    <header class="flex items-center justify-between px-4 py-2 flex-shrink-0" style="background:rgba(255,255,255,0.98);border-bottom:2px solid #bfdbfe;box-shadow:0 2px 8px rgba(37,99,235,0.06);">
-     <button id="menuToggle" class="md:hidden p-2" style="color:#2563eb;" onclick="toggleSidebar()"> <i data-lucide="menu" style="width:22px;height:22px;"></i> </button>
-     <div class="flex items-center gap-2">
-      <span style="font-size:20px;">🖥️</span> <span id="topTitle" class="text-sm font-bold" style="color:#1e40af;font-family:'Readex Pro',sans-serif;">رحلة إلى أجزاء الحاسوب</span>
+   <div class="flex-1 flex flex-col overflow-hidden" style="height:100%;"><!-- Top Bar -->
+    <header class="flex items-center justify-between px-4 py-2 flex-shrink-0" style="background:rgba(255,255,255,0.98);border-bottom:2px solid #bfdbfe;box-shadow:0 2px 8px rgba(37,99,235,0.06);"><button id="menuToggle" class="md:hidden p-2" style="color:#2563eb;" onclick="toggleSidebar()"> <i data-lucide="menu" style="width:22px;height:22px;"></i> </button>
+     <div class="flex items-center gap-2"><span style="font-size:20px;">🖥️</span> <span id="topTitle" class="text-sm font-bold" style="color:#1e40af;font-family:'Readex Pro',sans-serif;">رحلة إلى أجزاء الحاسوب</span>
      </div>
-     <div class="flex items-center gap-2">
-      <span id="scoreDisplay" class="text-xs px-3 py-1 rounded-full" style="background:rgba(37,99,235,0.08);color:#1e40af;font-weight:600;border:1px solid #bfdbfe;">⭐ 0 نقطة</span>
+     <div class="flex items-center gap-2"><span id="scoreDisplay" class="text-xs px-3 py-1 rounded-full" style="background:rgba(37,99,235,0.08);color:#1e40af;font-weight:600;border:1px solid #bfdbfe;">⭐ 0 نقطة</span>
      </div>
     </header><!-- Pages Container -->
-    <div id="pagesContainer" class="flex-1 overflow-hidden" style="height:100%;">
-     <!-- PAGE 0: Cover -->
+    <div id="pagesContainer" class="flex-1 overflow-hidden" style="height:100%;"><!-- PAGE 0: Cover -->
      <div class="page bg-grid" data-page="0">
       <div class="flex-1 flex items-center justify-center p-6">
        <div class="text-center max-w-lg">
         <div class="float-anim mb-6">
-         <svg width="140" height="140" viewbox="0 0 140 140" class="mx-auto">
-          <rect x="15" y="20" width="110" height="80" rx="8" fill="none" stroke="#2563eb" stroke-width="2" /> <rect x="25" y="30" width="90" height="55" rx="4" fill="rgba(37,99,235,0.08)" /> <rect x="50" y="105" width="40" height="6" rx="3" fill="#2563eb" opacity="0.5" /> <rect x="35" y="113" width="70" height="4" rx="2" fill="#2563eb" opacity="0.3" /> <!-- Screen content --> <circle cx="70" cy="52" r="12" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <path d="M65 52 L68 56 L76 48" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
+         <svg width="140" height="140" viewbox="0 0 140 140" class="mx-auto"><rect x="15" y="20" width="110" height="80" rx="8" fill="none" stroke="#2563eb" stroke-width="2" /> <rect x="25" y="30" width="90" height="55" rx="4" fill="rgba(37,99,235,0.08)" /> <rect x="50" y="105" width="40" height="6" rx="3" fill="#2563eb" opacity="0.5" /> <rect x="35" y="113" width="70" height="4" rx="2" fill="#2563eb" opacity="0.3" /> <!-- Screen content --> <circle cx="70" cy="52" r="12" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <path d="M65 52 L68 56 L76 48" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
          </svg>
         </div>
         <div class="fade-in">
@@ -355,10 +348,8 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
            </div>
           </div>
          </div>
-         <div class="mb-6">
-          <!-- University Logo -->
-          <svg width="60" height="60" viewbox="0 0 60 60" class="mx-auto mb-2">
-           <circle cx="30" cy="30" r="28" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.4" /> <path d="M30 12 L42 22 L42 40 L18 40 L18 22 Z" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <rect x="27" y="30" width="6" height="10" fill="rgba(37,99,235,0.2)" /> <path d="M22 22 L30 15 L38 22" fill="none" stroke="#2563eb" stroke-width="1.5" />
+         <div class="mb-6"><!-- University Logo -->
+          <svg width="60" height="60" viewbox="0 0 60 60" class="mx-auto mb-2"><circle cx="30" cy="30" r="28" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.4" /> <path d="M30 12 L42 22 L42 40 L18 40 L18 22 Z" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6" /> <rect x="27" y="30" width="6" height="10" fill="rgba(37,99,235,0.2)" /> <path d="M22 22 L30 15 L38 22" fill="none" stroke="#2563eb" stroke-width="1.5" />
           </svg>
           <div class="text-xs" style="color:#64748b;">
            الجامعة العربية المفتوحة
@@ -386,144 +377,28 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
         <div class="glow-card p-6 fade-in fade-in-d2">
          <h3 class="font-bold mb-3" style="color:#2563eb;">البرامج والأدوات المستخدمة</h3>
          <div class="grid grid-cols-2 gap-3 text-sm" style="color:#475569;line-height:1.8;">
-          <div class="flex items-center gap-2"><span>🌐</span> HTML5 / CSS3 / JavaScript
+          <div class="flex items-center gap-2">
+           <span>🌐</span> HTML5 / CSS3 / JavaScript
           </div>
-          <div class="flex items-center gap-2"><span>🎨</span> Tailwind CSS
+          <div class="flex items-center gap-2">
+           <span>🎨</span> Tailwind CSS
           </div>
-          <div class="flex items-center gap-2"><span>🤖</span> مساعد الذكاء الاصطناعي
+          <div class="flex items-center gap-2">
+           <span>🤖</span> مساعد الذكاء الاصطناعي
           </div>
-          <div class="flex items-center gap-2"><span>🎮</span> ألعاب تعليمية تفاعلية
+          <div class="flex items-center gap-2">
+           <span>🎮</span> ألعاب تعليمية تفاعلية
           </div>
-          <div class="flex items-center gap-2"><span>📱</span> تقنية الواقع المعزز
+          <div class="flex items-center gap-2">
+           <span>📱</span> تقنية الواقع المعزز
           </div>
-          <div class="flex items-center gap-2"><span>🖼️</span> رسومات SVG تفاعلية
-          </div>
-         </div>
-        </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(0)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(2)">التالي ⟶</button>
-        </div>
-       </div>
-      </div>
-     </div><!-- PAGE 12: Conclusion -->
-     <div class="page bg-grid" data-page="12">
-      <div class="flex-1 flex items-center justify-center p-6">
-       <div class="text-center max-w-lg">
-        <div class="text-5xl mb-4 float-anim">
-         🏆
-        </div>
-        <h2 class="text-2xl font-black neon-text mb-4 fade-in" style="font-family:'Readex Pro',sans-serif;">🎉 مبارك! أتممت الرحلة</h2>
-        <div class="glow-card p-6 mb-6 fade-in fade-in-d1">
-         <p class="text-sm leading-7 mb-4" style="color:#ccd;">تهانينا! لقد أكملت رحلتك في عالم أجزاء الحاسوب. تعرفت على وحدات الإدخال والإخراج والمعالجة والتخزين، وتفاعلت مع ألعاب تعليمية ونشاط واقع معزز ومساعد ذكي.</p>
-         <div class="text-center mb-4">
-          <div class="text-sm mb-2" style="color:#00ffc8;">
-           مجموع نقاطك النهائية
-          </div>
-          <div id="finalScore" class="text-5xl font-black neon-text">
-           0
-          </div>
-          <div class="text-xs mt-1" style="color:#889;">
-           نقطة من أصل 200
-          </div>
-         </div>
-         <div id="performanceRating" class="text-center p-3 rounded-lg" style="background:rgba(0,255,200,0.1);border:1px solid rgba(0,255,200,0.2);"></div>
-        </div>
-        <div class="glow-card p-5 mb-6 fade-in fade-in-d2">
-         <h3 class="font-bold mb-3 text-sm" style="color:#00ffc8;">📝 ملخص ما تعلمته</h3>
-         <div class="grid grid-cols-2 gap-2 text-xs" style="color:#aabbcc;">
-          <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
-           ✅ وحدات الإدخال
-          </div>
-          <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
-           ✅ وحدات الإخراج
-          </div>
-          <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
-           ✅ وحدة المعالجة
-          </div>
-          <div class="p-2 rounded-lg" style="background:rgba(0,255,200,0.05);">
-           ✅ وحدات التخزين
+          <div class="flex items-center gap-2">
+           <span>🖼️</span> رسومات SVG تفاعلية
           </div>
          </div>
         </div>
-        <div class="flex gap-3 flex-wrap justify-center"><button class="nav-btn fade-in fade-in-d3" onclick="goToPage(0)"> 🔄 إعادة الرحلة </button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(0)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(2)">التالي ⟶</button>
         </div>
-       </div>
-      </div>
-     </div><!-- PAGE 13: Certificate -->
-     <div class="page bg-grid" data-page="13">
-      <div class="flex-1 flex items-center justify-center p-4 md:p-6">
-       <div class="max-w-2xl w-full">
-        <div id="certificateContainer" class="glow-card p-8 md:p-12 text-center fade-in" style="background:linear-gradient(135deg,rgba(255,255,255,0.98),rgba(240,248,255,0.95));border:3px solid #2563eb;box-shadow:0 20px 60px rgba(37,99,235,0.15);"><!-- Certificate Header -->
-         <div class="mb-4">
-          <div class="text-xs tracking-widest mb-2" style="color:#2563eb;letter-spacing:3px;">
-           ⭐ شهادة تقدير ⭐
-          </div>
-          <div class="flex items-center justify-center gap-2 mb-3">
-           <div style="width:30px;height:2px;background:linear-gradient(90deg,#2563eb,transparent);"></div><span style="font-size:24px;">🎓</span>
-           <div style="width:30px;height:2px;background:linear-gradient(90deg,transparent,#2563eb);"></div>
-          </div>
-         </div><!-- Certificate Content -->
-         <div class="mb-6">
-          <h1 class="text-2xl md:text-3xl font-black mb-4" style="color:#1e40af;font-family:'Readex Pro',sans-serif;line-height:1.5;">شهادة إنجاز وتقدير</h1>
-          <p class="text-sm mb-6" style="color:#475569;line-height:2;">يُشرّف أن نُقرّ بأن</p>
-         </div><!-- Student Name -->
-         <div class="mb-8 pb-4" style="border-bottom:2px solid #bfdbfe;">
-          <p id="certName" class="text-2xl font-black" style="color:#1e40af;font-family:'Readex Pro',sans-serif;">أحمد محمد العلي</p>
-          <p class="text-xs mt-2" style="color:#667eea;font-weight:600;">الرقم الجامعي: <span id="certId">44312587</span></p>
-         </div><!-- Achievement Text -->
-         <div class="mb-8">
-          <p class="text-sm leading-7 mb-4" style="color:#475569;">قد أكمل بنجاح درس</p>
-          <p id="certTitle" class="text-xl font-bold mb-4" style="color:#00ffc8;">رحلة إلى أجزاء الحاسوب</p>
-          <p class="text-sm" style="color:#475569;">وأظهر إتقانًا وفهمًا عميقًا لمكونات الحاسوب الأساسية<br>
-            بما فيها وحدات الإدخال والإخراج والمعالجة والتخزين</p>
-         </div><!-- Performance Stats -->
-         <div class="grid grid-cols-2 gap-4 mb-8 p-4 rounded-lg" style="background:rgba(37,99,235,0.05);">
-          <div>
-           <div class="text-xs mb-1" style="color:#667eea;font-weight:600;">
-            النقاط المكتسبة
-           </div>
-           <div id="certScore" class="text-2xl font-black neon-text">
-            0
-           </div>
-           <div class="text-xs" style="color:#889;">
-            من 200
-           </div>
-          </div>
-          <div>
-           <div class="text-xs mb-1" style="color:#667eea;font-weight:600;">
-            التقييم
-           </div>
-           <div id="certGrade" class="text-2xl font-black" style="color:#1FD191;">
-            متفوق
-           </div>
-          </div>
-         </div><!-- Decorative Line -->
-         <div class="flex items-center justify-center gap-3 mb-8">
-          <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,#2563eb);"></div><span style="color:#2563eb;font-size:20px;">✨</span>
-          <div style="flex:1;height:1px;background:linear-gradient(90deg,#2563eb,transparent);"></div>
-         </div><!-- Date & Institution -->
-         <div class="mb-4">
-          <p class="text-xs mb-3" style="color:#475569;">تاريخ الإصدار: <span id="certDate" style="font-weight:600;">اليوم</span></p>
-          <p id="certInstitution" class="text-sm font-bold" style="color:#1e40af;">الجامعة العربية المفتوحة</p>
-         </div><!-- Seal -->
-         <div class="flex justify-center gap-4 mb-4">
-          <div class="text-4xl">
-           🏅
-          </div>
-          <div class="text-4xl">
-           📜
-          </div>
-          <div class="text-4xl">
-           🎖️
-          </div>
-         </div><!-- Signature Line -->
-         <div class="pt-4 mt-4" style="border-top:2px solid #bfdbfe;">
-          <p class="text-xs" style="color:#889;font-style:italic;">Digitally Certified | شهادة رقمية معتمدة</p>
-         </div>
-        </div><!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8"><button class="nav-btn fade-in fade-in-d1" onclick="downloadCertificate()"> 📥 تحميل الشهادة </button> <button class="nav-btn fade-in fade-in-d2" onclick="shareCertificate()"> 📤 مشاركة الشهادة </button> <button class="nav-btn fade-in fade-in-d3" onclick="goToPage(12)"> ⟵ الخلف </button>
-        </div><!-- Share Status -->
-        <div id="shareStatus" class="mt-4 text-center text-xs hidden" style="color:#1FD191;font-weight:600;"></div>
        </div>
       </div>
      </div><!-- PAGE 2: Introduction -->
@@ -559,8 +434,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
           </div>
          </div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(1)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(3)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(1)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(3)">التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -571,8 +445,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
         <h2 class="text-2xl font-black neon-text mb-6 fade-in" style="font-family:'Readex Pro',sans-serif;">🎬 تعريف بالدرس</h2>
         <div class="glow-card p-6 mb-4 fade-in fade-in-d1">
          <div class="flex items-center gap-4 mb-4">
-          <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#00ffc8,#00b894);">
-           <span style="font-size:28px;">👨‍🏫</span>
+          <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#00ffc8,#00b894);"><span style="font-size:28px;">👨‍🏫</span>
           </div>
           <div>
            <div class="font-bold" style="color:#e0e0e0;">
@@ -586,8 +459,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <div id="videoPlayer" class="rounded-xl overflow-hidden mb-4" style="background:#000;aspect-ratio:16/9;position:relative;cursor:pointer;" onclick="toggleVideo()">
           <div id="videoContent" class="w-full h-full flex items-center justify-center relative">
            <div id="playBtn" class="text-center">
-            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 pulse-glow" style="background:rgba(0,255,200,0.2);border:2px solid #00ffc8;">
-             <span style="font-size:24px;color:#00ffc8;">▶</span>
+            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 pulse-glow" style="background:rgba(0,255,200,0.2);border:2px solid #00ffc8;"><span style="font-size:24px;color:#00ffc8;">▶</span>
             </div>
             <div class="text-sm" style="color:#aaa;">
              اضغط للمشاهدة
@@ -608,8 +480,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
           🤖 تم إنشاء هذا العرض التقديمي باستخدام تقنيات الذكاء الاصطناعي
          </div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(4)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(4)">التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -625,8 +496,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <div class="space-y-3" id="objectivesList">
          </div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(5)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(2)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(5)">التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -715,8 +585,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <div class="space-y-2" id="quiz1"></div>
          <div id="quiz1Feedback" class="mt-3 text-sm hidden"></div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(4)">⟵ السابق</button> <button class="nav-btn" id="nextBtn6" onclick="checkQuizAndNext(6)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(4)">⟵ السابق</button> <button class="nav-btn" id="nextBtn6" onclick="checkQuizAndNext(6)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -783,8 +652,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <div class="space-y-2" id="quiz2"></div>
          <div id="quiz2Feedback" class="mt-3 text-sm hidden"></div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(5)">⟵ السابق</button> <button class="nav-btn" id="nextBtn7" onclick="checkQuizAndNext(7)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(5)">⟵ السابق</button> <button class="nav-btn" id="nextBtn7" onclick="checkQuizAndNext(7)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -800,8 +668,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <h3 class="font-bold mb-2" style="color:#00ffc8;">🧠 وحدة المعالجة المركزية (CPU)</h3>
          <p class="text-sm leading-7 mb-4" style="color:#ccd;">هي "دماغ" الحاسوب، تقوم بتنفيذ التعليمات ومعالجة البيانات. تتكون من وحدة الحساب والمنطق (ALU) ووحدة التحكم (CU).</p>
          <div class="flex items-center justify-center mb-4">
-          <svg width="200" height="120" viewbox="0 0 200 120">
-           <rect x="40" y="20" width="120" height="80" rx="8" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1.5" /> <text x="100" y="45" text-anchor="middle" fill="#00ffc8" font-size="10" font-weight="bold">
+          <svg width="200" height="120" viewbox="0 0 200 120"><rect x="40" y="20" width="120" height="80" rx="8" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1.5" /> <text x="100" y="45" text-anchor="middle" fill="#00ffc8" font-size="10" font-weight="bold">
             CPU
            </text> <rect x="52" y="55" width="44" height="30" rx="4" fill="rgba(0,255,200,0.1)" stroke="#00ffc8" stroke-width="1" opacity="0.6" /> <text x="74" y="74" text-anchor="middle" fill="#aaa" font-size="8">
             ALU
@@ -848,8 +715,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
           </div>
          </div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(6)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(8)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(6)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(8)">التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -857,44 +723,30 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
      <div class="page bg-grid" data-page="9">
       <div class="flex-1 p-6 md:p-10 overflow-y-auto">
        <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">🎮 لعبة المطابقة بالسحب والإفلات</h2>
-        <p class="text-sm mb-4 fade-in" style="color:#889;">اسحب أجهزة الإدخال والإخراج إلى الصناديق الصحيحة!</p>
+        <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">🎮 لعبة المطابقة</h2>
+        <p class="text-sm mb-4 fade-in" style="color:#889;">طابق كل جزء من أجزاء الحاسوب مع وظيفته الصحيحة!</p>
         <div class="glow-card p-5 mb-4">
          <div class="flex items-center justify-between mb-4">
-          <div>
-           <span class="text-sm" style="color:#00ffc8;">النقاط: </span> <span id="gameScore2" class="text-sm font-bold" style="color:#e0e0e0;">0</span>
+          <div><span class="text-sm" style="color:#00ffc8;">المستوى: </span> <span id="gameLevel" class="text-sm font-bold" style="color:#e0e0e0;">1</span>
           </div>
-          <div>
-           <span class="text-sm" style="color:#00ffc8;">المطابقات: </span> <span id="gameMatched" class="text-sm font-bold" style="color:#e0e0e0;">0 / 6</span>
-          </div><button class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.1);color:#00ffc8;border:1px solid rgba(0,255,200,0.2);cursor:pointer;" onclick="resetGameDragDrop()">🔄 إعادة</button>
-         </div><!-- Game Zone -->
-         <div class="grid grid-cols-2 gap-4 mb-4"><!-- Input Devices - Left Side -->
-          <div>
-           <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(255, 107, 53, 0.15);color:#FF6B35;">
-            📥 أجهزة الإدخال
-           </div>
-           <div id="gameInput" class="min-h-40 p-3 rounded-lg" style="background:rgba(255, 107, 53, 0.05);border:2px dashed rgba(255, 107, 53, 0.3);">
-           </div>
-          </div><!-- Output Devices - Right Side -->
-          <div>
-           <div class="text-xs font-bold px-3 py-2 rounded-lg mb-2" style="background:rgba(0, 78, 137, 0.15);color:#004E89;">
-            📤 أجهزة الإخراج
-           </div>
-           <div id="gameOutput" class="min-h-40 p-3 rounded-lg" style="background:rgba(0, 78, 137, 0.05);border:2px dashed rgba(0, 78, 137, 0.3);">
-           </div>
-          </div>
-         </div><!-- Draggable Items Pool -->
-         <div class="mb-4">
-          <div class="text-xs font-bold px-3 py-2 mb-2" style="color:#667eea;">
-           🎯 اسحب الأجهزة إلى الفئات الصحيحة
-          </div>
-          <div id="gamePool" class="flex flex-wrap gap-2 p-3 rounded-lg" style="background:rgba(37, 99, 235, 0.05);border:1px solid rgba(37, 99, 235, 0.2);min-height:80px;">
+          <div><span class="text-sm" style="color:#00ffc8;">النقاط: </span> <span id="gameScore" class="text-sm font-bold" style="color:#e0e0e0;">0</span>
+          </div><button class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.1);color:#00ffc8;border:1px solid rgba(0,255,200,0.2);cursor:pointer;" onclick="resetGame()">🔄 إعادة</button>
+         </div>
+         <div class="flex flex-wrap gap-2 justify-center mb-4">
+          <div class="text-xs px-2 py-1 rounded" style="background:rgba(255, 107, 53, 0.1);color:#FF6B35;">
+           الأجزاء ⬇️
           </div>
          </div>
-         <div id="gameFeedback2" class="mt-3 text-sm text-center hidden"></div>
+         <div id="gameParts" class="flex flex-wrap gap-2 justify-center mb-4"></div>
+         <div class="flex flex-wrap gap-2 justify-center mb-4">
+          <div class="text-xs px-2 py-1 rounded" style="background:rgba(0, 78, 137, 0.1);color:#004E89;">
+           الوظائف ⬇️
+          </div>
+         </div>
+         <div id="gameFunctions" class="flex flex-wrap gap-2 justify-center"></div>
+         <div id="gameFeedback" class="mt-4 text-center text-sm hidden"></div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(8)">⟵ السابق</button> <button class="nav-btn" id="gameNextBtn2" onclick="goToPage(10)" style="opacity:0.5;cursor:not-allowed;" disabled>التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(8)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(10)">التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -905,40 +757,12 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
         <h2 class="text-2xl font-black neon-text mb-2 fade-in" style="font-family:'Readex Pro',sans-serif;">📱 نشاط الواقع المعزز</h2>
         <p class="text-sm mb-4 fade-in" style="color:#889;">استكشف مكونات الحاسوب بالنقر على كل جزء لمعرفة تفاصيله!</p>
         <div class="glow-card p-4 mb-4 fade-in fade-in-d1">
-         <div class="flex items-center justify-between mb-3">
-          <div class="text-xs" style="color:#00ffc8;">
-           🔍 انقر على أي جزء للمزيد من المعلومات
-          </div><button onclick="toggleARQR()" class="text-xs px-2 py-1 rounded" style="background:rgba(0,255,200,0.1);color:#00ffc8;border:1px solid rgba(0,255,200,0.2);cursor:pointer;">📱 الباركود</button>
+         <div class="text-xs text-center mb-3" style="color:#00ffc8;">
+          🔍 انقر على أي جزء لرؤية المعلومات المعززة
          </div>
-         <div id="arQRPanel" class="hidden mb-3 p-3 rounded-lg" style="background:rgba(0,255,200,0.05);border:1px solid rgba(0,255,200,0.1);">
-          <div class="flex flex-col md:flex-row gap-4 items-start">
-           <div class="flex-1">
-            <div class="text-xs font-bold mb-2" style="color:#00ffc8;">
-             📲 كيفية استخدام الواقع المعزز:
-            </div>
-            <div class="text-xs" style="color:#ccd;line-height:1.8;">
-             <div class="flex items-start gap-2 mb-2">
-              <span style="color:#00ffc8;">①</span> <span>استخدم تطبيق قارئ الباركود</span>
-             </div>
-             <div class="flex items-start gap-2 mb-2">
-              <span style="color:#00ffc8;">②</span> <span>امسح الباركود بجهازك الذكي</span>
-             </div>
-             <div class="flex items-start gap-2 mb-2">
-              <span style="color:#00ffc8;">③</span> <span>اتبع التعليمات لرؤية الواقع المعزز</span>
-             </div>
-            </div>
-           </div>
-           <div class="flex-shrink-0 w-24 h-24 p-2 rounded-lg" style="background:white;border:2px solid rgba(0,255,200,0.2);">
-            <svg viewbox="0 0 100 100" style="width:100%;height:100%;"><!-- Simple QR pattern --> <rect x="10" y="10" width="30" height="30" fill="#000" /> <rect x="20" y="20" width="10" height="10" fill="white" /> <rect x="60" y="10" width="30" height="30" fill="#000" /> <rect x="70" y="20" width="10" height="10" fill="white" /> <rect x="10" y="60" width="30" height="30" fill="#000" /> <rect x="20" y="70" width="10" height="10" fill="white" /> <rect x="45" y="45" width="8" height="8" fill="#00ffc8" opacity="0.3" /> <rect x="55" y="55" width="8" height="8" fill="#00ffc8" opacity="0.3" /> <rect x="65" y="45" width="8" height="8" fill="#00ffc8" opacity="0.3" />
-            </svg>
-           </div>
-          </div>
-         </div>
-         <div id="arScene" class="relative rounded-xl mx-auto" style="background:linear-gradient(180deg,#0d1526,#0a1a2a);height:350px;max-width:500px;overflow:hidden;border:1px solid rgba(0,255,200,0.1);">
-          <!-- AR scanning lines effect -->
+         <div id="arScene" class="relative rounded-xl mx-auto" style="background:linear-gradient(180deg,#0d1526,#0a1a2a);height:350px;max-width:500px;overflow:hidden;border:1px solid rgba(0,255,200,0.1);"><!-- AR scanning lines effect -->
           <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 4px,rgba(0,255,200,0.02) 4px,rgba(0,255,200,0.02) 5px);pointer-events:none;"></div><!-- Computer case outline -->
-          <svg width="100%" height="100%" viewbox="0 0 500 350" style="position:absolute;inset:0;">
-           <!-- Main case --> <rect x="120" y="40" width="260" height="270" rx="10" fill="rgba(0,255,200,0.03)" stroke="rgba(0,255,200,0.2)" stroke-width="1" /> <!-- Internal parts as clickable areas --> <g id="arCPU" class="pc-part" onclick="showARInfo('cpu')">
+          <svg width="100%" height="100%" viewbox="0 0 500 350" style="position:absolute;inset:0;"><!-- Main case --> <rect x="120" y="40" width="260" height="270" rx="10" fill="rgba(0,255,200,0.03)" stroke="rgba(0,255,200,0.2)" stroke-width="1" /> <!-- Internal parts as clickable areas --> <g id="arCPU" class="pc-part" onclick="showARInfo('cpu')">
             <rect x="180" y="70" width="70" height="50" rx="6" fill="rgba(0,255,200,0.08)" stroke="#00ffc8" stroke-width="1" />
             <text x="215" y="100" text-anchor="middle" fill="#00ffc8" font-size="11" font-family="Tajawal">
              CPU
@@ -986,8 +810,7 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
           📱 هذا نموذج محاكاة للواقع المعزز يتيح لك استكشاف مكونات الحاسوب بشكل تفاعلي. في التطبيق الفعلي، يمكن استخدام تطبيقات مثل ZapWorks أو Adobe Aero لإنشاء تجربة واقع معزز كاملة.
          </div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(9)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(11)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(9)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(11)">التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -1003,20 +826,17 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
            مرحبًا! 👋 أنا المساعد الذكي. اسألني أي سؤال عن أجزاء الحاسوب وسأجيبك فورًا!
           </div>
          </div>
-         <div class="flex gap-2">
-          <input id="chatInput" type="text" placeholder="اكتب سؤالك هنا..." class="flex-1 px-4 py-2 rounded-full text-sm" style="background:rgba(0,255,200,0.05);border:1px solid rgba(0,255,200,0.2);color:#e0e0e0;outline:none;font-family:'Tajawal';" onkeydown="if(event.key==='Enter')sendChat()"> <button onclick="sendChat()" class="w-10 h-10 rounded-full flex items-center justify-center" style="background:#00ffc8;color:#0a0f1a;cursor:pointer;border:none;"> <i data-lucide="send" style="width:16px;height:16px;"></i> </button>
+         <div class="flex gap-2"><input id="chatInput" type="text" placeholder="اكتب سؤالك هنا..." class="flex-1 px-4 py-2 rounded-full text-sm" style="background:rgba(0,255,200,0.05);border:1px solid rgba(0,255,200,0.2);color:#e0e0e0;outline:none;font-family:'Tajawal';" onkeydown="if(event.key==='Enter')sendChat()"> <button onclick="sendChat()" class="w-10 h-10 rounded-full flex items-center justify-center" style="background:#00ffc8;color:#0a0f1a;cursor:pointer;border:none;"> <i data-lucide="send" style="width:16px;height:16px;"></i> </button>
          </div>
         </div>
         <div class="glow-card p-4 fade-in fade-in-d2">
          <div class="text-xs mb-2" style="color:#00ffc8;">
           💡 أسئلة مقترحة:
          </div>
-         <div class="flex flex-wrap gap-2">
-          <button onclick="askSuggested('ما هو المعالج؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما هو المعالج؟</button> <button onclick="askSuggested('ما الفرق بين RAM و ROM؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما الفرق بين RAM و ROM؟</button> <button onclick="askSuggested('ما هي وحدات الإدخال؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما هي وحدات الإدخال؟</button>
+         <div class="flex flex-wrap gap-2"><button onclick="askSuggested('ما هو المعالج؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما هو المعالج؟</button> <button onclick="askSuggested('ما الفرق بين RAM و ROM؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما الفرق بين RAM و ROM؟</button> <button onclick="askSuggested('ما هي وحدات الإدخال؟')" class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.08);color:#aaa;border:1px solid rgba(0,255,200,0.15);cursor:pointer;">ما هي وحدات الإدخال؟</button>
          </div>
         </div>
-        <div class="flex justify-between mt-8">
-         <button class="nav-btn" onclick="goToPage(10)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(12)">التالي ⟶</button>
+        <div class="flex justify-between mt-8"><button class="nav-btn" onclick="goToPage(10)">⟵ السابق</button> <button class="nav-btn" onclick="goToPage(12)">التالي ⟶</button>
         </div>
        </div>
       </div>
@@ -1033,8 +853,10 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
          <div class="text-center">
           <div class="text-sm mb-2" style="color:#00ffc8;">
            مجموع نقاطك النهائية
-          
- </div>
+          </div>
+          <div id="finalScore" class="text-4xl font-black neon-text">
+           0
+          </div>
           <div class="text-xs mt-1" style="color:#889;">
            نقطة
           </div>
@@ -1078,13 +900,13 @@ const defaultConfig = {
 
 let currentPage = 0;
 let totalScore = 0;
-const totalPages = 13;
+const totalPages = 12;
 const quizCompleted = {};
 
 const pageNames = [
   'صفحة الغلاف', 'دليل الاستخدام', 'المقدمة', 'تعريف بالدرس',
   'أهداف الدرس', 'وحدات الإدخال', 'وحدات الإخراج',
-  'المعالجة والتخزين', 'لعبة المطابقة', 'الواقع المعزز', 'المساعد الذكي', 'الخاتمة', 'الشهادة'
+  'المعالجة والتخزين', 'لعبة المطابقة', 'الواقع المعزز', 'المساعد الذكي', 'الخاتمة'
 ];
 
 // ===== NAVIGATION =====
@@ -1124,10 +946,7 @@ function toggleSidebar() {
 function updateScore(pts) {
   totalScore += pts;
   document.getElementById('scoreDisplay').textContent = `⭐ ${totalScore} نقطة`;
-  if (document.getElementById('finalScore')) {
-    document.getElementById('finalScore').textContent = totalScore;
-  }
-  updatePerformanceRating();
+  document.getElementById('finalScore').textContent = totalScore;
 }
 
 // ===== BUILD SIDEBAR =====
@@ -1200,7 +1019,7 @@ function answerQuiz(containerId, feedbackId, selected, correct) {
       if (i === correct) opt.classList.add('correct');
     });
     opts[selected].classList.add('correct');
-    feedback.innerHTML = '<span style="color:#1FD191;font-weight:600;">✅ إجابة صحيحة! أحسنت! +10 نقاط</span>';
+    feedback.innerHTML = '<span style="color:#10b981;font-weight:600;">✅ إجابة صحيحة! أحسنت! +10 نقاط</span>';
     updateScore(10);
     quizCompleted[containerId] = true;
     container.dataset.answered = 'true';
@@ -1208,11 +1027,19 @@ function answerQuiz(containerId, feedbackId, selected, correct) {
     
     // Disable all options after correct answer
     opts.forEach(opt => opt.style.pointerEvents = 'none');
+    
+    // Auto-advance after 2 seconds
+    setTimeout(() => {
+      const nextPageNum = currentPage + 1;
+      if (nextPageNum < totalPages) {
+        goToPage(nextPageNum);
+      }
+    }, 2000);
   } else {
     // Wrong answer - show hint, keep it clickable for retry
     opts[selected].classList.add('wrong');
     const hint = hints[containerId] || 'اقرأ المعلومات بتمعن وحاول مرة أخرى! 😊';
-    feedback.innerHTML = `<span style="color:#FF006E;font-weight:600;">❌ ليست هذه الإجابة الصحيحة</span><div style="color:#FFB703;margin-top:8px;font-size:13px;">${hint}</div>`;
+    feedback.innerHTML = `<span style="color:#ef4444;font-weight:600;">❌ ليست هذه الإجابة الصحيحة</span><div style="color:#f59e0b;margin-top:8px;font-size:13px;">${hint}</div>`;
     
     // Remove wrong style after 800ms so user can try again
     setTimeout(() => {
@@ -1224,7 +1051,10 @@ function answerQuiz(containerId, feedbackId, selected, correct) {
 
 // Check if quiz is answered before moving to next page
 function checkQuizAndNext(nextPage) {
-  goToPage(nextPage);
+  const currentQuizId = 'quiz' + (currentPage - 5); // Adjust based on your page structure
+  if (quizCompleted[currentQuizId]) {
+    goToPage(nextPage);
+  }
 }
 
 function enableNextButton() {
@@ -1233,13 +1063,6 @@ function enableNextButton() {
     btn.disabled = false;
     btn.style.opacity = '1';
     btn.style.cursor = 'pointer';
-  }
-  // Enable game next button too
-  const gameBtn = document.getElementById('gameNextBtn');
-  if (gameBtn) {
-    gameBtn.disabled = false;
-    gameBtn.style.opacity = '1';
-    gameBtn.style.cursor = 'pointer';
   }
 }
 
@@ -1281,160 +1104,153 @@ function toggleVideo() {
   }, 3000);
 }
 
-// ===== MATCHING GAME - DRAG & DROP =====
-const gameDataByCategory = {
-  input: [
-    { part: '⌨️ لوحة المفاتيح', type: 'input' },
-    { part: '🖱️ الفأرة', type: 'input' },
-    { part: '🎤 الميكروفون', type: 'input' }
-  ],
-  output: [
-    { part: '🖥️ الشاشة', type: 'output' },
-    { part: '🖨️ الطابعة', type: 'output' },
-    { part: '🔊 السماعة', type: 'output' }
-  ]
-};
+// ===== MATCHING GAME =====
+const gameData = [
+  { part: '⌨️ لوحة المفاتيح', func: 'إدخال النصوص' },
+  { part: '🖥️ الشاشة', func: 'عرض البيانات' },
+  { part: '🧠 المعالج', func: 'معالجة البيانات' },
+  { part: '💾 القرص الصلب', func: 'تخزين دائم' },
+  { part: '🖱️ الفأرة', func: 'التأشير والتحكم' },
+  { part: '🔊 السماعة', func: 'إخراج الصوت' }
+];
 
-let draggedGameItem = null;
-let matchedGameItems = new Set();
-let gameScoreDragDrop = 0;
+let selectedPart = null;
+let selectedFunc = null;
+let matchedPairs = 0;
+let gameScore = 0;
 
-function buildGameDragDrop() {
-  const pool = document.getElementById('gamePool');
-  const input = document.getElementById('gameInput');
-  const output = document.getElementById('gameOutput');
-  
-  pool.innerHTML = '';
-  input.innerHTML = '';
-  output.innerHTML = '';
-  
-  matchedGameItems.clear();
-  gameScoreDragDrop = 0;
-  draggedGameItem = null;
-  
-  document.getElementById('gameScore2').textContent = '0';
-  document.getElementById('gameMatched').textContent = '0 / 6';
-  document.getElementById('gameFeedback2').classList.add('hidden');
+function buildGame() {
+  const partsDiv = document.getElementById('gameParts');
+  const funcsDiv = document.getElementById('gameFunctions');
+  partsDiv.innerHTML = '';
+  funcsDiv.innerHTML = '';
+  matchedPairs = 0;
+  gameScore = 0;
+  selectedPart = null;
+  selectedFunc = null;
+  document.getElementById('gameScore').textContent = '0';
+  document.getElementById('gameFeedback').classList.add('hidden');
 
-  // Create all items
-  const allItems = [
-    ...gameDataByCategory.input,
-    ...gameDataByCategory.output
-  ];
+  const shuffledParts = [...gameData].sort(() => Math.random() - 0.5);
+  const shuffledFuncs = [...gameData].sort(() => Math.random() - 0.5);
 
-  // Shuffle
-  const shuffled = [...allItems].sort(() => Math.random() - 0.5);
-
-  // Setup drop zones
-  input.dataset.category = 'input';
-  output.dataset.category = 'output';
-  
-  input.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    input.style.borderColor = '#FF6B35';
-    input.style.background = 'rgba(255, 107, 53, 0.15)';
-  });
-  input.addEventListener('dragleave', () => {
-    input.style.borderColor = 'rgba(255, 107, 53, 0.3)';
-    input.style.background = 'rgba(255, 107, 53, 0.05)';
-  });
-  input.addEventListener('drop', (e) => {
-    e.preventDefault();
-    if (draggedGameItem && draggedGameItem.dataset.type === 'input') {
-      dropItem(draggedGameItem, input, 'input');
-    }
-    input.style.borderColor = 'rgba(255, 107, 53, 0.3)';
-    input.style.background = 'rgba(255, 107, 53, 0.05)';
-  });
-
-  output.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    output.style.borderColor = '#004E89';
-    output.style.background = 'rgba(0, 78, 137, 0.15)';
-  });
-  output.addEventListener('dragleave', () => {
-    output.style.borderColor = 'rgba(0, 78, 137, 0.3)';
-    output.style.background = 'rgba(0, 78, 137, 0.05)';
-  });
-  output.addEventListener('drop', (e) => {
-    e.preventDefault();
-    if (draggedGameItem && draggedGameItem.dataset.type === 'output') {
-      dropItem(draggedGameItem, output, 'output');
-    }
-    output.style.borderColor = 'rgba(0, 78, 137, 0.3)';
-    output.style.background = 'rgba(0, 78, 137, 0.05)';
-  });
-
-  // Build draggable items in pool
-  shuffled.forEach((item) => {
+  shuffledParts.forEach((item, i) => {
     const el = document.createElement('div');
     el.className = 'game-card';
     el.textContent = item.part;
-    el.draggable = true;
-    el.dataset.type = item.type;
-    el.dataset.part = item.part;
-    
-    el.addEventListener('dragstart', (e) => {
-      draggedGameItem = el;
-      el.style.opacity = '0.6';
-    });
-    
-    el.addEventListener('dragend', (e) => {
-      el.style.opacity = '1';
-    });
-    
-    pool.appendChild(el);
+    el.dataset.pair = item.part;
+    el.onclick = () => selectCard(el, 'part');
+    partsDiv.appendChild(el);
+  });
+
+  shuffledFuncs.forEach((item, i) => {
+    const el = document.createElement('div');
+    el.className = 'game-card';
+    el.style.borderColor = 'rgba(255,200,0,0.2)';
+    el.textContent = item.func;
+    el.dataset.pair = item.func;
+    el.onclick = () => selectCard(el, 'func');
+    funcsDiv.appendChild(el);
   });
 }
 
-function dropItem(itemEl, dropZone, correctType) {
-  const itemType = itemEl.dataset.type;
-  
-  if (itemType === correctType) {
-    // Correct drop
-    itemEl.style.opacity = '0.6';
-    itemEl.draggable = false;
-    itemEl.style.borderColor = '#1FD191';
-    itemEl.style.background = 'rgba(31, 209, 145, 0.2)';
-    itemEl.style.cursor = 'default';
-    
-    dropZone.appendChild(itemEl);
-    
-    matchedGameItems.add(itemEl.dataset.part);
-    gameScoreDragDrop += 15;
-    
-    document.getElementById('gameScore2').textContent = gameScoreDragDrop;
-    document.getElementById('gameMatched').textContent = matchedGameItems.size + ' / 6';
-    updateScore(15);
-    
-    if (matchedGameItems.size === 6) {
-      setTimeout(() => {
-        const fb = document.getElementById('gameFeedback2');
-        fb.classList.remove('hidden');
-        fb.innerHTML = '<div style="color:#1FD191;font-size:16px;font-weight:700;">🎉 ممتاز! صنّفت جميع الأجهزة بشكل صحيح! يمكنك الانتقال للصفحة التالية</div>';
-        const btn = document.getElementById('gameNextBtn2');
-        btn.disabled = false;
-        btn.style.opacity = '1';
-        btn.style.cursor = 'pointer';
-      }, 300);
+function selectCard(el, type) {
+  if (el.classList.contains('matched')) return;
+  if (el.classList.contains('selected')) {
+    el.classList.remove('selected');
+    el.style.borderColor = '#bfdbfe';
+    el.style.background = 'rgba(37, 99, 235, 0.05)';
+    if (type === 'part') {
+      selectedPart = null;
+    } else {
+      selectedFunc = null;
     }
+    return;
+  }
+
+  if (type === 'part') {
+    if (selectedPart) {
+      selectedPart.classList.remove('selected');
+      selectedPart.style.borderColor = '#bfdbfe';
+      selectedPart.style.background = 'rgba(37, 99, 235, 0.05)';
+    }
+    el.classList.add('selected');
+    el.style.borderColor = '#FF6B35';
+    el.style.background = 'rgba(255, 107, 53, 0.15)';
+    selectedPart = el;
   } else {
-    // Wrong drop - show error
-    const fb = document.getElementById('gameFeedback2');
-    fb.classList.remove('hidden');
-    const wrongCategory = correctType === 'input' ? 'الإخراج' : 'الإدخال';
-    fb.innerHTML = `<div style="color:#FF006E;font-weight:600;">❌ هذا جهاز من فئة ${wrongCategory}، حاول مرة أخرى! 😊</div>`;
-    
-    setTimeout(() => {
-      fb.classList.add('hidden');
-    }, 1500);
-    
-    draggedGameItem = null;
+    if (selectedFunc) {
+      selectedFunc.classList.remove('selected');
+      selectedFunc.style.borderColor = '#FFB703';
+      selectedFunc.style.background = 'rgba(255, 183, 3, 0.08)';
+    }
+    el.classList.add('selected');
+    el.style.borderColor = '#004E89';
+    el.style.background = 'rgba(0, 78, 137, 0.15)';
+    selectedFunc = el;
+  }
+
+  if (selectedPart && selectedFunc) {
+    checkMatch();
   }
 }
 
-function resetGameDragDrop() {
-  buildGameDragDrop();
+function checkMatch() {
+  const partText = selectedPart.dataset.pair;
+  const funcText = selectedFunc.dataset.pair;
+  const match = gameData.find(d => d.part === partText && d.func === funcText);
+
+  if (match) {
+    // Correct match
+    selectedPart.classList.add('matched');
+    selectedFunc.classList.add('matched');
+    selectedPart.classList.remove('selected');
+    selectedFunc.classList.remove('selected');
+    selectedPart.style.borderColor = '#1FD191';
+    selectedPart.style.background = 'rgba(31, 209, 145, 0.2)';
+    selectedFunc.style.borderColor = '#1FD191';
+    selectedFunc.style.background = 'rgba(31, 209, 145, 0.2)';
+    selectedPart.style.pointerEvents = 'none';
+    selectedFunc.style.pointerEvents = 'none';
+    
+    matchedPairs++;
+    gameScore += 15;
+    document.getElementById('gameScore').textContent = gameScore;
+    updateScore(15);
+
+    if (matchedPairs === gameData.length) {
+      const fb = document.getElementById('gameFeedback');
+      fb.classList.remove('hidden');
+      fb.innerHTML = '<div style="color:#1FD191;font-size:16px;font-weight:700;">🎉 ممتاز! أكملت جميع المطابقات!</div>';
+    }
+    
+    selectedPart = null;
+    selectedFunc = null;
+  } else {
+    // Wrong match
+    selectedPart.classList.add('wrong-match');
+    selectedFunc.classList.add('wrong-match');
+    selectedPart.style.borderColor = '#FF006E';
+    selectedPart.style.background = 'rgba(255, 0, 110, 0.15)';
+    selectedFunc.style.borderColor = '#FF006E';
+    selectedFunc.style.background = 'rgba(255, 0, 110, 0.15)';
+    
+    setTimeout(() => {
+      selectedPart.classList.remove('wrong-match', 'selected');
+      selectedFunc.classList.remove('wrong-match', 'selected');
+      selectedPart.style.borderColor = '#bfdbfe';
+      selectedPart.style.background = 'rgba(37, 99, 235, 0.05)';
+      selectedFunc.style.borderColor = '#bfdbfe';
+      selectedFunc.style.background = 'rgba(37, 99, 235, 0.05)';
+      selectedPart = null;
+      selectedFunc = null;
+    }, 600);
+    return;
+  }
+}
+
+function resetGame() {
+  buildGame();
 }
 
 // ===== AR ACTIVITY =====
@@ -1495,11 +1311,6 @@ function hideARInfo() {
   document.querySelectorAll('.pc-part').forEach(p => p.style.opacity = '1');
 }
 
-function toggleARQR() {
-  const panel = document.getElementById('arQRPanel');
-  panel.classList.toggle('hidden');
-}
-
 // ===== AI CHAT =====
 const aiResponses = {
   'المعالج': 'المعالج (CPU) هو وحدة المعالجة المركزية، وهو بمثابة "دماغ" الحاسوب. يقوم بتنفيذ التعليمات ومعالجة البيانات. يتكون من وحدة الحساب والمنطق (ALU) التي تنفذ العمليات الحسابية، ووحدة التحكم (CU) التي تنظم عمل باقي المكونات. 🧠',
@@ -1550,190 +1361,6 @@ function sendChat() {
 function askSuggested(q) {
   document.getElementById('chatInput').value = q;
   sendChat();
-}
-
-// ===== PERFORMANCE RATING & CERTIFICATE =====
-function updatePerformanceRating() {
-  const ratingDiv = document.getElementById('performanceRating');
-  if (!ratingDiv) return;
-
-  const maxPoints = 200;
-  const percent = (totalScore / maxPoints) * 100;
-  let rating = 'متوسط';
-  let emoji = '😐';
-  let color = '#FFB703';
-
-  if (percent >= 90) {
-    rating = 'ممتاز جداً';
-    emoji = '🌟';
-    color = '#1FD191';
-  } else if (percent >= 80) {
-    rating = 'متفوق';
-    emoji = '⭐';
-    color = '#1FD191';
-  } else if (percent >= 70) {
-    rating = 'جيد جداً';
-    emoji = '👍';
-    color = '#00ffc8';
-  } else if (percent >= 60) {
-    rating = 'جيد';
-    emoji = '✓';
-    color = '#667eea';
-  } else if (percent >= 50) {
-    rating = 'مقبول';
-    emoji = '📚';
-    color = '#FFB703';
-  } else {
-    rating = 'يحتاج مراجعة';
-    emoji = '📖';
-    color = '#FF006E';
-  }
-
-  ratingDiv.innerHTML = `<div style="font-size:28px;margin-bottom:8px;">${emoji}</div><div style="color:${color};font-weight:700;font-size:16px;">${rating}</div><div style="color:#889;font-size:12px;margin-top:4px;">${totalScore} / ${maxPoints}</div>`;
-}
-
-function generateCertificate() {
-  const studentName = document.getElementById('coverName').textContent || window.elementSdk.config.student_name;
-  const studentId = document.getElementById('coverId').textContent || window.elementSdk.config.student_id;
-  const lessonTitle = document.getElementById('topTitle').textContent || window.elementSdk.config.lesson_title;
-  const institutionName = window.elementSdk.config.institution_name || 'الجامعة العربية المفتوحة';
-
-  document.getElementById('certName').textContent = studentName;
-  document.getElementById('certId').textContent = studentId;
-  document.getElementById('certTitle').textContent = lessonTitle;
-  document.getElementById('certInstitution').textContent = institutionName;
-  document.getElementById('certScore').textContent = totalScore;
-
-  // Get grade
-  const percent = (totalScore / 200) * 100;
-  let grade = 'متوسط';
-  if (percent >= 90) grade = 'ممتاز';
-  else if (percent >= 80) grade = 'متفوق';
-  else if (percent >= 70) grade = 'جيد جداً';
-  else if (percent >= 60) grade = 'جيد';
-  else if (percent >= 50) grade = 'مقبول';
-
-  document.getElementById('certGrade').textContent = grade;
-
-  // Set date
-  const today = new Date();
-  const arabicDate = today.toLocaleDateString('ar-EG', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-  document.getElementById('certDate').textContent = arabicDate;
-}
-
-function downloadCertificate() {
-  // Create a canvas-based certificate image
-  const certDiv = document.getElementById('certificateContainer');
-  if (!certDiv) return;
-
-  // Show feedback
-  const status = document.getElementById('shareStatus');
-  status.classList.remove('hidden');
-  status.textContent = '📥 جاري تحضير الشهادة...';
-
-  // Simple text-based download (HTML)
-  const studentName = document.getElementById('certName').textContent;
-  const studentId = document.getElementById('certId').textContent;
-  const score = document.getElementById('certScore').textContent;
-  const grade = document.getElementById('certGrade').textContent;
-  const title = document.getElementById('certTitle').textContent;
-
-  const htmlContent = `
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شهادة - ${studentName}</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 40px; background: #f5f5f5; }
-    .certificate { max-width: 800px; margin: 0 auto; background: white; padding: 60px 40px; text-align: center; border: 5px solid #2563eb; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    h1 { color: #1e40af; font-size: 32px; margin: 20px 0; }
-    .name { font-size: 28px; font-weight: bold; color: #00ffc8; margin: 30px 0; border-bottom: 2px solid #2563eb; padding-bottom: 15px; }
-    .info { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0; }
-    .info-item { padding: 15px; background: #f0f9ff; border-radius: 8px; }
-    .info-label { color: #667eea; font-weight: bold; font-size: 12px; }
-    .info-value { color: #1f2937; font-size: 16px; font-weight: bold; margin-top: 5px; }
-    .achievement { margin: 30px 0; line-height: 1.8; color: #475569; }
-    .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #2563eb; font-size: 12px; color: #889; }
-    .date { margin-top: 20px; color: #667eea; font-weight: bold; }
-  </style>
-</head>
-<body>
-  <div class="certificate">
-    <h1>⭐ شهادة تقدير ⭐</h1>
-    <div class="name">${studentName}</div>
-    <div class="achievement">
-      <p>قد أكمل بنجاح درس</p>
-      <h2 style="color: #00ffc8; margin: 15px 0;">${title}</h2>
-      <p>وأظهر فهماً متقدماً لمكونات الحاسوب الأساسية</p>
-    </div>
-    <div class="info">
-      <div class="info-item">
-        <div class="info-label">النقاط المكتسبة</div>
-        <div class="info-value">${score} / 200</div>
-      </div>
-      <div class="info-item">
-        <div class="info-label">التقييم</div>
-        <div class="info-value">${grade}</div>
-      </div>
-    </div>
-    <div class="date">${new Date().toLocaleDateString('ar-EG', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</div>
-    <div class="footer">
-      <p>🎓 الجامعة العربية المفتوحة</p>
-      <p>Digitally Certified | شهادة رقمية معتمدة</p>
-    </div>
-  </div>
-</body>
-</html>`;
-
-  const blob = new Blob([htmlContent], { type: 'text/html' });
-  const url = window.URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `شهادة_${studentName}_${new Date().getTime()}.html`;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  window.URL.revokeObjectURL(url);
-
-  setTimeout(() => {
-    status.textContent = '✅ تم تحميل الشهادة بنجاح!';
-    setTimeout(() => status.classList.add('hidden'), 3000);
-  }, 500);
-}
-
-function shareCertificate() {
-  const status = document.getElementById('shareStatus');
-  status.classList.remove('hidden');
-  
-  const studentName = document.getElementById('certName').textContent;
-  const score = document.getElementById('certScore').textContent;
-  const grade = document.getElementById('certGrade').textContent;
-
-  const text = `🎓 لقد أكملت درس أجزاء الحاسوب بنجاح!\n\n📊 نقاطي: ${score}/200\n⭐ تقييمي: ${grade}\n\n#التعليم #أجزاء_الحاسوب #الجامعة_العربية_المفتوحة`;
-
-  if (navigator.share) {
-    navigator.share({
-      title: 'شهادة إنجاز',
-      text: text
-    }).catch(err => {
-      console.log('Error sharing:', err);
-      status.textContent = '📋 تم نسخ المحتوى!';
-      setTimeout(() => status.classList.add('hidden'), 2000);
-    });
-  } else {
-    // Fallback: copy to clipboard
-    navigator.clipboard.writeText(text).then(() => {
-      status.textContent = '✅ تم نسخ المحتوى! يمكنك مشاركته الآن';
-      setTimeout(() => status.classList.add('hidden'), 3000);
-    });
-  }
 }
 
 // ===== ELEMENT SDK =====
@@ -1807,9 +1434,9 @@ buildQuiz('quiz2', 'quiz2Feedback', {
   options: ['إدخال البيانات للحاسوب', 'عرض نتائج المعالجة للمستخدم', 'تخزين البيانات بشكل دائم', 'الاتصال بالإنترنت'],
   correct: 1
 });
-buildGameDragDrop();
+buildGame();
 goToPage(0);
 lucide.createIcons();
 </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ebe9a4d74ebd1e8',t:'MTc3NjEyNjYzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ebeafbd627fd1e8',t:'MTc3NjEyNzUxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
