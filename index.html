@@ -28,20 +28,6 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
   100% { background-position: 0% 50%; }
 }
 
-.quiz-opt.correct { 
-  border-color: #1FD191 !important;
-  background: rgba(31, 209, 145, 0.2) !important;
-  color: #0d7a4a !important;
-  font-weight: 700;
-  pointer-events: none;
-}
-
-.quiz-opt.wrong { 
-  border-color: #FF006E !important;
-  background: rgba(255, 0, 110, 0.15) !important;
-  color: #c40254 !important;
-}
-
 /* Clean card - Professional and inviting */
 .glow-card {
   background: rgba(255, 255, 255, 0.98);
@@ -733,13 +719,13 @@ body { font-family: 'Tajawal', sans-serif; overflow: hidden; }
           </div><button class="text-xs px-3 py-1 rounded-full" style="background:rgba(0,255,200,0.1);color:#00ffc8;border:1px solid rgba(0,255,200,0.2);cursor:pointer;" onclick="resetGame()">🔄 إعادة</button>
          </div>
          <div class="flex flex-wrap gap-2 justify-center mb-4">
-          <div class="text-xs px-2 py-1 rounded" style="background:rgba(255, 107, 53, 0.1);color:#FF6B35;">
+          <div class="text-xs px-2 py-1 rounded" style="background:rgba(0,255,200,0.1);color:#00ffc8;">
            الأجزاء ⬇️
           </div>
          </div>
          <div id="gameParts" class="flex flex-wrap gap-2 justify-center mb-4"></div>
          <div class="flex flex-wrap gap-2 justify-center mb-4">
-          <div class="text-xs px-2 py-1 rounded" style="background:rgba(0, 78, 137, 0.1);color:#004E89;">
+          <div class="text-xs px-2 py-1 rounded" style="background:rgba(255,200,0,0.1);color:#ffc800;">
            الوظائف ⬇️
           </div>
          </div>
@@ -1003,31 +989,25 @@ function answerQuiz(containerId, feedbackId, selected, correct) {
   const container = document.getElementById(containerId);
   const feedback = document.getElementById(feedbackId);
   const opts = container.querySelectorAll('.quiz-opt');
-  
-  // Check if already answered correctly
-  if (container.dataset.answered === 'true') return;
+  if (opts[0].classList.contains('correct') || opts[0].classList.contains('wrong')) return;
 
   const hints = {
     'quiz1': 'تذكر: لوحة المفاتيح هي من وحدات الإدخال 💡 تُستخدم لإدخال البيانات والأوامر إلى الحاسوب',
     'quiz2': 'تذكر: وحدات الإخراج تُظهر لك النتائج! 💡 مثل الشاشة التي تعرض لك ما يعمله الحاسوب'
   };
 
+  opts.forEach((opt, i) => {
+    opt.style.pointerEvents = 'none';
+    if (i === correct) opt.classList.add('correct');
+    else if (i === selected) opt.classList.add('wrong');
+  });
+
   feedback.classList.remove('hidden');
   if (selected === correct) {
-    // Correct answer
-    opts.forEach((opt, i) => {
-      if (i === correct) opt.classList.add('correct');
-    });
-    opts[selected].classList.add('correct');
     feedback.innerHTML = '<span style="color:#10b981;font-weight:600;">✅ إجابة صحيحة! أحسنت! +10 نقاط</span>';
     updateScore(10);
     quizCompleted[containerId] = true;
-    container.dataset.answered = 'true';
     enableNextButton();
-    
-    // Disable all options after correct answer
-    opts.forEach(opt => opt.style.pointerEvents = 'none');
-    
     // Auto-advance after 2 seconds
     setTimeout(() => {
       const nextPageNum = currentPage + 1;
@@ -1036,16 +1016,8 @@ function answerQuiz(containerId, feedbackId, selected, correct) {
       }
     }, 2000);
   } else {
-    // Wrong answer - show hint, keep it clickable for retry
-    opts[selected].classList.add('wrong');
     const hint = hints[containerId] || 'اقرأ المعلومات بتمعن وحاول مرة أخرى! 😊';
     feedback.innerHTML = `<span style="color:#ef4444;font-weight:600;">❌ ليست هذه الإجابة الصحيحة</span><div style="color:#f59e0b;margin-top:8px;font-size:13px;">${hint}</div>`;
-    
-    // Remove wrong style after 800ms so user can try again
-    setTimeout(() => {
-      opts[selected].classList.remove('wrong');
-      feedback.classList.add('hidden');
-    }, 1800);
   }
 }
 
@@ -1156,37 +1128,14 @@ function buildGame() {
 
 function selectCard(el, type) {
   if (el.classList.contains('matched')) return;
-  if (el.classList.contains('selected')) {
-    el.classList.remove('selected');
-    el.style.borderColor = '#bfdbfe';
-    el.style.background = 'rgba(37, 99, 235, 0.05)';
-    if (type === 'part') {
-      selectedPart = null;
-    } else {
-      selectedFunc = null;
-    }
-    return;
-  }
 
   if (type === 'part') {
-    if (selectedPart) {
-      selectedPart.classList.remove('selected');
-      selectedPart.style.borderColor = '#bfdbfe';
-      selectedPart.style.background = 'rgba(37, 99, 235, 0.05)';
-    }
+    document.querySelectorAll('#gameParts .game-card').forEach(c => c.classList.remove('selected'));
     el.classList.add('selected');
-    el.style.borderColor = '#FF6B35';
-    el.style.background = 'rgba(255, 107, 53, 0.15)';
     selectedPart = el;
   } else {
-    if (selectedFunc) {
-      selectedFunc.classList.remove('selected');
-      selectedFunc.style.borderColor = '#FFB703';
-      selectedFunc.style.background = 'rgba(255, 183, 3, 0.08)';
-    }
+    document.querySelectorAll('#gameFunctions .game-card').forEach(c => c.classList.remove('selected'));
     el.classList.add('selected');
-    el.style.borderColor = '#004E89';
-    el.style.background = 'rgba(0, 78, 137, 0.15)';
     selectedFunc = el;
   }
 
@@ -1201,18 +1150,10 @@ function checkMatch() {
   const match = gameData.find(d => d.part === partText && d.func === funcText);
 
   if (match) {
-    // Correct match
     selectedPart.classList.add('matched');
     selectedFunc.classList.add('matched');
     selectedPart.classList.remove('selected');
     selectedFunc.classList.remove('selected');
-    selectedPart.style.borderColor = '#1FD191';
-    selectedPart.style.background = 'rgba(31, 209, 145, 0.2)';
-    selectedFunc.style.borderColor = '#1FD191';
-    selectedFunc.style.background = 'rgba(31, 209, 145, 0.2)';
-    selectedPart.style.pointerEvents = 'none';
-    selectedFunc.style.pointerEvents = 'none';
-    
     matchedPairs++;
     gameScore += 15;
     document.getElementById('gameScore').textContent = gameScore;
@@ -1221,32 +1162,21 @@ function checkMatch() {
     if (matchedPairs === gameData.length) {
       const fb = document.getElementById('gameFeedback');
       fb.classList.remove('hidden');
-      fb.innerHTML = '<div style="color:#1FD191;font-size:16px;font-weight:700;">🎉 ممتاز! أكملت جميع المطابقات!</div>';
+      fb.innerHTML = '<div style="color:#00ffc8;font-size:16px;">🎉 ممتاز! أكملت جميع المطابقات!</div>';
     }
-    
-    selectedPart = null;
-    selectedFunc = null;
   } else {
-    // Wrong match
     selectedPart.classList.add('wrong-match');
     selectedFunc.classList.add('wrong-match');
-    selectedPart.style.borderColor = '#FF006E';
-    selectedPart.style.background = 'rgba(255, 0, 110, 0.15)';
-    selectedFunc.style.borderColor = '#FF006E';
-    selectedFunc.style.background = 'rgba(255, 0, 110, 0.15)';
-    
     setTimeout(() => {
       selectedPart.classList.remove('wrong-match', 'selected');
       selectedFunc.classList.remove('wrong-match', 'selected');
-      selectedPart.style.borderColor = '#bfdbfe';
-      selectedPart.style.background = 'rgba(37, 99, 235, 0.05)';
-      selectedFunc.style.borderColor = '#bfdbfe';
-      selectedFunc.style.background = 'rgba(37, 99, 235, 0.05)';
       selectedPart = null;
       selectedFunc = null;
     }, 600);
     return;
   }
+  selectedPart = null;
+  selectedFunc = null;
 }
 
 function resetGame() {
@@ -1438,5 +1368,5 @@ buildGame();
 goToPage(0);
 lucide.createIcons();
 </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ebeafbd627fd1e8',t:'MTc3NjEyNzUxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ebeafbd7285d1e8',t:'MTc3NjEyNzUxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
