@@ -665,29 +665,34 @@
                         <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.15); color: #1E40AF;">③</div>
                         <div>
                           <div class="font-bold" style="color: #2563EB;">استكشف اجزاء الحاسوب ثم اجب عن السؤال التالي</div>
-                          <div id="quiz-box" style="margin-top:20px; text-align:center;">
-  <p style="font-size:20px; font-weight:bold;">ما نوع لوحة المفاتيح؟</p>
+                          <<div id="quiz-box" style="margin-top:20px; text-align:center;">
+  <p style="font-size:22px; font-weight:bold;">ما نوع لوحة المفاتيح؟</p>
 
-  <button onclick="checkAnswer('input')" style="margin:5px; padding:10px 20px;">جهاز إدخال</button>
-  <button onclick="checkAnswer('output')" style="margin:5px; padding:10px 20px;">جهاز إخراج</button>
-  <button onclick="checkAnswer('storage')" style="margin:5px; padding:10px 20px;">جهاز تخزين</button>
+  <button class="quiz-btn" onclick="checkAnswer('input')">جهاز إدخال</button>
+  <button class="quiz-btn" onclick="checkAnswer('output')">جهاز إخراج</button>
+  <button class="quiz-btn" onclick="checkAnswer('storage')">جهاز تخزين</button>
 
   <p id="result" style="margin-top:15px; font-size:18px; font-weight:bold;"></p>
 </div>
 
-<script>
-function checkAnswer(answer) {
-  const result = document.getElementById("result");
-
-  if (answer === "input") {
-    result.innerHTML = "✔️ إجابة صحيحة!";
-    result.style.color = "green";
-  } else {
-    result.innerHTML = "❌ إجابة غير صحيحة، حاولي مرة أخرى";
-    result.style.color = "red";
-  }
+<style>
+.quiz-btn {
+  background-color: #2563EB; /* أزرق جميل */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin: 8px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-</script>
+
+.quiz-btn:hover {
+  background-color: #1E40AF;
+  transform: scale(1.05);
+}
+</style>
                         </div>
                       </div>
                     </div>
