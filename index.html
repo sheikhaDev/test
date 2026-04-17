@@ -843,12 +843,12 @@
       rating.innerHTML = `<div style="color: #1E40AF; font-weight: 700;">${text}</div>`;
     }
 
-    function buildSidebar() {
-      const nav = document.getElementById('sidebarNav');
+    function buildSebar() {
+      const nav = document.getElementBy('sebarNav');
       nav.innerHTML = '';
       pageNames.forEach((name, i) => {
         const el = document.createElement('div');
-        el.className = 'sidebar-item' + (i === 0 ? ' active' : '');
+        el.className = 'sebar-item' + (i === 0 ? ' active' : '');
         el.textContent = name;
         el.onclick = () => goToPage(i);
         nav.appendChild(el);
@@ -862,7 +862,7 @@
         'أن يُميّزَ الطالبُ أجهزةَ التخزين ',
         'أن يربطَ الطالبُ بين استخدام الأجهزة ومواقف من حياته الواقعية'
       ];
-      const container = document.getElementById('objectivesList');
+      const container = document.getElementBy('objectivesList');
       container.innerHTML = '';
       objectives.forEach((obj, i) => {
         const el = document.createElement('div');
@@ -873,7 +873,7 @@
       });
     }
 
-    function buildQuiz(containerId, feedbackId, question) {
+    function buildQuiz(container, feedback, question) {
       const container = document.getElementById(containerId);
       container.innerHTML = '';
       question.options.forEach((opt, i) => {
@@ -1135,9 +1135,7 @@
         options: ['إدخال البيانات', 'عرض النتائج للمستخدم', 'تخزين البيانات', 'الاتصال بالإنترنت'],
         correct: 1
       buildGame();
-      buildQuiz('quiz4', 'quiz2Feedback', {
-        options: ['اجهزة الاخراج', 'اجهزة الادخال', 'اجهزةالتخزين'],
-        correct: 1
+      
       lucide.createIcons();
       updateProgress();
       updateSidebar();
