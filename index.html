@@ -843,35 +843,47 @@
       });
     }
 
-    function buildObjectives() {
-      const objectives = [
-        'أن يتعرّفَ الطالبُ على المكونات المادية للحاسوب بشكلٍ صحيح',
-        'اأن يُميّزَ الطالبُ بين أجهزة الإدخال وأجهزة الإخراج بشكلٍ صحيح.',
-        'أن يُميّزَ الطالبُ أجهزةَ التخزين ',
-        'أن يربطَ الطالبُ بين استخدام الأجهزة ومواقف من حياته الواقعية'
-      ];
-      const container = document.getElementBy('objectivesList');
-      container.innerHTML = '';
-      objectives.forEach((obj, i) => {
-        const el = document.createElement('div');
-        el.className = 'flex items-start gap-3 p-3 rounded-lg';
-        el.style.background = 'rgba(37, 99, 235, 0.05)';
-        el.innerHTML = `<div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.12); color: #1E40AF;">${i + 1}</div><span class="text-sm" style="color: #334155;">${obj}</span>`;
-        container.appendChild(el);
-      });
-    }
+function buildSidebar() {
+  const nav = document.getElementById('sidebarNav');
+  nav.innerHTML = '';
+  pageNames.forEach((name, i) => {
+    const el = document.createElement('div');
+    el.className = 'sidebar-item' + (i === 0 ? ' active' : '');
+    el.textContent = name;
+    el.onclick = () => goToPage(i);
+    nav.appendChild(el);
+  });
+}
 
-    function buildQuiz(container, feedback, question) {
-      const container = document.getElementById(containerId);
-      container.innerHTML = '';
-      question.options.forEach((opt, i) => {
-        const el = document.createElement('div');
-        el.className = 'quiz-opt text-sm';
-        el.textContent = opt;
-        el.onclick = () => answerQuiz(containerId, feedbackId, i, question.correct);
-        container.appendChild(el);
-      });
-    }
+function buildObjectives() {
+  const objectives = [
+    'أن يتعرّفَ الطالبُ على المكونات المادية للحاسوب بشكلٍ صحيح',
+    'أن يُميّزَ الطالبُ بين أجهزة الإدخال وأجهزة الإخراج بشكلٍ صحيح',
+    'أن يُميّزَ الطالبُ أجهزةَ التخزين',
+    'أن يربطَ الطالبُ بين استخدام الأجهزة ومواقف من حياته الواقعية'
+  ];
+  const container = document.getElementById('objectivesList');
+  container.innerHTML = '';
+  objectives.forEach((obj, i) => {
+    const el = document.createElement('div');
+    el.className = 'flex items-start gap-3 p-3 rounded-lg';
+    el.style.background = 'rgba(37, 99, 235, 0.05)';
+    el.innerHTML = `<div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.12); color: #1E40AF;">${i + 1}</div><span class="text-sm" style="color: #334155;">${obj}</span>`;
+    container.appendChild(el);
+  });
+}
+
+function buildQuiz(containerId, feedbackId, question) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+  question.options.forEach((opt, i) => {
+    const el = document.createElement('div');
+    el.className = 'quiz-opt text-sm';
+    el.textContent = opt;
+    el.onclick = () => answerQuiz(containerId, feedbackId, i, question.correct);
+    container.appendChild(el);
+  });
+}
 
     function answerQuiz(containerId, feedbackId, selected, correct) {
       const container = document.getElementById(containerId);
