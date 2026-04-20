@@ -619,26 +619,14 @@
                 <h3 class="font-bold mb-4 text-center" style="color: #2563EB;">📲 امسح رمز الاستجابة السريعة</h3>
                 <div class="flex flex-col items-center gap-6">
                   <div class="p-4 rounded-lg" style="background: white; border: 3px solid #2563EB;">
-                    <svg width="200" height="200" viewBox="0 0 200 200" style="margin: 0 auto;">
-                      <rect width="200" height="200" fill="white" />
-                      <rect x="10" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" />
-                      <rect x="15" y="15" width="30" height="30" fill="#000" />
-                      <rect x="20" y="20" width="20" height="20" fill="white" />
-                      <rect x="25" y="25" width="10" height="10" fill="#000" />
-                      <rect x="150" y="10" width="40" height="40" fill="none" stroke="#000" stroke-width="2" />
-                      <rect x="155" y="15" width="30" height="30" fill="#000" />
-                      <rect x="160" y="20" width="20" height="20" fill="white" />
-                      <rect x="165" y="25" width="10" height="10" fill="#000" />
-                      <rect x="10" y="150" width="40" height="40" fill="none" stroke="#000" stroke-width="2" />
-                      <rect x="15" y="155" width="30" height="30" fill="#000" />
-                      <rect x="20" y="160" width="20" height="20" fill="white" />
-                      <rect x="25" y="165" width="10" height="10" fill="#000" />
-                      <rect x="65" y="65" width="4" height="4" fill="#000" />
-                      <rect x="75" y="70" width="4" height="4" fill="#000" />
-                      <rect x="85" y="75" width="4" height="4" fill="#000" />
-                      <rect x="70" y="85" width="4" height="4" fill="#000" />
-                      <rect x="80" y="90" width="4" height="4" fill="#000" />
-                    </svg>
+                    <iframe src="https://mywebar.com/pi/896309"
+  frameborder="0"
+  scrolling="yes"
+  seamless="seamless"
+  style="display:block; width:100%; height:100vh;"
+  allow="camera;gyroscope;accelerometer;
+  magnetometer;xr-spatial-tracking;microphone;">
+</iframe>
                   </div>
 
                   <div class="w-full">
@@ -648,8 +636,13 @@
                       <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(37, 99, 235, 0.03);">
                         <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.15); color: #1E40AF;">①</div>
                         <div>
-                          <div class="font-bold" style="color: #2563EB;">افتح تطبيق قارئ الباركود</div>
-                          <div class="text-xs mt-1" style="color: #64748B;">استخدم Google Lens أو أي تطبيق QR</div>
+                          <div class="font-bold" style="color: #2563EB;">افتح كاميرا الهاتف أو استخدم تطبيق قراءة QR Code
+</div>
+                          <div class="text-xs mt-1" style="color: #64748B;"> وجّه الكاميرا نحو الكود الظاهر أمامك</div>
+                           <div class="text-xs mt-1" style="color: #64748B;">اضغط على الرابط الذي يظهر لك</div>
+                           <div class="text-xs mt-1" style="color: #64748B;">انتظر قليلًا حتى يتم تحميل التجربة</div>
+                           <div class="text-xs mt-1" style="color: #64748B;">حرّك الهاتف لتشاهد الأجهزة أمامك في الواقع المعزز</div>
+                          <div class="text-xs mt-1" style="color: #64748B;">حرّك الهاتف لتشاهد الأجهزة أمامك في الواقع المعزز</div>
                         </div>
                       </div>
 
@@ -664,14 +657,14 @@
                       <div class="flex items-start gap-3 p-3 rounded-lg" style="background: rgba(37, 99, 235, 0.03);">
                         <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background: rgba(37, 99, 235, 0.15); color: #1E40AF;">③</div>
                         <div>
-                          <div class="font-bold" style="color: #2563EB;">استكشف اجزاء الحاسوب ثم اجب عن السؤال التالي</div>
+                          <div class="font-bold" style="color: #2563EB;">بعد مسح الباركود والمشاهدة، اجب عن السؤال التالي</div>
                           
 <div id="quiz-box" style="margin-top:20px; text-align:center;">
-  <p style="font-size:22px; font-weight:bold;">ما نوع لوحة المفاتيح؟</p>
+  <p style="font-size:22px; font-weight:bold;">ما فائدة الأجهزة المعروضة أمامك؟</p>
 
-  <button type="button" class="quiz-btn" onclick="checkAnswer('input')">جهاز إدخال</button>
-  <button type="button" class="quiz-btn" onclick="checkAnswer('output')">جهاز إخراج</button>
-  <button type="button" class="quiz-btn" onclick="checkAnswer('storage')">جهاز تخزين</button>
+  <button type="button" class="quiz-btn" onclick="checkAnswer('input')"> تقوم بتنفيذ العمليات ومعالجة البيانات</button>
+  <button type="button" class="quiz-btn" onclick="checkAnswer('output')">تستقبل البيانات من المستخدم</button>
+  <button type="button" class="quiz-btn" onclick="checkAnswer('storage')">تعرض نتائج معالجة البيانات للمستخدم</button>
 
   <p id="result" style="margin-top:15px; font-size:18px; font-weight:bold;"></p>
 </div>
